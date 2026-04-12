@@ -1,0 +1,1471 @@
+/* ============================================================
+   CarryOn — Drivers page styles
+   Tokens: primary #2F80ED | sky #A6D2F3 | sky-20 rgba(166,210,243,.2)
+   ============================================================ */
+
+/* ── Driver Hero — Figma 311-2830 ─────────────────────────── */
+/* Outer section: white background, overflow hidden */
+.d-hero {
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Shell: full-width centering wrapper */
+.d-hero__shell {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 12-col inline-grid — exact Figma token match */
+.d-hero__grid {
+  display: inline-grid;
+  width: min(100%, 1280px);
+  padding: 96px 40px;
+  row-gap: 24px;
+  column-gap: 24px;
+  align-self: stretch;
+  grid-template-rows: 419.5px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+/* Copy — cols 1-5 */
+.d-hero__copy {
+  grid-column: 1 / span 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+}
+
+/* Visual — cols 6-12 */
+.d-hero__visual {
+  grid-column: 6 / span 7;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #dbeafe;
+  box-shadow: var(--shadow-soft);
+}
+
+.d-hero__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Title */
+.d-hero__title {
+  margin: 0 0 1rem;
+  font-family: "Manrope", var(--font);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+}
+
+/* Lead paragraph */
+.d-hero__lead {
+  margin: 0 0 0;
+  font-size: 0.975rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 26rem;
+}
+
+/* Button group */
+.d-hero__btns {
+  margin-top: 1.75rem;
+  align-items: center;
+}
+
+/* "Learn More" text link */
+.d-hero__learn-more {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.d-hero__learn-more:hover {
+  border-bottom-color: var(--primary);
+  text-decoration: none;
+}
+
+/* Badge card — bottom-right of visual */
+.d-hero__badge {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.d-hero__badge-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(166, 210, 243, 0.25);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.d-hero__badge-label {
+  margin: 0 0 1px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.d-hero__badge-value {
+  margin: 0;
+  font-family: "Manrope", var(--font);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Responsive hero */
+@media (max-width: 900px) {
+  .d-hero__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 60px 24px;
+    row-gap: 32px;
+  }
+
+  .d-hero__copy {
+    grid-column: 1 / -1;
+  }
+
+  .d-hero__visual {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+    min-height: 260px;
+  }
+}
+
+/* ── Stats — Figma node 311-2855 ──────────────────────────── */
+/* Outer section wrapper — flex column, border-top/bottom */
+.d-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-top: 1px solid rgba(195, 198, 214, 0.10);
+  border-bottom: 1px solid rgba(195, 198, 214, 0.10);
+  background: #fff;
+}
+
+/* Inner layout container — padding 80px 0 */
+.d-stats__inner {
+  padding: 80px 0;
+  width: 100%;
+  max-width: var(--layout-max);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+  align-self: stretch;
+}
+
+/* 3-column equal grid for cards — justify-self stretch */
+.d-stats__row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto;
+  gap: 24px;
+}
+
+/* ── Stat card — Figma node 311-2857 ── */
+.d-stat-card {
+  display: flex;
+  padding: 40px 40px 56px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  grid-row: 1 / span 1;
+  justify-self: stretch;
+  border-radius: 8px;
+  border: 1px solid rgba(195, 198, 214, 0.05);
+  background: rgba(166, 210, 243, 0.20);
+}
+
+/* Kicker label — e.g. "AVG MONTHLY EARNINGS" */
+.d-stat-card__kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Large value — e.g. "$4,200+" */
+.d-stat-card__value {
+  margin: 0;
+  font-family: "Manrope", var(--font);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+/* First description line */
+.d-stat-card__desc {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Second description line */
+.d-stat-card__sub {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .d-stats__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .d-stats__row {
+    grid-template-columns: 1fr;
+  }
+
+  .d-stat-card {
+    padding: 32px 28px 40px 28px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Precision Onboarding + Designed for Fleet
+   Figma nodes: 311-2887 / 2888 / 2889 / 2890 / 2892 / 2945 / 2946 / 2947
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-2887 — outer section: exact Figma tokens */
+.d-features {
+  background: var(--bg-page); /* #f7f9fe — light blue-grey to match screenshot */
+  overflow: hidden;
+}
+
+/* Section shell: flex col, padding 128px 0, gap 96px, center */
+.d-features__shell {
+  display: flex;
+  padding: 128px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px;
+  align-self: stretch;
+}
+
+/* ── 311-2888: Precision Onboarding block ── */
+.d-ob-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+/* 311-2889: heading group */
+.d-ob-block__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: 14px;
+}
+
+/* 311-2890: "Precision Onboarding" title */
+.d-ob-block__title {
+  margin: 0;
+  color: #2F80ED;
+  text-align: center;
+  font-family: "Manrope", var(--font);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+}
+
+/* Blue accent bar below title */
+.d-ob-block__accent {
+  width: 56px;
+  height: 4px;
+  border-radius: 99px;
+  background: #2F80ED;
+}
+
+/* 311-2892: Steps container — width 1024px */
+.d-ob-steps-wrap {
+  display: flex;
+  width: min(1024px, 100%);
+  max-width: 1024px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ────────────────────────────────────────────────────────────
+   Horizontal stepper matching screenshot:
+   - Large ghost step numbers at top
+   - Rounded-square icon below (not circle!)
+   - Horizontal track line through icon center
+   - Label + description below
+   ────────────────────────────────────────────────────────────*/
+.d-stepper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+/* Track line — top = num line-height(40px) + margin(6px) + half icon(28px) = 74px */
+.d-stepper::before {
+  content: "";
+  position: absolute;
+  top: 74px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(47, 128, 237, 0.20);
+  z-index: 0;
+}
+
+/* Individual step column */
+.d-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+  padding: 0 8px;
+}
+
+/* Step number — exact Figma token match */
+.d-step__num {
+  color: rgba(166, 210, 243, 0.20);
+  text-align: center;
+  font-family: "Manrope", var(--font);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  margin-bottom: 6px;
+}
+
+/* Rounded-square icon — 56×56, border-radius 14px */
+.d-step__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(166, 210, 243, 0.35);
+  color: #2F80ED;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 2; /* sits on top of the track line */
+  flex-shrink: 0;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Active step 01 — filled solid blue, white icon */
+.d-step--active .d-step__icon {
+  background: #2F80ED;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(47, 128, 237, 0.40);
+}
+
+/* Step label */
+.d-step__label {
+  margin: 0;
+  font-family: "Manrope", var(--font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #2F80ED;
+}
+
+/* Step description */
+.d-step__desc {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 176px;
+}
+
+/* ── Designed for the Modern Fleet card — 311-2945 ── */
+.d-fleet-card {
+  display: flex;
+  padding: 64px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 24px;
+  background: rgba(166, 210, 243, 0.20);
+}
+
+/* 311-2946 — inner 2-col grid: row 650px, gap 64px */
+.d-fleet-card__grid {
+  display: inline-grid;
+  row-gap: 64px;
+  column-gap: 64px;
+  align-self: stretch;
+  grid-template-rows: 650px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* 311-2947 — left copy: exact Figma tokens */
+.d-fleet-card__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;               /* 40px between all 4 direct flex children */
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  justify-self: stretch;
+  min-height: 0;
+}
+
+/* ── Flex child 1: Title ── */
+.d-fleet-card__title {
+  margin: 0;
+  font-family: "Manrope", var(--font);
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #2F80ED;
+}
+
+/* ── Flex child 2: Description with left blue border bar ── */
+.d-fleet-card__quote {
+  margin: 0;
+  padding-left: 16px;
+  border-left: 3px solid #2F80ED;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* ── Flex child 3: 2×2 features grid ── */
+.d-fleet-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 20px;
+  align-self: stretch;
+}
+
+.d-fleet-feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.d-fleet-feat__icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(47, 128, 237, 0.10);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #2F80ED;
+  flex-shrink: 0;
+}
+
+.d-fleet-feat__text h3 {
+  margin: 0 0 4px;
+  font-family: "Manrope", var(--font);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #2F80ED;
+}
+
+.d-fleet-feat__text p {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* ── Flex child 4: "Explore all driver benefits →" link ── */
+.d-fleet-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Manrope", var(--font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #2F80ED;
+  text-decoration: none;
+  transition: gap 0.15s ease;
+}
+
+.d-fleet-card__link:hover {
+  text-decoration: none;
+  gap: 10px;
+}
+
+/* ── Right column: phone image ── */
+.d-fleet-card__phone-col {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Phone/app image — tilted perspective matching screenshot */
+.d-fleet-card__phone-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.d-fleet-card__phone-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(47, 128, 237, 0.25);
+  transform: perspective(800px) rotateY(-6deg) rotateX(2deg);
+  transition: transform 0.3s ease;
+}
+
+.d-fleet-card__phone-img img:hover {
+  transform: perspective(800px) rotateY(-3deg) rotateX(1deg);
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .d-features__shell {
+    padding: 80px 0;
+    gap: 64px;
+  }
+
+  .d-fleet-card {
+    padding: 40px;
+  }
+
+  .d-fleet-card__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+  }
+
+  .d-fleet-card__copy {
+    grid-column: 1 / -1;
+  }
+
+  .d-fleet-card__phone-col {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .d-stepper {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .d-stepper::before {
+    display: none;
+  }
+
+  .d-step {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .d-step {
+    flex: 0 0 100%;
+  }
+
+  .d-fleet-features {
+    grid-template-columns: 1fr;
+  }
+
+  .d-features__shell {
+    padding: 64px 0;
+    gap: 48px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   THE PRECISION DRIVER HUB — Figma 311-2991
+   ══════════════════════════════════════════════════════════════ */
+.d-hub {
+  background: var(--bg-page);
+  overflow: hidden;
+}
+
+.d-hub__shell {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 311-2991 — inline-grid, 12-col, row 544px, padding 208px 0 128px 0 */
+.d-hub__grid {
+  display: inline-grid;
+  padding: 208px 0 128px 0;
+  row-gap: 48px;
+  column-gap: 48px;
+  align-self: stretch;
+  grid-template-rows: 544px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Left phone image — cols 1-6 */
+.d-hub__phone {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 6;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0a1628;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.10), 0 8px 10px -6px rgba(0,0,0,.10);
+  position: relative;
+}
+
+.d-hub__phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 311-2996 — right copy: flex col, gap 48px, col 7/span 6 */
+.d-hub__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  grid-row: 1 / span 1;
+  grid-column: 7 / span 6;
+  justify-self: stretch;
+  min-height: 0;
+}
+
+/* 311-2999 — title: Manrope 800, 48px, #2F80ED, -1.2px */
+.d-hub__title {
+  margin: 0;
+  align-self: stretch;
+  color: #2F80ED;
+  font-family: "Manrope", var(--font);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: -1.2px;
+}
+
+/* 311-3001 — description: Manrope 400, 18px, #000, 28px */
+.d-hub__desc {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", var(--font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* 311-3003 / 3012 / 3021 — feature items: flex row, gap 24px */
+.d-hub__feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.d-hub__feat-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(166, 210, 243, 0.35);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #2F80ED;
+  flex-shrink: 0;
+}
+
+.d-hub__feat-text h3 {
+  margin: 0 0 6px;
+  font-family: "Manrope", var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2F80ED;
+}
+
+.d-hub__feat-text p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SUPPORT CARDS — Figma 311-3030
+   inline-grid, 2-col, row 334px, padding 80px 0 208px 0, gap 32px
+   ══════════════════════════════════════════════════════════════ */
+.d-support {
+  background: var(--bg-page);
+  overflow: hidden;
+}
+
+/* 311-3030 — inline-grid, 2 cols, row 334px, gap 32px, padding 80px 0 208px 0 */
+.d-support__grid {
+  display: inline-grid;
+  padding: 80px 0 208px 0;
+  row-gap: 32px;
+  column-gap: 32px;
+  align-self: stretch;
+  grid-template-rows: 334px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+}
+
+/* Both cards — common styles matching 311-3032 shadow */
+.d-support__card {
+  border-radius: 16px;
+  padding: 40px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.10), 0 8px 10px -6px rgba(0,0,0,.10);
+}
+
+/* Card 1: 24/7 Priority Support — dark blue gradient */
+.d-support__card--primary {
+  background: linear-gradient(140deg, #1a4fa0 0%, #2F80ED 100%);
+  color: #fff;
+}
+
+.d-support__card--primary .d-support__card-icon {
+  color: rgba(255, 255, 255, 0.90);
+}
+
+.d-support__card--primary h3 {
+  margin: 0;
+  font-family: "Manrope", var(--font);
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.d-support__card--primary p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+/* Card 2: Emergency Protection — light blue */
+.d-support__card--secondary {
+  border: 1px solid rgba(195, 198, 214, 0.05);
+  background: rgba(166, 210, 243, 0.20);
+}
+
+.d-support__card--secondary .d-support__card-icon {
+  color: #2F80ED;
+}
+
+.d-support__card--secondary h3 {
+  margin: 0;
+  font-family: "Manrope", var(--font);
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #2F80ED;
+  letter-spacing: -0.02em;
+}
+
+/* 311-3045 — description: exact Figma tokens */
+.d-support__card--secondary p,
+.d-support__card-desc {
+  margin: 0;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+}
+
+/* 311-3044 — content wrapper: flex col, max-width 384px */
+.d-support__card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 384px;
+  max-width: 100%;
+  gap: 20px;
+}
+
+/* Decorative circle behind card content */
+.d-support__card::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .d-hub__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 80px 0 64px 0;
+    row-gap: 32px;
+  }
+
+  .d-hub__phone {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+    min-height: 260px;
+  }
+
+  .d-hub__copy {
+    grid-column: 1 / -1;
+    gap: 32px;
+  }
+
+  .d-hub__title {
+    font-size: clamp(2rem, 5vw, 48px);
+    line-height: 1.1;
+  }
+
+  .d-support__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 64px 0 80px 0;
+  }
+
+  .d-support__card {
+    min-height: 280px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TESTIMONIAL — exact Figma token match
+   311-3046 / 3047 / 3050 / 3064 / 3065 / 3066 / 3067 / 3068 / 3070 / 3071
+   ══════════════════════════════════════════════════════════════ */
+.d-testimonial {
+  background: var(--bg-page);
+  padding-block: clamp(2rem, 5vw, 3rem);
+}
+
+/* 311-3046 — card: padding 96px 175px, radius 32px */
+.d-testimonial__card {
+  display: flex;
+  padding: 96px 175px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 32px;
+  border: 1px solid rgba(195, 198, 214, 0.05);
+  background: rgba(166, 210, 243, 0.20);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 311-3047 — "99" quote decoration: absolute, top-right, opacity 0.05 */
+.d-testimonial__deco {
+  display: flex;
+  padding: 48px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  opacity: 0.05;
+  font-family: "Manrope", var(--font);
+  font-size: 220px;
+  font-weight: 900;
+  line-height: 0.85;
+  color: #2F80ED;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* 311-3050 — main content: flex col, center, gap 16px */
+.d-testimonial__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+/* 311-3064 — avatar + stars: flex col, center */
+.d-testimonial__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+}
+
+/* Avatar: rounded square */
+.d-testimonial__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Stars row — amber/gold color */
+.d-testimonial__stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* 311-3065 — quote: Manrope 500, 30px, #2F80ED, line-height 41.25px, -0.75px */
+.d-testimonial__quote {
+  margin: 0;
+  align-self: stretch;
+  color: #2F80ED;
+  text-align: center;
+  font-family: "Manrope", var(--font);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 41.25px;
+  letter-spacing: -0.75px;
+}
+
+/* 311-3066 — author info: flex col, gap 4px */
+.d-testimonial__author-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+/* 311-3067 — name wrapper: flex col, center */
+.d-testimonial__name-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+/* 311-3068 — MARCUS CHEN: Manrope 900, 16px, uppercase, #2F80ED, 1.6px spacing */
+.d-testimonial__name {
+  color: #2F80ED;
+  text-align: center;
+  font-family: "Manrope", var(--font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* 311-3070 — subtitle: Manrope 600, 14px, #434654 */
+.d-testimonial__sub {
+  margin: 0;
+  align-self: stretch;
+  color: #434654;
+  text-align: center;
+  font-family: "Manrope", var(--font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* 311-3071 — stats: small muted */
+.d-testimonial__stats {
+  margin: 0;
+  align-self: stretch;
+  color: var(--text-muted);
+  text-align: center;
+  font-family: "Manrope", var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .d-testimonial__card {
+    padding: 64px 80px;
+  }
+
+  .d-testimonial__quote {
+    font-size: clamp(1.1rem, 3vw, 30px);
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 560px) {
+  .d-testimonial__card {
+    padding: 48px 32px;
+    border-radius: 20px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FAQ  — Figma nodes 311-3073 … 311-3092
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-3073 outer: full-width section, centred */
+.d-faq {
+  background: var(--bg-page);
+  display: flex;
+  justify-content: center;
+}
+
+/* 311-3073 outer wrapper — centres the 896px column */
+.d-faq__outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* 311-3073 inner container — 896px, flex col, padding 224 0 96, gap 64 */
+.d-faq__container {
+  display: flex;
+  width: 896px;
+  max-width: 896px;
+  padding: 224px 0 96px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+/* 311-3074 block — flex col, center, gap 16 */
+.d-faq__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+/* 311-3075 heading group — flex col, center */
+.d-faq__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+}
+
+/* 311-3076 title — Manrope 800, 36px, #2F80ED, -0.9px */
+.d-faq__title {
+  margin: 0;
+  color: #2F80ED;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;       /* 111.111% */
+  letter-spacing: -0.9px;
+}
+
+/* 311-3077 blue accent bar — 64×4px, radius 12 */
+.d-faq__accent {
+  width: 64px;
+  height: 4px;
+  border-radius: 12px;
+  background: #2F80ED;
+  flex-shrink: 0;
+}
+
+/* FAQ items list */
+.d-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: stretch;
+}
+
+/* FAQ item card — radius 8, solid sky bg, 1px sky border */
+.d-faq__item {
+  border-radius: 8px;
+  border: 1px solid #A6D2F3;
+  background: #A6D2F3;
+  overflow: hidden;
+}
+
+/* 311-3080 / 311-3087 / 311-3092 question row */
+.d-faq__question {
+  display: flex;
+  padding: 24px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  gap: 12px;
+}
+
+.d-faq__question::-webkit-details-marker {
+  display: none;
+}
+
+/* 311-3081 question text — Manrope 700, 16px, #2F80ED, 24px */
+.d-faq__q-text {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;       /* 150% */
+}
+
+.d-faq__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease;
+}
+
+.d-faq__item[open] .d-faq__icon {
+  transform: rotate(180deg);
+}
+
+/* 311-3085 answer body */
+.d-faq__answer {
+  padding: 0 24px 24px;
+}
+
+/* 311-3085 answer text — Manrope 400, 16px, #000, 26px */
+.d-faq__answer p {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;       /* 162.5% */
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .d-faq__container {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 24px 64px;
+  }
+}
+
+@media (max-width: 640px) {
+  .d-faq__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .d-faq__container {
+    padding: 60px 20px 48px;
+    gap: 40px;
+  }
+}
+
+/* ── Ready to Start Driving CTA ──────────────────────────── */
+.d-cta {
+  padding-block: clamp(3rem, 7vw, 4.5rem);
+  background: var(--bg-white);
+}
+
+.d-cta__card {
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(166, 210, 243, 0.4);
+  overflow: hidden;
+  max-width: 700px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.d-cta__top-bar {
+  height: 8px;
+  background: var(--primary);
+}
+
+/* 311-3097: body content wrapper — flex col, 672px max, gap 40px */
+.d-cta__body {
+  display: flex;
+  max-width: 672px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  margin-inline: auto;
+}
+
+/* 311-3099: heading — Manrope 800, 48px, #2F80ED, -1.2px */
+.d-cta__body h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: -1.2px;
+  color: #2F80ED;
+  align-self: stretch;
+}
+
+/* 311-3101: subtitle — Manrope 400, 20px, #434654, center, 28px */
+.d-cta__body p {
+  margin: 0;
+  align-self: stretch;
+  color: #434654;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+}
+
+.d-cta__body .cta-buttons {
+  justify-content: flex-start;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER — Figma nodes 311-3108 … 311-3160
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-3108: footer shell */
+.d-footer {
+  position: relative;
+  background: #A6D2F3;
+  border-top: 1px solid rgba(195, 198, 214, 0.10);
+  display: flex;
+  justify-content: center;
+}
+
+/* 311-3108: inner wrap — flex col, 1280px, padding 64px 0, gap 64px */
+.d-footer__wrap {
+  display: flex;
+  width: 1280px;
+  max-width: 100%;
+  padding: 64px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+/* 311-3109: 4-col grid — repeat(4,1fr), padding 0 48px, gap 48px, rows 120.25px */
+.d-footer__grid {
+  display: inline-grid;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 48px;
+  row-gap: 48px;
+  column-gap: 48px;
+  align-self: stretch;
+  grid-template-rows: 120.25px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Col 1 — brand */
+.d-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.d-footer__logo {
+  color: #1A3D6B;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.d-footer__brand-copy {
+  margin: 0;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Cols 2-4 — nav columns */
+.d-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d-footer__col-head {
+  margin: 0;
+  color: #1A3D6B;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+}
+
+.d-footer__col-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.d-footer__col-list a {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.d-footer__col-list a:hover {
+  color: #1A3D6B;
+}
+
+/* Active link (Driver Careers) */
+.d-footer__link--active {
+  color: #2F80ED !important;
+  font-weight: 500 !important;
+}
+
+/* 311-3141: bottom bar — flex col, center, padding 64px 48px 0, border-top */
+.d-footer__bottom {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  padding: 64px 48px 0;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  border-top: 1px solid rgba(195, 198, 214, 0.10);
+}
+
+/* 311-3142: copyright text — Manrope 400, 14px, #000, center, 20px */
+.d-footer__copy {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+/* 311-3160: floating Apply to Drive FAB — absolute, bottom-right, shadow */
+.d-footer__fab {
+  position: fixed;
+  bottom: 24px;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 202.92px;
+  height: 56px;
+  padding: 0 20px;
+  border-radius: 12px;
+  background: #2F80ED;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+}
+
+.d-footer__fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .d-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    padding: 0 24px;
+  }
+  .d-footer__wrap {
+    padding: 48px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .d-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .d-footer__bottom {
+    padding: 32px 24px 0;
+  }
+  .d-footer__fab {
+    width: auto;
+    right: 16px;
+    bottom: 16px;
+  }
+}

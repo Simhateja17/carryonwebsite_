@@ -1,0 +1,10 @@
+{
+  "name": "carryon-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CarryOn marketing site (static HTML/CSS)",
+  "scripts": {
+    "start": "npx --yes serve . -l 3000",
+    "dev": "npx --yes serve . -l 3000"
+  }
+}
