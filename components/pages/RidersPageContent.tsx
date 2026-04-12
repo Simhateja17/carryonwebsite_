@@ -1,0 +1,841 @@
+/* eslint-disable @next/next/no-img-element */
+
+export function RidersPageContent() {
+  return (
+    <>
+      <main>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 HERO — Figma 311-3165 / 311-3167 / 311-3168 / 311-3170
+                 2-col grid, max-width 1280px, padding 64px 32px, gap 48px
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-hero">
+              {/*311-3191: decorative blur blob*/}
+              <div className="r-hero__blob" aria-hidden="true"></div>
+      
+              {/*311-3167: 2-col grid container*/}
+              <div className="r-hero__grid">
+      
+                {/*311-3168: left column — flex col, gap 31px*/}
+                <div className="r-hero__copy">
+      
+                  {/*311-3170: heading — Manrope 800, 60px, black + blue*/}
+                  <h1 className="r-hero__title">
+                    Precision Logistics<br />
+                    <span className="r-hero__title--blue">for Every Mile.</span>
+                  </h1>
+      
+                  {/*311-3171 / 3172: description container + text*/}
+                  <div className="r-hero__desc-wrap">
+                    <p className="r-hero__desc">
+                      Experience the next generation of delivery. Real-time
+                      tracking, transparent pricing, and a fleet ready to move
+                      your world.
+                    </p>
+                  </div>
+      
+                  {/*311-3173: button group*/}
+                  <div className="r-hero__btns">
+                    {/*311-3175: primary button with shadow*/}
+                    <a href="#book" className="r-btn r-btn--primary">
+                      Book a Delivery
+                    </a>
+                    <a href="#how" className="r-btn r-btn--ghost">
+                      How It Works
+                    </a>
+                  </div>
+      
+                </div>{/*/r-hero__copy*/}
+      
+                {/*311-3176: right column — phone/map mockup*/}
+                <div className="r-hero__visual" aria-hidden="true">
+                  <div className="r-phone">
+                    <div className="r-phone__frame">
+                      <div className="r-phone__screen">
+                        {/*Map background*/}
+                        <div className="r-phone__map">
+                          <div className="r-phone__map-grid"></div>
+                          {/*Route line*/}
+                          <svg className="r-phone__route" viewBox="0 0 260 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M80 340 C80 300 140 280 140 240 C140 200 100 180 100 140 C100 100 130 80 130 60" stroke="#2F80ED" strokeWidth="3" strokeDasharray="8 4" strokeLinecap="round"/>
+                            <circle cx="80" cy="340" r="10" fill="#2F80ED"/>
+                            <circle cx="80" cy="340" r="6" fill="#fff"/>
+                            <circle cx="130" cy="60" r="10" fill="#22c55e"/>
+                            <circle cx="130" cy="60" r="6" fill="#fff"/>
+                          </svg>
+                          {/*Delivery pin*/}
+                          <div className="r-phone__pin r-phone__pin--dest">
+                            <svg width="28" height="36" viewBox="0 0 24 30" fill="none">
+                              <path d="M12 0C5.373 0 0 5.373 0 12c0 9 12 18 12 18S24 21 24 12C24 5.373 18.627 0 12 0z" fill="#2F80ED"/>
+                              <circle cx="12" cy="12" r="4" fill="#fff"/>
+                            </svg>
+                          </div>
+                        </div>
+                        {/*Status bar*/}
+                        <div className="r-phone__status">
+                          <div className="r-phone__status-card">
+                            <div className="r-phone__status-icon">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                              </svg>
+                            </div>
+                            <div className="r-phone__status-text">
+                              <span className="r-phone__status-label">En Route</span>
+                              <span className="r-phone__status-eta">ETA 8 min</span>
+                            </div>
+                            <div className="r-phone__status-pulse"></div>
+                          </div>
+                        </div>
+                      </div>
+                      {/*Phone notch*/}
+                      <div className="r-phone__notch"></div>
+                    </div>
+                  </div>
+                </div>{/*/r-hero__visual*/}
+      
+              </div>{/*/r-hero__grid*/}
+            </section>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 VERSATILE SOLUTIONS — Figma 311-3218 to 311-3232
+                 bg rgba(166,210,243,0.20), padding 96px 0
+                 3-col card grid, grid-template-rows 290px
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-solutions">
+              <div className="r-solutions__wrap">
+      
+                {/*311-3220: header group — flex col, center, gap 16.5px*/}
+                <div className="r-solutions__header">
+                  {/*311-3221: kicker — Manrope 700, 12px, #2F80ED, 2.4px tracking*/}
+                  <span className="r-kicker">VERSATILE SOLUTIONS</span>
+                  {/*311-3222 / 3223: title wrap + text*/}
+                  <div className="r-solutions__title-wrap">
+                    <h2 className="r-section-title">Tailored to Your Delivery Needs</h2>
+                  </div>
+                </div>
+      
+                {/*311-3224: 3-col cards grid — repeat(3,1fr), gap 32px, rows 290px*/}
+                <div className="r-solutions__grid">
+      
+                  {/*311-3225: card — padding 40px, radius 16px, white, shadow*/}
+                  <article className="r-solutions__card">
+                    <div className="r-solutions__card-icon">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
+                        <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+                      </svg>
+                    </div>
+                    {/*311-3229 / 3230: content + title*/}
+                    <div className="r-solutions__card-body">
+                      <h3 className="r-solutions__card-title">Parcel Delivery</h3>
+                      <p className="r-solutions__card-desc">Door-to-door parcel delivery for individuals and small businesses. Fast, tracked, and insured for every shipment.</p>
+                    </div>
+                  </article>
+      
+                  <article className="r-solutions__card">
+                    <div className="r-solutions__card-icon">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
+                        <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                      </svg>
+                    </div>
+                    <div className="r-solutions__card-body">
+                      <h3 className="r-solutions__card-title">Business Freight</h3>
+                      <p className="r-solutions__card-desc">Scale your B2B logistics with dedicated fleet options, bulk pricing, and API integration for high-volume operations.</p>
+                    </div>
+                  </article>
+      
+                  <article className="r-solutions__card">
+                    <div className="r-solutions__card-icon">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
+                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                      </svg>
+                    </div>
+                    <div className="r-solutions__card-body">
+                      <h3 className="r-solutions__card-title">Same-Day Rush</h3>
+                      <p className="r-solutions__card-desc">Urgent delivery in under 2 hours within city limits. Guaranteed same-day fulfilment for time-critical shipments.</p>
+                    </div>
+                  </article>
+      
+                </div>{/*/r-solutions__grid*/}
+              </div>{/*/r-solutions__wrap*/}
+            </section>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 FOUR STEPS TO DELIVERY — Figma 311-3249 to 311-3264
+                 max-width 1280px, padding 96px 32px, gap 64px
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-steps" id="how">
+              <div className="r-steps__wrap">
+      
+                {/*311-3250: header row — flex, space-between, align flex-end*/}
+                <div className="r-steps__header">
+                  {/*311-3253: title — Manrope 800, 36px, #000, -0.9px*/}
+                  <h2 className="r-steps__title">Four Steps to Delivery</h2>
+                  {/*311-3254 / 3255: right desc — max-width 384px, right-aligned*/}
+                  <div className="r-steps__header-desc">
+                    <p>Seamlessly integrated from the moment you book until the final handover.</p>
+                  </div>
+                </div>
+      
+                {/*Steps 4-col grid*/}
+                <div className="r-steps__grid">
+      
+                  {/*Step 1 — 311-3258 / 3260 / 3261 / 3264*/}
+                  <div className="r-steps__item">
+                    {/*311-3260: icon box — 80×80, radius 12, blue shadow*/}
+                    <div className="r-steps__icon">
+                      {/*311-3261: number — Manrope 900, 24px, #FFF*/}
+                      <span className="r-steps__num">1</span>
+                    </div>
+                    {/*311-3264: title — Manrope 700, 18px, #000, 28px*/}
+                    <h3 className="r-steps__item-title">Enter Details</h3>
+                    <p className="r-steps__item-desc">Input your pickup and drop-off location with package dimensions and weight.</p>
+                  </div>
+      
+                  {/*Step 2*/}
+                  <div className="r-steps__item">
+                    <div className="r-steps__icon">
+                      <span className="r-steps__num">2</span>
+                    </div>
+                    <h3 className="r-steps__item-title">Choose Vehicle</h3>
+                    <p className="r-steps__item-desc">Pick the right vehicle for your cargo — from bikes for small parcels to trucks for bulk freight.</p>
+                  </div>
+      
+                  {/*Step 3*/}
+                  <div className="r-steps__item">
+                    <div className="r-steps__icon">
+                      <span className="r-steps__num">3</span>
+                    </div>
+                    <h3 className="r-steps__item-title">Track Live</h3>
+                    <p className="r-steps__item-desc">Follow your delivery in real-time on our precision map with live driver location.</p>
+                  </div>
+      
+                  {/*Step 4*/}
+                  <div className="r-steps__item">
+                    <div className="r-steps__icon">
+                      <span className="r-steps__num">4</span>
+                    </div>
+                    <h3 className="r-steps__item-title">Delivery Complete</h3>
+                    <p className="r-steps__item-desc">Receive instant confirmation and digital proof of delivery straight to your inbox.</p>
+                  </div>
+      
+                </div>{/*/r-steps__grid*/}
+              </div>{/*/r-steps__wrap*/}
+            </section>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 OUR PRECISION FLEET — Figma 311-3291 to 311-3305
+                 background #2F80ED, padding 96px 0
+                 fleet card grid (4 cols), cards with blur/glass style
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-fleet">
+              <div className="r-fleet__wrap">
+      
+                {/*311-3294 / 3295 / 3296: header*/}
+                <div className="r-fleet__header">
+                  <div className="r-fleet__title-group">
+                    {/*311-3296: title — Manrope 800, 36px, #FFF, -0.9px*/}
+                    <h2 className="r-fleet__title">Our Precision Fleet</h2>
+                  </div>
+                  {/*311-3297 / 3298: subtitle — opacity 0.8, #C4D2FF, 16px*/}
+                  <div className="r-fleet__subtitle-wrap">
+                    <p className="r-fleet__subtitle">Built for speed, reliability, and cargo integrity.</p>
+                  </div>
+                </div>
+      
+                {/*311-3300: fleet cards grid — repeat(4,1fr), radius 16px, glass bg*/}
+                <div className="r-fleet__grid">
+      
+                  {/*Vehicle 1: Bike — 311-3300 / 3303 / 3304 / 3305*/}
+                  <div className="r-fleet__card">
+                    <div className="r-fleet__card-icon">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/>
+                        <path d="M15 6a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v1h7V6z"/><path d="M9 7l3 10.5"/><path d="M15 7l1.5 5.5"/><path d="M9.5 12h5"/>
+                      </svg>
+                    </div>
+                    {/*311-3303 / 3304: content + name — Manrope 700, 24px, #FFF*/}
+                    <div className="r-fleet__card-info">
+                      <h3 className="r-fleet__card-name">Bike</h3>
+                      {/*311-3305: subtitle*/}
+                      <p className="r-fleet__card-spec">Up to 5 kg · City centre</p>
+                    </div>
+                  </div>
+      
+                  {/*Vehicle 2: Scooter*/}
+                  <div className="r-fleet__card">
+                    <div className="r-fleet__card-icon">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/>
+                        <path d="M6 18H3V9h3l3-4h5l2 4h2l1 5H6"/><path d="M12 5v4"/>
+                      </svg>
+                    </div>
+                    <div className="r-fleet__card-info">
+                      <h3 className="r-fleet__card-name">Scooter</h3>
+                      <p className="r-fleet__card-spec">Up to 15 kg · Urban zone</p>
+                    </div>
+                  </div>
+      
+                  {/*Vehicle 3: Van*/}
+                  <div className="r-fleet__card">
+                    <div className="r-fleet__card-icon">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="1" y="3" width="15" height="13" rx="2"/>
+                        <path d="M16 8h4l3 3v5h-7V8z"/>
+                        <circle cx="5.5" cy="18.5" r="2.5"/>
+                        <circle cx="18.5" cy="18.5" r="2.5"/>
+                      </svg>
+                    </div>
+                    <div className="r-fleet__card-info">
+                      <h3 className="r-fleet__card-name">Van</h3>
+                      <p className="r-fleet__card-spec">Up to 500 kg · Metro area</p>
+                    </div>
+                  </div>
+      
+                  {/*Vehicle 4: Truck*/}
+                  <div className="r-fleet__card">
+                    <div className="r-fleet__card-icon">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/>
+                        <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                        <path d="M16 3h2l2 3"/>
+                      </svg>
+                    </div>
+                    <div className="r-fleet__card-info">
+                      <h3 className="r-fleet__card-name">Truck</h3>
+                      <p className="r-fleet__card-spec">Up to 5 000 kg · Nationwide</p>
+                    </div>
+                  </div>
+      
+                </div>{/*/r-fleet__grid*/}
+              </div>{/*/r-fleet__wrap*/}
+            </section>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 TRANSPARENT PRICING — Figma 311-3328 to 311-3342
+                 2-col grid, max-width 1280px, padding 96px 32px, gap 64px
+                 Left: copy + features · Right: pricing calculator UI
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-pricing">
+              <div className="r-pricing__grid">
+      
+                {/*311-3329: left column — flex col, gap 16.5px*/}
+                <div className="r-pricing__copy">
+                  {/*311-3330: kicker — Manrope 700, 12px, #2F80ED, 2.4px, uppercase*/}
+                  <span className="r-kicker">TRANSPARENCY FIRST</span>
+                  {/*311-3332: heading — Manrope 800, 36px, #000, 45px, -0.9px*/}
+                  <h2 className="r-pricing__title">Transparent pricing with no<br />hidden surprises.</h2>
+                  {/*311-3334: body — Manrope 400, 18px, #000, 29.25px*/}
+                  <p className="r-pricing__desc">
+                    We believe in fair, distance-based pricing. Calculate your estimated
+                    costs before you book, so you're always in control of your budget.
+                  </p>
+                  {/*311-3335: features list — flex col, gap 16px, padding-top 15.5px*/}
+                  <ul className="r-pricing__features">
+                    <li className="r-pricing__feature">
+                      <span className="r-pricing__check" aria-hidden="true">
+                        <svg className="r-pricing__check-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="11" cy="11" r="11" fill="#2F80ED"/>
+                          <path d="M6.5 11.2l2.8 2.8 6.2-6.2" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>No surge pricing during peak hours</span>
+                    </li>
+                    <li className="r-pricing__feature">
+                      <span className="r-pricing__check" aria-hidden="true">
+                        <svg className="r-pricing__check-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="11" cy="11" r="11" fill="#2F80ED"/>
+                          <path d="M6.5 11.2l2.8 2.8 6.2-6.2" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>Direct door-to-door transit rates</span>
+                    </li>
+                    <li className="r-pricing__feature">
+                      <span className="r-pricing__check" aria-hidden="true">
+                        <svg className="r-pricing__check-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="11" cy="11" r="11" fill="#2F80ED"/>
+                          <path d="M6.5 11.2l2.8 2.8 6.2-6.2" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>Complimentary insurance on all trips</span>
+                    </li>
+                  </ul>
+                </div>{/*/r-pricing__copy*/}
+      
+                {/*Right: Price Estimator (screenshot / Figma 311-3328)*/}
+                <div className="r-pricing__calc">
+                  <div className="r-pricing__calc-card">
+                    <h3 className="r-pricing__calc-title">Price Estimator</h3>
+      
+                    <div className="r-pricing__slider-block">
+                      <label className="r-pricing__block-label" htmlFor="r-pricing-distance">Delivery distance (km)</label>
+                      <input
+                        type="range"
+                        id="r-pricing-distance"
+                        className="r-pricing__range"
+                        min={5}
+                        max={100}
+                        defaultValue={52}
+                        aria-valuemin={5}
+                        aria-valuemax={100}
+                        aria-valuenow={52}
+                        aria-label="Delivery distance in kilometres"
+                      />
+                      <div className="r-pricing__slider-scale">
+                        <span>5 KM</span>
+                        <span>100 KM</span>
+                      </div>
+                    </div>
+      
+                    <div className="r-pricing__vehicle-select">
+                      <span className="r-pricing__block-label">Vehicle selection</span>
+                      <div className="r-pricing__vehicles" role="group" aria-label="Vehicle type">
+                        <button type="button" className="r-pricing__vtype r-pricing__vtype--active">Bike</button>
+                        <button type="button" className="r-pricing__vtype">Pickup</button>
+                        <button type="button" className="r-pricing__vtype">Truck</button>
+                      </div>
+                    </div>
+      
+                    <div className="r-pricing__divider" aria-hidden="true"></div>
+      
+                    <div className="r-pricing__estimate">
+                      <span className="r-pricing__est-label">Estimated Total</span>
+                      <span className="r-pricing__est-price">$18.50</span>
+                    </div>
+      
+                    <button type="button" className="r-pricing__cta">Book This Route</button>
+                  </div>
+                </div>
+      
+              </div>{/*/r-pricing__grid*/}
+            </section>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 POWERFUL APP — Figma 311-3378 to 311-3394
+                 bg rgba(166,210,243,0.20), 2-col grid, 0 32px padding, gap 80px
+                 Left: phone mockup · Right: features
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-app">
+              {/*311-3379: 2-col grid, max-width 1280px, padding 0 32px, gap 80px, rows 568px*/}
+              <div className="r-app__grid">
+      
+                {/*Left col: phone mockup*/}
+                <div className="r-app__phone-col">
+                  <div className="r-app__phone">
+                    <div className="r-app__phone-frame">
+                      <div className="r-app__phone-screen">
+                        <div className="r-app__ui">
+                          {/*App header*/}
+                          <div className="r-app__ui-header">
+                            <span className="r-app__ui-greeting">Good morning, Alex 👋</span>
+                            <div className="r-app__ui-avatar"></div>
+                          </div>
+                          {/*Active delivery card*/}
+                          <div className="r-app__ui-card">
+                            <div className="r-app__ui-card-top">
+                              <span className="r-app__ui-badge">Active</span>
+                              <span className="r-app__ui-eta">ETA 12 min</span>
+                            </div>
+                            <div className="r-app__ui-progress">
+                              <div className="r-app__ui-bar">
+                                <div className="r-app__ui-fill"></div>
+                              </div>
+                            </div>
+                            <p className="r-app__ui-addr">456 Commerce Ave, Dallas</p>
+                          </div>
+                          {/*Map mini*/}
+                          <div className="r-app__ui-map">
+                            <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="200" height="100" fill="#E8F4FD"/>
+                              <path d="M0 60 L40 50 L80 55 L120 45 L160 50 L200 45" stroke="#C8DFF0" strokeWidth="8"/>
+                              <path d="M0 80 L50 70 L90 75 L130 65 L200 70" stroke="#C8DFF0" strokeWidth="5"/>
+                              <circle cx="150" cy="48" r="8" fill="#2F80ED"/>
+                              <circle cx="150" cy="48" r="4" fill="#fff"/>
+                            </svg>
+                          </div>
+                          {/*Notification*/}
+                          <div className="r-app__ui-notif">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            <span>Package picked up · just now</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="r-app__phone-notch"></div>
+                    </div>
+                  </div>
+                </div>
+      
+                {/*311-3380: right column — flex col, gap 40px, col 2 span 1*/}
+                <div className="r-app__copy">
+      
+                  {/*311-3381: heading group — flex col, gap 16.5px*/}
+                  <div className="r-app__heading-group">
+                    {/*311-3382: kicker — Manrope 700, 12px, #2F80ED, uppercase*/}
+                    <span className="r-kicker">POWERFUL APP</span>
+                    {/*311-3384: title — Manrope 800, 36px, #000, 45px, -0.9px*/}
+                    <h2 className="r-app__title">Everything you need, right in your<br />pocket.</h2>
+                  </div>
+      
+                  {/*311-3391: features list — flex col*/}
+                  <div className="r-app__features">
+      
+                    {/*Feature 1 — 311-3392 / 3394*/}
+                    <div className="r-app__feature">
+                      <div className="r-app__feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2" strokeLinecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                      </div>
+                      <div className="r-app__feature-text">
+                        {/*311-3392: feature title — Manrope 700, 20px, #000, 28px*/}
+                        <h4 className="r-app__feature-title">Instant Notifications</h4>
+                        {/*311-3394: feature desc — Manrope 400, 16px, #000, 26px*/}
+                        <p className="r-app__feature-desc">Get real-time updates for every milestone—from dispatch to door.</p>
+                      </div>
+                    </div>
+      
+                    {/*Feature 2*/}
+                    <div className="r-app__feature">
+                      <div className="r-app__feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2" strokeLinecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                      </div>
+                      <div className="r-app__feature-text">
+                        <h4 className="r-app__feature-title">Schedule Deliveries</h4>
+                        <p className="r-app__feature-desc">Plan ahead and schedule deliveries up to 7 days in advance.</p>
+                      </div>
+                    </div>
+      
+                    {/*Feature 3*/}
+                    <div className="r-app__feature">
+                      <div className="r-app__feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2" strokeLinecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      </div>
+                      <div className="r-app__feature-text">
+                        <h4 className="r-app__feature-title">Contact Driver</h4>
+                        <p className="r-app__feature-desc">Direct in-app chat or call with your driver at any point during the delivery.</p>
+                      </div>
+                    </div>
+      
+                  </div>{/*/r-app__features*/}
+                </div>{/*/r-app__copy*/}
+      
+              </div>{/*/r-app__grid*/}
+            </section>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 YOUR TRUST IS OUR PRIORITY — Figma 311-3416 to 311-3427
+                 max-width 1280px, padding 96px 32px, gap 64px
+                 Kicker: SECURITY FIRST · 3-col cards, border #A6D2F3, radius 24px
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-trust">
+              <div className="r-trust__wrap">
+      
+                {/*311-3417: header group — flex col, center, gap 16.5px*/}
+                <div className="r-trust__header">
+                  {/*311-3418: kicker*/}
+                  <span className="r-kicker r-kicker--center">SECURITY FIRST</span>
+                  {/*311-3419 / 3420: title*/}
+                  <div className="r-trust__title-wrap">
+                    <h2 className="r-section-title">Your Trust is Our Priority</h2>
+                  </div>
+                </div>
+      
+                {/*311-3421: 3-col grid — repeat(3,1fr), rows 235.50px, gap 32px*/}
+                <div className="r-trust__grid">
+      
+                  {/*311-3422: card — padding 40px, radius 24px, border #A6D2F3*/}
+                  <article className="r-trust__card">
+                    <div className="r-trust__card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                      </svg>
+                    </div>
+                    {/*311-3424 / 3425: content + title — Manrope 700, 20px, #000*/}
+                    <div className="r-trust__card-body">
+                      <h3 className="r-trust__card-title">Verified Drivers</h3>
+                      {/*311-3427: desc*/}
+                      <p className="r-trust__card-desc">Every driver completes comprehensive background checks, vehicle inspections, and training before their first delivery.</p>
+                    </div>
+                  </article>
+      
+                  <article className="r-trust__card">
+                    <div className="r-trust__card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                      </svg>
+                    </div>
+                    <div className="r-trust__card-body">
+                      <h3 className="r-trust__card-title">Live GPS Tracking</h3>
+                      <p className="r-trust__card-desc">Follow your package in real-time from pickup to delivery with our precision GPS system and live map view.</p>
+                    </div>
+                  </article>
+      
+                  <article className="r-trust__card">
+                    <div className="r-trust__card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+                      </svg>
+                    </div>
+                    <div className="r-trust__card-body">
+                      <h3 className="r-trust__card-title">Insurance Coverage</h3>
+                      <p className="r-trust__card-desc">Every delivery is insured from the moment it's picked up. We protect your cargo so you never have to worry.</p>
+                    </div>
+                  </article>
+      
+                </div>{/*/r-trust__grid*/}
+              </div>{/*/r-trust__wrap*/}
+            </section>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 TESTIMONIALS (HIGHLIGHTED) — Figma 311-3440 to 311-3454
+                 bg rgba(166,210,243,0.20), padding 96px 32px
+                 2-col grid, rows 273.50px, white cards radius 32px
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-testimonials-hl">
+              <div className="r-testimonials-hl__grid">
+      
+                <article className="r-testimonials-hl__card">
+                  <div className="r-testimonials-hl__quote-wrap">
+                    <span className="r-testimonials-hl__mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote className="r-testimonials-hl__quote">
+                      Fast and reliable delivery every time. CarryOn has completely changed how we handle our last-mile distribution.
+                    </blockquote>
+                  </div>
+                  <div className="r-testimonials-hl__author">
+                    <div className="r-testimonials-hl__avatar" role="img" aria-label=""></div>
+                    <div className="r-testimonials-hl__author-info">
+                      <span className="r-testimonials-hl__name">David Chen</span>
+                      <span className="r-testimonials-hl__role">E-COMMERCE OWNER</span>
+                    </div>
+                  </div>
+                </article>
+      
+                <article className="r-testimonials-hl__card">
+                  <div className="r-testimonials-hl__quote-wrap">
+                    <span className="r-testimonials-hl__mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote className="r-testimonials-hl__quote">
+                      The tracking is the most precise I've seen in any logistics app. It's actually accurate to the minute.
+                    </blockquote>
+                  </div>
+                  <div className="r-testimonials-hl__author">
+                    <div className="r-testimonials-hl__avatar r-testimonials-hl__avatar--2" role="img" aria-label=""></div>
+                    <div className="r-testimonials-hl__author-info">
+                      <span className="r-testimonials-hl__name">Sarah Williams</span>
+                      <span className="r-testimonials-hl__role">PROJECT MANAGER</span>
+                    </div>
+                  </div>
+                </article>
+      
+              </div>
+            </section>
+      
+            {/*FAQ — narrow column, blue panels, no heavy borders (screenshot)*/}
+            <section className="r-faq">
+              <div className="r-faq__container">
+                <div className="r-faq__header">
+                  <h2 className="r-faq__title">Frequently Asked Questions</h2>
+                </div>
+      
+                <div className="r-faq__list">
+                  <details className="r-faq__item" open>
+                    <summary className="r-faq__question">
+                      <span className="r-faq__q-text">How is the price calculated?</span>
+                      <span className="r-faq__icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                      </span>
+                    </summary>
+                    <div className="r-faq__answer">
+                      <p>Pricing is based on the distance between pickup and drop-off, the type of vehicle selected, and current demand. We provide a guaranteed price before you confirm your booking.</p>
+                    </div>
+                  </details>
+      
+                  <details className="r-faq__item">
+                    <summary className="r-faq__question">
+                      <span className="r-faq__q-text">Can I cancel my delivery?</span>
+                      <span className="r-faq__icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                      </span>
+                    </summary>
+                    <div className="r-faq__answer">
+                      <p>Yes. You can cancel free of charge before a driver is assigned. After assignment, a small cancellation fee may apply depending on how close the driver is to pickup.</p>
+                    </div>
+                  </details>
+      
+                  <details className="r-faq__item">
+                    <summary className="r-faq__question">
+                      <span className="r-faq__q-text">Are my items insured during transit?</span>
+                      <span className="r-faq__icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                      </span>
+                    </summary>
+                    <div className="r-faq__answer">
+                      <p>Every shipment includes baseline coverage. You can declare higher value items in the app for additional protection up to our stated limits.</p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </section>
+      
+            {/*What our riders say — stars, centered quote, location subtitle*/}
+            <section className="r-reviews">
+              <div className="r-reviews__wrap">
+                <div className="r-reviews__header">
+                  <span className="r-kicker r-kicker--center">CUSTOMER STORIES</span>
+                  <div className="r-reviews__title-wrap">
+                    <h2 className="r-section-title">What our riders say</h2>
+                  </div>
+                </div>
+      
+                <div className="r-reviews__grid">
+                  <article className="r-reviews__card">
+                    <div className="r-reviews__stars" aria-label="5 out of 5 stars">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote className="r-reviews__quote">
+                      Fast and reliable delivery every time. CarryOn has completely changed how we handle our last-mile distribution.
+                    </blockquote>
+                    <div className="r-reviews__author">
+                      <div className="r-reviews__avatar" role="img" aria-label=""></div>
+                      <div className="r-reviews__author-info">
+                        <span className="r-reviews__name">David Chen</span>
+                        <span className="r-reviews__role">E-commerce Owner &bull; Austin, TX</span>
+                      </div>
+                    </div>
+                  </article>
+      
+                  <article className="r-reviews__card">
+                    <div className="r-reviews__stars" aria-label="5 out of 5 stars">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote className="r-reviews__quote">
+                      The tracking is the most precise I've seen in any logistics app. It's actually accurate to the minute.
+                    </blockquote>
+                    <div className="r-reviews__author">
+                      <div className="r-reviews__avatar r-reviews__avatar--2" role="img" aria-label=""></div>
+                      <div className="r-reviews__author-info">
+                        <span className="r-reviews__name">Sarah Williams</span>
+                        <span className="r-reviews__role">Project Manager &ndash; Chicago, IL</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+      
+            {/*══════════════════════════════════════════════════════════════
+                 READY TO SEND CTA — Figma 311-3782 to 311-3792
+                 background #2F80ED, centred content
+                 Title 48px white 800 · Subtitle 20px white 400 · Buttons
+                 ══════════════════════════════════════════════════════════════*/}
+            <section className="r-cta">
+              {/*311-3782: decorative gradient overlay*/}
+              <div className="r-cta__glow" aria-hidden="true"></div>
+      
+              {/*311-3783: content col — flex col, center, gap 32px*/}
+              <div className="r-cta__content">
+                {/*311-3784 / 3785: title group + text — Manrope 800, 48px, #FFF, -1.2px*/}
+                <div className="r-cta__title-group">
+                  <h2 className="r-cta__title">Ready to Send Your First Delivery?</h2>
+                </div>
+                {/*311-3787: subtitle — Manrope 400, 20px, #FFF, 28px*/}
+                <p className="r-cta__desc">
+                  Join thousands of riders who experience the precision of CarryOn every
+                  single day.
+                </p>
+                {/*311-3788: button row — flex, center, gap 16px, padding-top 16px*/}
+                <div className="r-cta__btns">
+                  {/*311-3790 / 3791 / 3792: Book Delivery button — white, #2F80ED text, shadow*/}
+                  <a href="#book" className="r-cta__btn r-cta__btn--primary">
+                    Book Delivery
+                  </a>
+                  <a href="#" className="r-cta__btn r-cta__btn--ghost">
+                    Download App
+                  </a>
+                </div>
+              </div>
+            </section>
+      
+          </main>
+      
+          {/*══════════════════════════════════════════════════════════════
+               FOOTER — Figma 311-3795 (wrap) + 4-col + bottom legal row
+               ══════════════════════════════════════════════════════════════*/}
+          <footer className="r-footer" id="contact">
+      
+            {/*311-3795: flex col, max-width 1280px, padding 80px 32px 48px, gap 64px*/}
+            <div className="r-footer__wrap">
+      
+              <div className="r-footer__grid">
+      
+                <div className="r-footer__brand">
+                  <a href="/" className="r-footer__logo">CarryOn</a>
+                  <p className="r-footer__brand-copy">
+                    Precision logistics for every mile. Sending anything, anywhere made simple and reliable.
+                  </p>
+                  <div className="r-footer__social" aria-label="Social media">
+                    <a href="#" className="r-footer__social-link" aria-label="X (Twitter)">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" className="r-footer__social-link" aria-label="LinkedIn">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="#" className="r-footer__social-link" aria-label="Facebook">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                  </div>
+                </div>
+      
+                <div className="r-footer__col">
+                  <h4 className="r-footer__col-head">Services</h4>
+                  <ul className="r-footer__col-list">
+                    <li><a href="#">On-Demand Delivery</a></li>
+                    <li><a href="#">Scheduled Routes</a></li>
+                    <li><a href="#">Enterprise API</a></li>
+                    <li><a href="#">Warehousing</a></li>
+                    <li><a href="#">Custom Fleet</a></li>
+                  </ul>
+                </div>
+      
+                <div className="r-footer__col">
+                  <h4 className="r-footer__col-head">Company</h4>
+                  <ul className="r-footer__col-list">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                    <li><a href="#">Safety Report</a></li>
+                  </ul>
+                </div>
+      
+                <div className="r-footer__col">
+                  <h4 className="r-footer__col-head">Support</h4>
+                  <ul className="r-footer__col-list">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Partner with Us</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">Fleet Login</a></li>
+                  </ul>
+                </div>
+      
+              </div>
+      
+              <div className="r-footer__bottom">
+                <p className="r-footer__copy">© 2024 CarryOn Logistics. All rights reserved.</p>
+                <nav className="r-footer__legal" aria-label="Legal">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+                  <a href="#">Cookie Policy</a>
+                </nav>
+              </div>
+      
+            </div>
+          </footer>
+    </>
+  );
+}

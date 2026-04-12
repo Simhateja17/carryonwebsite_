@@ -1,0 +1,2132 @@
+/* ================================================================
+   riders.css — CarryOn Riders Page
+   All tokens follow Figma nodes 311-3165 … 311-3840
+   ================================================================ */
+
+/* ── Shared Tokens ─────────────────────────────────────────── */
+:root {
+  --r-blue:     #2F80ED;
+  --r-dark:     #1A3D6B;
+  --r-sky:      #A6D2F3;
+  --r-bg:       #F7F9FE;
+  --r-bg-tint:  rgba(166, 210, 243, 0.20);
+  --r-text:     #000;
+  --r-muted:    #434654;
+}
+
+/* ── Kicker utility ────────────────────────────────────────── */
+.r-kicker {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.r-kicker--center {
+  text-align: center;
+  align-self: stretch;
+  display: block;
+}
+
+/* ── Section title utility ─────────────────────────────────── */
+.r-section-title {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   HERO — 311-3165 / 311-3167 / 311-3168 / 311-3170
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-3165: page background */
+.r-hero {
+  position: relative;
+  background: #F7F9FE;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* 311-3191: decorative blur blob */
+.r-hero__blob {
+  width: 817.59px;
+  height: 945.77px;
+  position: absolute;
+  right: -145.996px;
+  top: -168.871px;
+  border-radius: 12px;
+  background: rgba(218, 226, 255, 0.20);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 311-3167: 2-col grid — max-width 1280px, padding 64px 32px, gap 48px, rows 675.55px */
+.r-hero__grid {
+  position: relative;
+  z-index: 1;
+  display: inline-grid;
+  max-width: 1280px;
+  width: 100%;
+  padding: 64px 32px;
+  row-gap: 48px;
+  column-gap: 48px;
+  align-self: stretch;
+  grid-template-rows: 675.55px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* 311-3168: left copy col — flex col, gap 31px, col 1 */
+.r-hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 31px;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  justify-self: stretch;
+  justify-content: center;
+}
+
+/* 311-3170: heading — Manrope 800, 60px, black + blue */
+.r-hero__title {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 60px;
+  letter-spacing: -1.5px;
+}
+
+.r-hero__title--blue {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* 311-3171 / 3172: description wrapper + text */
+.r-hero__desc-wrap {
+  display: flex;
+  width: 512px;
+  max-width: 512px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.r-hero__desc {
+  margin: 0;
+  color: #434654;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32.5px;
+}
+
+/* 311-3173: button group — flex, gap 16px, padding-top 1px */
+.r-hero__btns {
+  display: flex;
+  padding-top: 1px;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+/* Buttons */
+.r-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  height: 52px;
+  border-radius: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+/* 311-3175: primary button — #2F80ED bg, blue shadow */
+.r-btn--primary {
+  background: #2F80ED;
+  color: #fff;
+  box-shadow: 0 20px 25px -5px rgba(0, 61, 155, 0.25),
+              0 8px 10px -6px rgba(0, 61, 155, 0.25);
+}
+
+.r-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 28px 32px -5px rgba(0, 61, 155, 0.3);
+}
+
+.r-btn--ghost {
+  background: transparent;
+  color: #2F80ED;
+  border: 1.5px solid #2F80ED;
+}
+
+.r-btn--ghost:hover {
+  background: rgba(47, 128, 237, 0.06);
+}
+
+/* ── Hero phone mockup ── */
+.r-hero__visual {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.r-phone {
+  position: relative;
+  width: 300px;
+}
+
+.r-phone__frame {
+  position: relative;
+  width: 300px;
+  height: 580px;
+  background: #1a1a2e;
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.45),
+              0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.r-phone__screen {
+  width: 100%;
+  height: 100%;
+  background: #f0f4f8;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.r-phone__map {
+  position: absolute;
+  inset: 0;
+  background: #e8f0f8;
+  overflow: hidden;
+}
+
+.r-phone__map-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(166,210,243,0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(166,210,243,0.3) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.r-phone__route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.r-phone__pin {
+  position: absolute;
+}
+
+.r-phone__pin--dest {
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.r-phone__status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 12px 12px;
+}
+
+.r-phone__status-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.r-phone__status-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(47,128,237,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.r-phone__status-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.r-phone__status-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+}
+
+.r-phone__status-eta {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #434654;
+}
+
+.r-phone__status-pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.3); }
+}
+
+.r-phone__notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 26px;
+  background: #1a1a2e;
+  border-radius: 0 0 14px 14px;
+  z-index: 10;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   VERSATILE SOLUTIONS — 311-3218 to 311-3232
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-3218: section — flex col, padding 96px 0, bg tint */
+.r-solutions {
+  display: flex;
+  padding: 96px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  background: rgba(166, 210, 243, 0.20);
+}
+
+/* 311-3220: wrap — flex col, center, gap 16.5px */
+.r-solutions__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16.5px;
+  align-self: stretch;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* 311-3220 header group */
+.r-solutions__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  margin-bottom: 32px;
+}
+
+.r-solutions__title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+/* 311-3224: 3-col cards grid — repeat(3,1fr), gap 32px, rows 290px */
+.r-solutions__grid {
+  display: inline-grid;
+  row-gap: 32px;
+  column-gap: 32px;
+  align-self: stretch;
+  grid-template-rows: 290px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 311-3225: card — padding 40px, radius 16px, white, shadow */
+.r-solutions__card {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 0 12px 32px 0 rgba(41, 79, 131, 0.06);
+}
+
+.r-solutions__card-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(47, 128, 237, 0.08);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* 311-3229: content wrapper */
+.r-solutions__card-body {
+  display: flex;
+  padding-top: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 8px;
+}
+
+/* 311-3230: card title — Manrope 700, 20px, #000, 28px */
+.r-solutions__card-title {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.r-solutions__card-desc {
+  margin: 0;
+  color: #434654;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   FOUR STEPS — 311-3249 to 311-3264
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-3249: section container */
+.r-steps {
+  display: flex;
+  justify-content: center;
+  background: #F7F9FE;
+}
+
+/* 311-3249: inner wrap — flex col, max-width 1280px, padding 96px 32px, gap 64px */
+.r-steps__wrap {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  padding: 96px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  align-self: stretch;
+}
+
+/* 311-3250: header row — flex, space-between, align flex-end */
+.r-steps__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+/* 311-3253: title — Manrope 800, 36px, #000, -0.9px */
+.r-steps__title {
+  margin: 0;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+}
+
+/* 311-3254 / 3255: right desc — max-width 384px, right-aligned */
+.r-steps__header-desc {
+  display: flex;
+  max-width: 384px;
+  padding-left: 19.3px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.r-steps__header-desc p {
+  margin: 0;
+  color: #000;
+  text-align: right;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Steps 4-col grid */
+.r-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  align-self: stretch;
+}
+
+/* 311-3258: step item — flex col, gap 24px */
+.r-steps__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* 311-3260: step icon — 80×80, radius 12, blue shadow */
+.r-steps__icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: #2F80ED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 61, 155, 0.20),
+              0 8px 10px -6px rgba(0, 61, 155, 0.20);
+}
+
+/* 311-3261: step number — Manrope 900, 24px, #FFF */
+.r-steps__num {
+  color: #FFF;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+/* 311-3264: step title — Manrope 700, 18px, #000, 28px */
+.r-steps__item-title {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.r-steps__item-desc {
+  margin: 0;
+  color: #434654;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   OUR PRECISION FLEET — 311-3291 to 311-3305
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-3291: section — flex col, padding 96px 0, bg #2F80ED */
+.r-fleet {
+  display: flex;
+  padding: 96px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  background: #2F80ED;
+  justify-content: center;
+}
+
+/* Inner wrap */
+.r-fleet__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  align-self: stretch;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* 311-3294: header group */
+.r-fleet__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+/* 311-3295 / 3296: title — Manrope 800, 36px, #FFF, -0.9px, center */
+.r-fleet__title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+.r-fleet__title {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+  align-self: stretch;
+}
+
+/* 311-3297 / 3298: subtitle — opacity 0.8, #C4D2FF, 16px, 24px */
+.r-fleet__subtitle-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  opacity: 0.8;
+}
+
+.r-fleet__subtitle {
+  margin: 0;
+  color: #C4D2FF;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Fleet grid: 4-col */
+.r-fleet__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-self: stretch;
+}
+
+/* 311-3300: fleet card — padding 32px, radius 16px, glass, blur */
+.r-fleet__card {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.r-fleet__card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-4px);
+}
+
+.r-fleet__card-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.12);
+  border-radius: 16px;
+}
+
+/* 311-3303 / 3304: info + name — Manrope 700, 24px, #FFF, 32px */
+.r-fleet__card-info {
+  display: flex;
+  padding-top: 16px;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+}
+
+.r-fleet__card-name {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+/* 311-3305: spec text */
+.r-fleet__card-spec {
+  margin: 0;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   TRANSPARENT PRICING — 311-3328 to 311-3342
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-3328: section + inner grid — max-width 1280px, padding 96px 32px, gap 64px */
+.r-pricing {
+  display: flex;
+  justify-content: center;
+  background: #F7F9FE;
+}
+
+/* 311-3328 — exact Figma grid */
+.r-pricing__grid {
+  display: inline-grid;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 96px 32px;
+  row-gap: 64px;
+  column-gap: 64px;
+  align-self: stretch;
+  grid-template-rows: minmax(513px, auto);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  box-sizing: border-box;
+}
+
+/* 311-3329: left col — flex col, gap 16.5px */
+.r-pricing__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16.5px;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  justify-self: stretch;
+  justify-content: center;
+}
+
+/* 311-3332: title — Manrope 800, 36px, #000, 45px, -0.9px */
+.r-pricing__title {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: -0.9px;
+}
+
+/* 311-3334: body — Manrope 400, 18px, #000, 29.25px */
+.r-pricing__desc {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29.25px;
+}
+
+/* 311-3335: features list */
+.r-pricing__features {
+  display: flex;
+  padding-top: 15.5px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* 311-3336 / 3338: feature item */
+.r-pricing__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.r-pricing__check {
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.r-pricing__check-icon {
+  display: block;
+}
+
+/* 311-3338: feature text — Manrope 500, 16px, #000, 24px */
+.r-pricing__feature span:last-child {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* Right col: calculator card */
+.r-pricing__calc {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  justify-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Price Estimator card — matches screenshot (light panel, slider, segmented vehicles) */
+.r-pricing__calc-card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  padding: 40px 40px 36px;
+  border-radius: 24px;
+  background: rgba(166, 210, 243, 0.35);
+  border: 1px solid rgba(166, 210, 243, 0.65);
+  box-shadow: 0 12px 40px rgba(41, 79, 131, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.r-pricing__calc-title {
+  margin: 0;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 30px;
+  letter-spacing: -0.3px;
+}
+
+/* DELIVERY DISTANCE (KM) */
+.r-pricing__slider-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.r-pricing__block-label {
+  display: block;
+  color: #6b7280;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.r-pricing__range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(166, 210, 243, 0.85);
+  outline: none;
+  cursor: pointer;
+}
+
+.r-pricing__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2F80ED;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(47, 128, 237, 0.45);
+  cursor: pointer;
+}
+
+.r-pricing__range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2F80ED;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(47, 128, 237, 0.45);
+  cursor: pointer;
+}
+
+.r-pricing__range::-moz-range-track {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(166, 210, 243, 0.85);
+}
+
+.r-pricing__slider-scale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.r-pricing__slider-scale span {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* VEHICLE SELECTION — white pills, selected = blue border + blue text */
+.r-pricing__vehicle-select {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.r-pricing__vehicles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.r-pricing__vtype {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #d1dae8;
+  background: #fff;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.r-pricing__vtype:hover {
+  border-color: #2F80ED;
+  color: #2F80ED;
+}
+
+.r-pricing__vtype--active {
+  border-color: #2F80ED;
+  background: #fff;
+  color: #2F80ED;
+  box-shadow: 0 0 0 1px rgba(47, 128, 237, 0.15);
+}
+
+.r-pricing__divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  align-self: stretch;
+}
+
+.r-pricing__estimate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 2px;
+}
+
+.r-pricing__est-label {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.r-pricing__est-price {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.r-pricing__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 54px;
+  border-radius: 12px;
+  background: #2F80ED;
+  color: #fff;
+  border: none;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.r-pricing__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(47, 128, 237, 0.38);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   POWERFUL APP — 311-3378 to 311-3394
+   ══════════════════════════════════════════════════════════════ */
+
+/* 311-3378: section — flex col, padding 96px 0, bg tint */
+.r-app {
+  display: flex;
+  padding: 96px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  background: rgba(166, 210, 243, 0.20);
+  justify-content: center;
+}
+
+/* 311-3379: 2-col grid — max-width 1280px, padding 0 32px, gap 80px, rows 568px */
+.r-app__grid {
+  display: inline-grid;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  row-gap: 80px;
+  column-gap: 80px;
+  align-self: stretch;
+  grid-template-rows: 568px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Left phone col */
+.r-app__phone-col {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.r-app__phone {
+  position: relative;
+  width: 260px;
+}
+
+.r-app__phone-frame {
+  width: 260px;
+  height: 520px;
+  background: #1a1a2e;
+  border-radius: 36px;
+  padding: 10px;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.35);
+}
+
+.r-app__phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #f0f6ff;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+}
+
+.r-app__ui {
+  padding: 20px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.r-app__ui-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.r-app__ui-greeting {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+}
+
+.r-app__ui-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2F80ED, #A6D2F3);
+}
+
+.r-app__ui-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 4px 16px rgba(47,128,237,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.r-app__ui-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.r-app__ui-badge {
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.r-app__ui-eta {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.r-app__ui-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.r-app__ui-bar {
+  height: 4px;
+  background: rgba(166,210,243,0.4);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.r-app__ui-fill {
+  height: 100%;
+  width: 65%;
+  background: #2F80ED;
+  border-radius: 4px;
+}
+
+.r-app__ui-addr {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  color: #434654;
+}
+
+.r-app__ui-map {
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.r-app__ui-map svg {
+  width: 100%;
+  height: 100%;
+}
+
+.r-app__ui-notif {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.r-app__ui-notif span {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  color: #434654;
+}
+
+.r-app__phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 22px;
+  background: #1a1a2e;
+  border-radius: 0 0 12px 12px;
+  z-index: 10;
+}
+
+/* 311-3380: right col — flex col, gap 40px */
+.r-app__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  justify-self: stretch;
+  justify-content: center;
+}
+
+/* 311-3381: heading group — flex col, gap 16.5px */
+.r-app__heading-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16.5px;
+  align-self: stretch;
+}
+
+/* 311-3384: title — Manrope 800, 36px, #000, 45px, -0.9px */
+.r-app__title {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: -0.9px;
+}
+
+/* 311-3391: features list */
+.r-app__features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 28px;
+}
+
+.r-app__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.r-app__feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(47, 128, 237, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.r-app__feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 311-3392: feature title — Manrope 700, 20px, #000, 28px */
+.r-app__feature-title {
+  margin: 0;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+/* 311-3394: feature desc — Manrope 400, 16px, #000, 26px */
+.r-app__feature-desc {
+  margin: 0;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   YOUR TRUST IS OUR PRIORITY — 311-3416 to 311-3427
+   ══════════════════════════════════════════════════════════════ */
+
+.r-trust {
+  display: flex;
+  justify-content: center;
+  background: #F7F9FE;
+}
+
+/* 311-3416: inner wrap — flex col, max-width 1280px, padding 96px 32px, gap 64px */
+.r-trust__wrap {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  padding: 96px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  align-self: stretch;
+}
+
+/* 311-3417: header group — flex col, center, gap 16.5px */
+.r-trust__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16.5px;
+  align-self: stretch;
+}
+
+.r-trust__title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+/* 311-3421: 3-col grid — repeat(3,1fr), rows 235.50px, gap 32px */
+.r-trust__grid {
+  display: inline-grid;
+  row-gap: 32px;
+  column-gap: 32px;
+  align-self: stretch;
+  grid-template-rows: 235.5px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 311-3422: card — padding 40px, radius 24px, border #A6D2F3 */
+.r-trust__card {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14.9px;
+  border-radius: 24px;
+  border: 1px solid #A6D2F3;
+}
+
+.r-trust__card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(47, 128, 237, 0.08);
+  border-radius: 12px;
+}
+
+/* 311-3424 / 3425: content + title — Manrope 700, 20px, #000, 28px */
+.r-trust__card-body {
+  display: flex;
+  padding-top: 9.1px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 8px;
+}
+
+.r-trust__card-title {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+/* 311-3427 */
+.r-trust__card-desc {
+  margin: 0;
+  color: #434654;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   TESTIMONIALS (HIGHLIGHTED) — 311-3440 to 311-3454
+   ══════════════════════════════════════════════════════════════ */
+
+/* Full-bleed light blue band + inner max 1280 (screenshot) */
+.r-testimonials-hl {
+  display: flex;
+  width: 100%;
+  padding: 96px 32px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: rgba(166, 210, 243, 0.20);
+}
+
+/* 311-3441: 2-col grid — repeat(2,1fr), gap 48px */
+.r-testimonials-hl__grid {
+  display: grid;
+  max-width: 1280px;
+  width: 100%;
+  row-gap: 48px;
+  column-gap: 48px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* 311-3442: card — large radius, white, soft shadow */
+.r-testimonials-hl__card {
+  display: flex;
+  padding: 40px 44px 44px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  border-radius: 32px;
+  background: #FFF;
+  box-shadow: 0 4px 24px rgba(41, 79, 131, 0.08);
+}
+
+/* Large decorative opening quote — light blue */
+.r-testimonials-hl__quote-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 0;
+}
+
+.r-testimonials-hl__mark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 0.65;
+  color: rgba(166, 210, 243, 0.95);
+  margin: 0 0 -0.15em;
+  user-select: none;
+}
+
+/* 311-3445: quote — Manrope 500, 20px, #000, 32.5px */
+.r-testimonials-hl__quote {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32.5px;
+  font-style: normal;
+}
+
+/* 311-3446: author row */
+.r-testimonials-hl__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.r-testimonials-hl__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2F80ED, #A6D2F3);
+  flex-shrink: 0;
+}
+
+.r-testimonials-hl__avatar--2 {
+  background: linear-gradient(135deg, #6366f1, #a5b4fc);
+}
+
+/* 311-3450: author info col */
+.r-testimonials-hl__author-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 2px;
+}
+
+/* 311-3451: name — Manrope 700, 16px, #000, 24px */
+.r-testimonials-hl__name {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* 311-3453: role — Manrope 700, 12px, #434654, 1.2px, uppercase */
+.r-testimonials-hl__role {
+  color: #434654;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   WHAT OUR RIDERS SAY — 311-3733 to 311-3753
+   ══════════════════════════════════════════════════════════════ */
+
+.r-reviews {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+/* 311-3733: wrap — flex col, max-width 1280px, padding 0 32px, gap 64px */
+.r-reviews__wrap {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  padding: 96px 32px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 48px;
+  align-self: stretch;
+}
+
+/* 311-3734: header group */
+.r-reviews__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16.5px;
+  align-self: stretch;
+}
+
+.r-reviews__title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+.r-reviews__grid {
+  display: grid;
+  width: 100%;
+  row-gap: 48px;
+  column-gap: 48px;
+  align-self: stretch;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.r-reviews__card {
+  display: flex;
+  padding: 48px 40px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 32px;
+  border: 1px solid rgba(166, 210, 243, 0.35);
+  background: #FFF;
+  box-shadow: 0 4px 24px rgba(41, 79, 131, 0.06);
+}
+
+.r-reviews__stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.r-reviews__quote {
+  margin: 0;
+  max-width: 36rem;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32.5px;
+  font-style: normal;
+  text-align: center;
+}
+
+.r-reviews__author {
+  display: flex;
+  padding-top: 12px;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  margin-top: auto;
+}
+
+.r-reviews__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2F80ED, #A6D2F3);
+  flex-shrink: 0;
+}
+
+.r-reviews__avatar--2 {
+  background: linear-gradient(135deg, #6366f1, #a5b4fc);
+}
+
+.r-reviews__author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.r-reviews__name {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.r-reviews__role {
+  color: #434654;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   FAQ — 311-3466 to 311-3481
+   ══════════════════════════════════════════════════════════════ */
+
+.r-faq {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+/* Narrow FAQ column — screenshot ~672px */
+.r-faq__container {
+  display: flex;
+  width: 100%;
+  max-width: 672px;
+  padding: 80px 24px 96px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+/* 311-3467 / 3468: header + title — Manrope 800, 30px, #000, 36px, -0.75px */
+.r-faq__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+.r-faq__title {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+}
+
+.r-faq__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+/* FAQ panels — solid sky fill, no outline (screenshot) */
+.r-faq__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 16px;
+  border: none;
+  background: #A6D2F3;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(41, 79, 131, 0.06);
+}
+
+/* 311-3471: question row — padding 24px, space-between */
+.r-faq__question {
+  display: flex;
+  padding: 24px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  gap: 12px;
+}
+
+.r-faq__question::-webkit-details-marker {
+  display: none;
+}
+
+/* 311-3473: question text — Manrope 700, 18px, #000, 28px */
+.r-faq__q-text {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.r-faq__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: #000;
+  transition: transform 0.25s ease;
+}
+
+.r-faq__item[open] .r-faq__icon {
+  transform: rotate(180deg);
+}
+
+/* 311-3477: answer — Manrope 400, 16px, #434654, 24px */
+.r-faq__answer {
+  padding: 0 24px 24px;
+  align-self: stretch;
+}
+
+.r-faq__answer p {
+  margin: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.85;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   READY TO SEND CTA — 311-3782 to 311-3792
+   ══════════════════════════════════════════════════════════════ */
+
+.r-cta {
+  position: relative;
+  background: #2F80ED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 80px 32px;
+}
+
+/* 311-3782: gradient glow overlay */
+.r-cta__glow {
+  position: absolute;
+  width: 1024px;
+  height: 382px;
+  opacity: 0.5;
+  background: radial-gradient(134.35% 134.35% at 50% 50%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 311-3783: content col — flex col, center, gap 32px */
+.r-cta__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+  max-width: 800px;
+  text-align: center;
+}
+
+.r-cta__title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+/* 311-3785: title — Manrope 800, 48px, #FFF, -1.2px */
+.r-cta__title {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: -1.2px;
+}
+
+/* 311-3787: subtitle — Manrope 400, 20px, #FFF, 28px */
+.r-cta__desc {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* 311-3788: button row — flex, center, gap 16px, padding-top 16px */
+.r-cta__btns {
+  display: flex;
+  padding-top: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+/* 311-3790 / 3791 / 3792: primary button — white, #2F80ED text, big shadow */
+.r-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.r-cta__btn--primary {
+  background: #fff;
+  color: #2F80ED;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 28px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.r-cta__btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 32px 60px -12px rgba(0, 0, 0, 0.35);
+}
+
+.r-cta__btn--ghost {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.35);
+}
+
+.r-cta__btn--ghost:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER — 311-3792+ / 311-3796 / 311-3797 / 311-3812 / 311-3826 / 311-3840
+   ══════════════════════════════════════════════════════════════ */
+
+.r-footer {
+  background: #A6D2F3;
+  border-top: 1px solid rgba(195, 198, 214, 0.10);
+  display: flex;
+  justify-content: center;
+}
+
+/* 311-3795 — Figma wrap */
+.r-footer__wrap {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  padding: 80px 32px 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.r-footer__grid {
+  display: grid;
+  width: 100%;
+  align-self: stretch;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 48px;
+  row-gap: 40px;
+}
+
+.r-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.r-footer__logo {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.r-footer__logo:hover {
+  opacity: 0.85;
+}
+
+.r-footer__brand-copy {
+  margin: 0;
+  max-width: 280px;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  opacity: 0.9;
+}
+
+.r-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 4px;
+}
+
+.r-footer__social-link {
+  color: #1A3D6B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.r-footer__social-link:hover {
+  color: #2F80ED;
+  transform: translateY(-2px);
+}
+
+.r-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.r-footer__col-head {
+  margin: 0;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.r-footer__col-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.r-footer__col-list a {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.r-footer__col-list a:hover {
+  color: #2F80ED;
+}
+
+/* Bottom bar — copyright left, legal links right */
+.r-footer__bottom {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding-top: 32px;
+  align-self: stretch;
+  border-top: 1px solid rgba(195, 198, 214, 0.25);
+}
+
+.r-footer__copy {
+  margin: 0;
+  color: #000;
+  text-align: left;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.r-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+}
+
+.r-footer__legal a {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.r-footer__legal a:hover {
+  color: #2F80ED;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .r-hero__grid,
+  .r-pricing__grid,
+  .r-app__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 64px 24px;
+  }
+
+  .r-hero__copy { grid-column: 1; grid-row: 1; }
+  .r-hero__visual { grid-column: 1; grid-row: 2; }
+
+  .r-pricing__copy { grid-column: 1; grid-row: 1; }
+  .r-pricing__calc { grid-column: 1; grid-row: 2; }
+
+  .r-pricing__calc-card {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .r-app__phone-col { grid-column: 1; grid-row: 2; }
+  .r-app__copy { grid-column: 1; grid-row: 1; }
+
+  .r-steps__grid,
+  .r-fleet__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .r-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .r-hero__title,
+  .r-hero__title--blue {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  .r-hero__desc-wrap { width: 100%; max-width: 100%; }
+
+  .r-solutions__grid,
+  .r-testimonials-hl__grid,
+  .r-reviews__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .r-trust__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .r-steps__header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .r-steps__header-desc { max-width: 100%; text-align: left; }
+  .r-steps__header-desc p { text-align: left; }
+
+  .r-steps__grid { grid-template-columns: 1fr 1fr; }
+
+  .r-fleet__grid { grid-template-columns: repeat(2, 1fr); }
+
+  .r-cta__title { font-size: 36px; line-height: 40px; }
+
+  .r-faq__container { width: 100%; max-width: 100%; padding: 64px 24px 96px; }
+
+  .r-footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .r-hero__title,
+  .r-hero__title--blue { font-size: 32px; line-height: 36px; }
+
+  .r-steps__grid,
+  .r-fleet__grid,
+  .r-footer__grid { grid-template-columns: 1fr; }
+
+  .r-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .r-cta__btns { flex-direction: column; align-items: center; }
+}
