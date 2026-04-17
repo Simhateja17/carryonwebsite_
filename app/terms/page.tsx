@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/styles/legal.css";
+import "@/styles/terms.css";
 import { TermsPageContent } from "@/components/pages/TermsPageContent";
 
 export const metadata: Metadata = {

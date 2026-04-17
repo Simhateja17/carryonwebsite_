@@ -1,0 +1,385 @@
+/* ================================================================
+   terms.css — CarryOn Terms of Service page
+   ================================================================ */
+
+/* ── Page shell ── */
+.ts-page {
+  background: #fff;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+}
+
+/* ── HEADER ── */
+.ts-header {
+  padding: 64px 48px 49px;
+  border-bottom: 1px solid rgba(195, 198, 214, 0.10);
+}
+
+.ts-header__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.ts-header__left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ts-kicker {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2f80ed;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  line-height: 18px;
+}
+
+.ts-title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: -1.2px;
+  line-height: 48px;
+}
+
+.ts-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  line-height: 24px;
+}
+
+.ts-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 25px;
+  border-radius: 2px;
+  border: 1px solid rgba(195, 198, 214, 0.20);
+  background: rgba(166, 210, 243, 0.20);
+  box-shadow: 0 12px 32px -4px rgba(41, 79, 131, 0.06);
+  color: #2f80ed;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.ts-download:hover {
+  background: rgba(166, 210, 243, 0.38);
+}
+
+/* ── BODY WRAPPER ── */
+.ts-body {
+  padding: 48px;
+}
+
+.ts-content {
+  max-width: 1149px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding-bottom: 96px;
+}
+
+/* ── Shared heading ── */
+.ts-h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  line-height: 36px;
+}
+
+.ts-h2--white {
+  color: #fff;
+}
+
+/* ── CARD — sky (sections 1 & 4) ── */
+.ts-card--sky {
+  background: rgba(166, 210, 243, 0.20);
+  border-radius: 2px;
+  padding: 40px;
+  box-shadow: 0 12px 32px -4px rgba(41, 79, 131, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.ts-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ts-card__accent {
+  width: 4px;
+  height: 32px;
+  background: #2f80ed;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.ts-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ts-card__body p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 26px;
+}
+
+.ts-card__body--lg p {
+  font-size: 18px;
+  line-height: 29.25px;
+}
+
+/* ── SECTION — plain (sections 2 & 5) ── */
+.ts-section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── Section 2 — 2-col obligation cards ── */
+.ts-oblig-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.ts-oblig-card {
+  background: rgba(166, 210, 243, 0.20);
+  border-left: 4px solid #2f80ed;
+  border-radius: 8px;
+  padding: 32px 32px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ts-oblig-kicker {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2f80ed;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  line-height: 18px;
+}
+
+.ts-oblig-card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 24px;
+}
+
+.ts-warrant {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 26px;
+}
+
+/* ── CARD — blue (section 3) ── */
+.ts-card--blue {
+  background: #2f80ed;
+  border-radius: 8px;
+  padding: 48px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ts-card--blue::before {
+  content: "";
+  position: absolute;
+  top: -96px;
+  right: -96px;
+  width: 256px;
+  height: 256px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  filter: blur(32px);
+  pointer-events: none;
+}
+
+.ts-limits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.ts-limit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ts-limit__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #dae2ff;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+.ts-limit p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.90;
+  line-height: 20px;
+}
+
+/* ── Blockquote (section 4) ── */
+.ts-blockquote {
+  margin: 0;
+  padding-left: 28px;
+  border-left: 4px solid #2f80ed;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 26px;
+  font-style: normal;
+}
+
+/* ── Section 5 body text ── */
+.ts-body-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 26px;
+}
+
+/* ── Section 5 checklist ── */
+.ts-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ts-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 24px;
+}
+
+.ts-checklist li img {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── FOOTER ── */
+.ts-footer {
+  background: #f1f4f9;
+  border-top: 1px solid #dbeafe;
+  padding: 32px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.ts-footer__brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ts-footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.ts-footer__link {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.ts-footer__link--active {
+  color: #1e40af;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.ts-footer__copy {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .ts-header {
+    padding: 48px 24px 40px;
+  }
+  .ts-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ts-body {
+    padding: 32px 24px;
+  }
+  .ts-oblig-grid,
+  .ts-limits-grid {
+    grid-template-columns: 1fr;
+  }
+  .ts-title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .ts-footer {
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
