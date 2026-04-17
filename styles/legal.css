@@ -1,0 +1,852 @@
+/* ================================================================
+   legal.css — CarryOn Terms of Service + Privacy Policy pages
+   ================================================================ */
+
+:root {
+  --l-blue:     #2F80ED;
+  --l-sky:      #A6D2F3;
+  --l-bg:       #F7F9FE;
+  --l-bg-tint:  rgba(166, 210, 243, 0.20);
+  --l-dark:     #000;
+  --l-muted:    #434654;
+}
+
+/* ── Shared page shell ── */
+.l-page {
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* ── Kicker ── */
+.l-kicker {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TERMS — HERO
+   ══════════════════════════════════════════════════════════════ */
+
+.tos-hero {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 64px 32px 49px;
+  border-bottom: 1px solid rgba(195, 198, 214, 0.10);
+}
+
+.tos-hero__inner {
+  max-width: 880px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tos-hero__date-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.tos-hero__title {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  letter-spacing: -1.2px;
+  color: #000;
+}
+
+.tos-hero__date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #434654;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.tos-hero__date svg {
+  flex-shrink: 0;
+}
+
+.tos-hero__download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 2px;
+  border: 1px solid rgba(195, 198, 214, 0.20);
+  background: rgba(166, 210, 243, 0.20);
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.tos-hero__download:hover {
+  background: rgba(166, 210, 243, 0.40);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TERMS — SECTIONS WRAPPER
+   ══════════════════════════════════════════════════════════════ */
+
+.tos-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px 96px;
+  gap: 56px;
+  background: #fff;
+}
+
+.tos-section {
+  width: 100%;
+  max-width: 880px;
+}
+
+/* Section heading */
+.tos-section__title {
+  margin: 0 0 16px;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.3px;
+  color: #000;
+}
+
+.tos-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tos-section__body p {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000;
+}
+
+/* ── Section 1 card — sky bg + blue left border ── */
+.tos-card--sky {
+  background: rgba(166, 210, 243, 0.20);
+  border-radius: 8px;
+  padding: 32px 40px;
+  border-left: 4px solid #2F80ED;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tos-card--sky .tos-section__title {
+  color: #000;
+}
+
+/* ── Section 2 — 2-col obligation cards ── */
+.tos-obligation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.tos-obligation-card {
+  background: rgba(166, 210, 243, 0.20);
+  border-radius: 16px;
+  padding: 32px;
+  border-left: 4px solid #2F80ED;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tos-obligation-card__kicker {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tos-obligation-card p {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000;
+}
+
+/* Legal warrant paragraph */
+.tos-warrant {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  max-width: 880px;
+  width: 100%;
+  padding: 0 32px;
+  align-self: center;
+}
+
+/* ── Section 3 — blue filled limitations card ── */
+.tos-card--blue {
+  background: #2F80ED;
+  border-radius: 16px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tos-card--blue::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.tos-card--blue .tos-section__title {
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.tos-limitations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.tos-limitation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tos-limitation__kicker {
+  color: rgba(255, 255, 255, 0.70);
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tos-limitation p {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #fff;
+}
+
+/* ── Section 4 — liability card with blockquote ── */
+.tos-card--sky-plain {
+  background: rgba(166, 210, 243, 0.20);
+  border-radius: 16px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tos-blockquote {
+  margin: 0;
+  padding: 16px 20px;
+  border-left: 3px solid #2F80ED;
+  background: rgba(166, 210, 243, 0.18);
+  border-radius: 0 8px 8px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 22px;
+  color: #000;
+}
+
+/* ── Section 5 — termination with checkmarks ── */
+.tos-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.tos-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+}
+
+.tos-checklist li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Legal footer ── */
+.l-footer {
+  background: #f1f4f9;
+  border-top: 1px solid #dbeafe;
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.l-footer__brand {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.l-footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.l-footer__nav a {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.l-footer__nav a.is-active {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+.l-footer__nav a:hover {
+  color: #1e40af;
+}
+
+.l-footer__copy {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   PRIVACY POLICY — HERO (full-width blue card)
+   ══════════════════════════════════════════════════════════════ */
+
+.pp-hero {
+  background: #2F80ED;
+  margin: 32px 32px 0;
+  border-radius: 24px;
+  padding: 56px 64px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+  min-height: 220px;
+}
+
+.pp-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pp-hero__kicker {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.pp-hero__title {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 58px;
+  letter-spacing: -1.3px;
+  color: #fff;
+}
+
+.pp-hero__desc {
+  margin: 0;
+  max-width: 520px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pp-hero__badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pp-hero__badge {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+
+.pp-hero__badge-value {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.pp-hero__badge-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PRIVACY — BODY
+   ══════════════════════════════════════════════════════════════ */
+
+.pp-body {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 32px 96px;
+  gap: 64px;
+  background: #fff;
+}
+
+/* Section heading with icon */
+.pp-section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pp-section-head__icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pp-section-title {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: #2F80ED;
+}
+
+/* ── Data Collection — 2-col cards ── */
+.pp-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.pp-data-card {
+  background: rgba(166, 210, 243, 0.18);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pp-data-card h4 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
+}
+
+.pp-data-card p {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #434654;
+}
+
+/* ── How We Use Data — 2x2 grid ── */
+.pp-use-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.pp-use-card {
+  background: rgba(166, 210, 243, 0.15);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pp-use-card--blue {
+  background: #2F80ED;
+}
+
+.pp-use-card h4 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
+}
+
+.pp-use-card--blue h4 {
+  color: #fff;
+}
+
+.pp-use-card p {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #434654;
+}
+
+.pp-use-card--blue p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pp-use-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.pp-use-card__tag {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background: rgba(47, 128, 237, 0.12);
+  color: #2F80ED;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.pp-use-card__icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(47, 128, 237, 0.10);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+/* ── Your Data Choices — blue-border card ── */
+.pp-choices-card {
+  border: 1.5px solid #2F80ED;
+  border-radius: 20px;
+  padding: 48px;
+  position: relative;
+}
+
+.pp-choices-kicker {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.pp-choices-title {
+  margin: 0 0 32px;
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+  color: #000;
+}
+
+.pp-choices-deco {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  opacity: 0.25;
+}
+
+.pp-choices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.pp-choice-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.pp-choice-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(47, 128, 237, 0.30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #2F80ED;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pp-choice-body h5 {
+  margin: 0 0 6px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #000;
+}
+
+.pp-choice-body p {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #434654;
+}
+
+/* ── Security Architecture — dark image card ── */
+.pp-security-img {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0a1628;
+  min-height: 240px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.pp-security-col {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pp-security-col:last-child {
+  border-right: none;
+}
+
+.pp-security-col__kicker {
+  color: #2F80ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pp-security-col p {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── Your Rights — accordion rows ── */
+.pp-rights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(166, 210, 243, 0.50);
+}
+
+.pp-rights-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: rgba(166, 210, 243, 0.12);
+  border-bottom: 1px solid rgba(166, 210, 243, 0.35);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.pp-rights-row:last-child {
+  border-bottom: none;
+}
+
+.pp-rights-row:hover {
+  background: rgba(166, 210, 243, 0.22);
+}
+
+.pp-rights-row__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pp-rights-row__icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(47, 128, 237, 0.10);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pp-rights-row__label {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  line-height: 22px;
+}
+
+.pp-rights-row__chevron {
+  color: #2F80ED;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .tos-hero {
+    padding: 48px 24px 40px;
+  }
+  .tos-hero__date-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tos-hero__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .tos-card--sky,
+  .tos-card--sky-plain {
+    padding: 28px 24px;
+  }
+  .tos-card--blue {
+    padding: 32px 24px;
+  }
+  .tos-obligation-grid,
+  .tos-limitations-grid {
+    grid-template-columns: 1fr;
+  }
+  .pp-hero {
+    margin: 16px 16px 0;
+    padding: 40px 32px;
+    grid-template-columns: 1fr;
+  }
+  .pp-hero__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .pp-hero__badges {
+    flex-direction: row;
+  }
+  .pp-body {
+    padding: 48px 24px 80px;
+  }
+  .pp-two-col,
+  .pp-use-grid,
+  .pp-choices-grid {
+    grid-template-columns: 1fr;
+  }
+  .pp-choices-card {
+    padding: 32px 24px;
+  }
+  .pp-security-img {
+    grid-template-columns: 1fr;
+  }
+  .l-footer {
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

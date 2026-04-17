@@ -461,12 +461,20 @@
   align-self: stretch;
 }
 
-/* 311-3250: header row — flex, space-between, align flex-end */
+/* 311-3250: header row — flex, space-between, align flex-start */
 .r-steps__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   align-self: stretch;
+}
+
+/* Header left column with kicker and title */
+.r-steps__header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 /* 311-3253: title — Manrope 800, 36px, #000, -0.9px */
@@ -483,10 +491,11 @@
 /* 311-3254 / 3255: right desc — max-width 384px, right-aligned */
 .r-steps__header-desc {
   display: flex;
-  max-width: 384px;
-  padding-left: 19.3px;
+  max-width: 320px;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: flex-start;
+  padding-top: 24px;
 }
 
 .r-steps__header-desc p {
@@ -499,20 +508,35 @@
   line-height: 24px;
 }
 
-/* Steps 4-col grid */
+/* Steps 4-col grid with connector line - all 4 in one row */
 .r-steps__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 32px;
   align-self: stretch;
+  position: relative;
+  width: 100%;
 }
 
-/* 311-3258: step item — flex col, gap 24px */
+/* Connector line between step boxes - full width across all 4 steps */
+.r-steps__connector {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  right: 60px;
+  height: 2px;
+  background: #2F80ED;
+  z-index: 0;
+}
+
+/* 311-3258: step item — flex col, gap 16px */
 .r-steps__item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 /* 311-3260: step icon — 80×80, radius 12, blue shadow */
@@ -527,6 +551,17 @@
   justify-content: center;
   box-shadow: 0 20px 25px -5px rgba(0, 61, 155, 0.20),
               0 8px 10px -6px rgba(0, 61, 155, 0.20);
+}
+
+/* Outlined style for steps 2, 3, 4 */
+.r-steps__icon--outline {
+  background: #F7F9FE;
+  border: 2px solid #2F80ED;
+  box-shadow: none;
+}
+
+.r-steps__icon--outline .r-steps__num {
+  color: #2F80ED;
 }
 
 /* 311-3261: step number — Manrope 900, 24px, #FFF */
@@ -731,16 +766,17 @@
   box-sizing: border-box;
 }
 
-/* 311-3329: left col — flex col, gap 16.5px */
+/* 311-3329: left col — flex col, gap 16px */
 .r-pricing__copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16.5px;
+  gap: 16px;
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
   justify-self: stretch;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 20px;
 }
 
 /* 311-3332: title — Manrope 800, 36px, #000, 45px, -0.9px */
@@ -769,10 +805,10 @@
 /* 311-3335: features list */
 .r-pricing__features {
   display: flex;
-  padding-top: 15.5px;
+  padding-top: 16px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
   align-self: stretch;
   list-style: none;
   margin: 0;
@@ -799,13 +835,13 @@
   display: block;
 }
 
-/* 311-3338: feature text — Manrope 500, 16px, #000, 24px */
+/* 311-3338: feature text — Manrope 500, 15px, #000, 22px */
 .r-pricing__feature span:last-child {
   color: #000;
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 22px;
 }
 
 /* Right col: calculator card */
@@ -822,16 +858,16 @@
 .r-pricing__calc-card {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 480px;
   margin-left: auto;
-  padding: 40px 40px 36px;
+  padding: 32px 32px 28px;
   border-radius: 24px;
-  background: rgba(166, 210, 243, 0.35);
-  border: 1px solid rgba(166, 210, 243, 0.65);
-  box-shadow: 0 12px 40px rgba(41, 79, 131, 0.08);
+  background: rgba(166, 210, 243, 0.30);
+  border: 1px solid rgba(166, 210, 243, 0.50);
+  box-shadow: 0 8px 32px rgba(41, 79, 131, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 }
 
 .r-pricing__calc-title {
@@ -2068,7 +2104,16 @@
   .r-app__phone-col { grid-column: 1; grid-row: 2; }
   .r-app__copy { grid-column: 1; grid-row: 1; }
 
-  .r-steps__grid,
+  .r-steps__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .r-steps__connector {
+    left: 50px;
+    right: 50px;
+  }
+
   .r-fleet__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2077,6 +2122,204 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
   }
+}
+
+/* ── Hero trust badge + avatar cluster ── */
+.r-hero__trust {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.r-hero__avatars {
+  display: flex;
+}
+.r-hero__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  object-fit: cover;
+  margin-left: -10px;
+}
+.r-hero__avatars .r-hero__avatar:first-child { margin-left: 0; }
+.r-hero__trust-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #434654;
+  letter-spacing: 0.05em;
+}
+
+/* ── Hero button with icon ── */
+.r-btn--primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Phone mockup with real image ── */
+.r-phone__map-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.r-phone__pin {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.r-phone__status-card {
+  position: absolute;
+  bottom: 16px;
+  left: 12px;
+  right: 12px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  z-index: 3;
+}
+.r-phone__status-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.r-phone__status-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #2f80ed;
+  background: rgba(166,210,243,0.3);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+.r-phone__status-eta {
+  font-size: 10px;
+  color: #434654;
+  font-weight: 500;
+}
+.r-phone__status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.r-phone__status-info {
+  display: flex;
+  flex-direction: column;
+}
+.r-phone__status-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+}
+.r-phone__status-sub {
+  font-size: 9px;
+  color: #434654;
+}
+
+/* ── Solutions card icon (background square) ── */
+.r-solutions__card-icon {
+  width: 56px;
+  height: 56px;
+  background: #a6d2f3;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Fleet cards (3-col) + featured card + badges ── */
+.r-fleet__grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+.r-fleet__card--featured {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.2) !important;
+  border-color: rgba(255,255,255,0.2) !important;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.25) !important;
+}
+.r-fleet__card-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 4px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+/* ── App section: real screenshot ── */
+.r-app__screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+  display: block;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.2);
+}
+
+/* ── Trust cards: icon sizing ── */
+.r-trust__card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(166,210,243,0.35);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Reviews avatar: real photo ── */
+.r-reviews__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 2px solid #a6d2f3;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ── Footer social icons ── */
+.r-footer__social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(166,210,243,0.3);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+/* ── App feature icon ── */
+.r-app__feature-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: #a6d2f3;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+/* ── Pricing check icon ── */
+.r-pricing__feature { display: flex; align-items: center; gap: 12px; }
+.r-pricing__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.r-pricing__check-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
 @media (max-width: 768px) {
@@ -2101,10 +2344,11 @@
   }
 
   .r-steps__header { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .r-steps__header-desc { max-width: 100%; text-align: left; }
+  .r-steps__header-desc { max-width: 100%; text-align: left; padding-top: 0; align-items: flex-start; }
   .r-steps__header-desc p { text-align: left; }
 
-  .r-steps__grid { grid-template-columns: 1fr 1fr; }
+  .r-steps__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .r-steps__connector { display: none; } /* Hide connector line on smaller screens */
 
   .r-fleet__grid { grid-template-columns: repeat(2, 1fr); }
 
@@ -2119,7 +2363,7 @@
   .r-hero__title,
   .r-hero__title--blue { font-size: 32px; line-height: 36px; }
 
-  .r-steps__grid,
+  .r-steps__grid { grid-template-columns: 1fr; gap: 32px; }
   .r-fleet__grid,
   .r-footer__grid { grid-template-columns: 1fr; }
 

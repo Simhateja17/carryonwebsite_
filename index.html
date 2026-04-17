@@ -3,32 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CarryOn — The Precision Navigator</title>
+    <title>CarryOn — Smart Logistics for Malaysia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+
+    <!-- HEADER -->
     <header class="site-header">
       <div class="header-frame">
-        <a href="#" class="logo-lockup" aria-label="CarryOn home">
-          <img
-            class="brand-logo"
-            src="assets/carryon-logo.png"
-            width="200"
-            height="56"
-            alt=""
-          />
+        <a href="index.html" class="logo-lockup" aria-label="CarryOn home">
+          <img class="brand-logo" src="assets/carryon-logo.png" width="141" height="38" alt="CarryOn" />
         </a>
         <nav class="header-nav" aria-label="Primary">
           <ul class="nav-main">
             <li><a href="index.html" class="is-active" aria-current="page">Home</a></li>
             <li><a href="drivers.html">Drivers</a></li>
             <li><a href="riders.html">Riders</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </nav>
@@ -36,570 +33,422 @@
     </header>
 
     <main>
-      <!-- Hero: Figma node 311-1945 — 12-col grid, 1536 / padding / 438px row -->
-      <section class="hero" id="about">
-        <div class="hero-shell">
-          <div class="hero-grid-figma">
-            <div class="hero-copy">
-              <h1 class="hero-title">
-                Precision logistics<br />
-                for the modern<br />
-                world.
-              </h1>
-              <p class="hero-lead">
-                Experience a high-end logistics ecosystem designed for speed, transparency, and
-                absolute reliability.
-              </p>
-              <div class="btn-group">
-                <button type="button" class="btn btn-primary">Start Shipping</button>
-                <button type="button" class="btn btn-sky">Drive with Us</button>
-                <button type="button" class="btn btn-outline-demo">View Demo</button>
-              </div>
+
+      <!-- SECTION 1: HERO -->
+      <section class="section-hero">
+        <div class="hero-inner">
+          <!-- Left: copy -->
+          <div class="hero-copy">
+            <h1 class="hero-title">
+              Smart Logistics for<br />
+              <span class="hero-title__accent">Malaysia's</span> Growing<br />
+              Economy
+            </h1>
+            <p class="hero-lead">
+              Seamless deliveries across Kuala Lumpur, Penang, and<br />
+              beyond. Precision-engineered for efficiency.
+            </p>
+            <div class="hero-btns">
+              <button type="button" class="btn btn-primary">Book Delivery</button>
+              <button type="button" class="btn btn-ghost-blue">Track Shipment</button>
             </div>
-            <div class="hero-visual" aria-hidden="true">
+          </div>
+
+          <!-- Right: visual with overlay badges -->
+          <div class="hero-visual">
+            <div class="hero-img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1519003722824-cd8dcea7d763?w=1400&q=85"
-                alt=""
-                width="900"
-                height="600"
+                src="assets/hero-truck.jpg"
+                alt="CarryOn logistics truck"
+                width="720"
+                height="438"
               />
-              <div class="telemetry-card">
-                <div class="telemetry-card__icon" aria-hidden="true">
-                  <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="16" cy="16" r="14" stroke="#1a1a1a" stroke-width="1.5" />
-                    <path
-                      d="M16 6v4M16 22v4M6 16h4M22 16h4"
-                      stroke="#1a1a1a"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M16 16l7-5"
-                      stroke="#1a1a1a"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                    />
-                    <circle cx="16" cy="16" r="2" fill="#1a1a1a" />
-                  </svg>
-                </div>
-                <div class="telemetry-card__body">
-                  <p class="telemetry-card__label">Real-time telemetry</p>
-                  <p class="telemetry-card__text">
-                    Route optimization active for Fleet #742. Fuel efficiency up 14%.
-                  </p>
-                </div>
+            </div>
+            <!-- Bottom-left badge -->
+            <div class="hero-badge hero-badge--bl">
+              <div class="hero-badge__icon">
+                <img src="assets/icon-pin.png" width="16" height="20" alt="" />
+              </div>
+              <div class="hero-badge__body">
+                <p class="hero-badge__label">REAL-TIME STATUS</p>
+                <p class="hero-badge__value">Live tracking enabled</p>
               </div>
             </div>
+            <!-- Top-right badge -->
+            <div class="hero-badge hero-badge--tr">
+              <div class="hero-badge__icon hero-badge__icon--sm">
+                <img src="assets/icon-delivery.png" width="16" height="20" alt="" />
+              </div>
+              <p class="hero-badge__value">Fast delivery across KL</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Stats: white metric cards (Figma-style layout) -->
-      <section class="stats" aria-label="Key metrics">
-        <div class="layout stats-cards">
-          <article class="stat-card">
-            <div class="stat-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75" />
-                <path
-                  d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                />
-              </svg>
+      <!-- SECTION 2: STATS -->
+      <section class="section-stats" aria-label="Key metrics">
+        <div class="layout">
+          <div class="stats-strip">
+            <div class="stats-item">
+              <p class="stats-value">50K+</p>
+              <p class="stats-label">DELIVERIES ACROSS MALAYSIA</p>
             </div>
-            <p class="stat-card__value">50+</p>
-            <p class="stat-card__label">Countries reached</p>
-          </article>
-          <article class="stat-card">
-            <div class="stat-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="14" r="7" stroke="currentColor" stroke-width="1.75" />
-                <path d="M12 10v4l2.5 1.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
-                <path d="M9 3h6M12 3v2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
-              </svg>
+            <div class="stats-item">
+              <p class="stats-value">99.9%</p>
+              <p class="stats-label">ACCURACY RATE</p>
             </div>
-            <p class="stat-card__value">99.8%</p>
-            <p class="stat-card__label">On-time delivery</p>
-          </article>
-          <article class="stat-card">
-            <div class="stat-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="2.6" stroke="currentColor" stroke-width="1.75" />
-                <path
-                  d="M2.5 20.5v-.5a4.5 4.5 0 0 1 4.5-4.5h2a4.5 4.5 0 0 1 4.5 4.5v.5"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                />
-                <circle cx="16.5" cy="8" r="2.6" stroke="currentColor" stroke-width="1.75" />
-                <path
-                  d="M11 20.5v-.5a4.5 4.5 0 0 1 4.5-4.5h2a4.5 4.5 0 0 1 4.5 4.5v.5"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                />
-              </svg>
+            <div class="stats-item">
+              <p class="stats-value">2.4k</p>
+              <p class="stats-label">ACTIVE FLEET PARTNERS</p>
             </div>
-            <p class="stat-card__value">12k+</p>
-            <p class="stat-card__label">Active drivers</p>
-          </article>
-          <article class="stat-card">
-            <div class="stat-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4 18V11M9.5 18V8M15 18v-6M20.5 18v-9"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M4 14l5.5-4L15 10l5.5-5"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+            <div class="stats-item">
+              <p class="stats-value">15+</p>
+              <p class="stats-label">MAJOR HUB CITIES</p>
             </div>
-            <p class="stat-card__value">$2.4B</p>
-            <p class="stat-card__label">Volume managed</p>
-          </article>
+          </div>
         </div>
       </section>
 
-      <!-- Ecosystem: Figma 311-1995 / 311-1996 / 311-2001 -->
-      <section class="section-ecosystem" id="solutions">
-        <div class="ecosystem-frame">
-          <!-- 311-1996: header group centered -->
-          <div class="ecosystem-header">
-            <h2 class="ecosystem-title">The CarryOn Ecosystem</h2>
-            <!-- 311-1999: 672px wrapper / 311-2000: text style -->
-            <div class="ecosystem-subtitle-wrap">
-              <p class="ecosystem-subtitle">One unified platform for every player in the supply chain cycle.</p>
-            </div>
+      <!-- SECTION 3: ECOSYSTEM -->
+      <section class="section-ecosystem">
+        <div class="layout">
+          <div class="eco-header">
+            <h2 class="eco-title">The CarryOn Ecosystem</h2>
+            <p class="eco-subtitle">Connecting Malaysia's logistics network through a unified digital infrastructure.</p>
           </div>
-          <!-- 311-2001: inline-grid, 3 cols, 362.5px row, 40px gap -->
           <div class="eco-grid">
             <article class="eco-card">
-              <div class="eco-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=85"
-                  alt=""
-                  width="600"
-                  height="363"
-                />
+              <div class="eco-card__img">
+                <img src="assets/eco-riders.jpg" alt="Rider on motorcycle" width="600" height="207" />
               </div>
-              <div class="eco-card-body">
-                <h3>For Riders</h3>
-                <p>Track every mile and enjoy white-glove delivery service right to your doorstep with zero friction.</p>
-                <a class="link-arrow" href="#">Learn more <span aria-hidden="true">→</span></a>
+              <div class="eco-card__body">
+                <h3>Riders</h3>
+                <p>Swift last-mile delivery experts specialized in navigating the urban landscape.</p>
+                <a href="riders.html" class="link-more">
+                  Learn more
+                  <img src="assets/icon-arrow.png" width="9" height="9" alt="" />
+                </a>
               </div>
             </article>
             <article class="eco-card">
-              <div class="eco-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=85"
-                  alt=""
-                  width="600"
-                  height="363"
-                />
+              <div class="eco-card__img">
+                <img src="assets/eco-drivers.jpg" alt="Driver with hardhat" width="600" height="207" />
               </div>
-              <div class="eco-card-body">
-                <h3>For Drivers</h3>
-                <p>Take control of your schedule and earnings with our precision routing and instant payment system.</p>
-                <a class="link-arrow" href="#">Learn more <span aria-hidden="true">→</span></a>
+              <div class="eco-card__body">
+                <h3>Drivers</h3>
+                <p>Heavy-duty transport and fleet management for interstate logistics across Malaysia.</p>
+                <a href="drivers.html" class="link-more">
+                  Learn more
+                  <img src="assets/icon-arrow.png" width="9" height="9" alt="" />
+                </a>
               </div>
             </article>
             <article class="eco-card">
-              <div class="eco-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=85"
-                  alt=""
-                  width="600"
-                  height="363"
-                />
+              <div class="eco-card__img">
+                <img src="assets/eco-business.jpg" alt="Business logistics" width="600" height="207" />
               </div>
-              <div class="eco-card-body">
-                <h3>For Business</h3>
-                <p>Scalable enterprise solutions that integrate seamlessly with your existing ERP for total visibility.</p>
-                <a class="link-arrow" href="#">Learn more <span aria-hidden="true">→</span></a>
+              <div class="eco-card__body">
+                <h3>Business</h3>
+                <p>Scalable enterprise solutions for supply chain optimization and retail distribution.</p>
+                <a href="#" class="link-more">
+                  Learn more
+                  <img src="assets/icon-arrow.png" width="9" height="9" alt="" />
+                </a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Simplicity at scale -->
-      <section class="section-scale">
+      <!-- SECTION 4: PROCESS (blue card) -->
+      <section class="section-process">
         <div class="layout">
-          <div class="section-head">
-            <h2>Simplicity at scale</h2>
-            <p>Four steps from request to proof of delivery—transparent, secure, and fast.</p>
-          </div>
-          <div class="steps">
-            <div class="step">
-              <div class="step-num">1</div>
-              <h3>Request a quote</h3>
-              <p>Instant lane pricing with live capacity from vetted partners.</p>
+          <div class="process-card">
+            <div class="process-header">
+              <h2 class="process-title">Streamlined Efficiency</h2>
+              <p class="process-subtitle">From clicking 'Order' to the final doorstep, we handle every detail.</p>
             </div>
-            <div class="step">
-              <div class="step-num">2</div>
-              <h3>Real-time matching</h3>
-              <p>AI-assisted dispatch pairs the right asset to your freight profile.</p>
-            </div>
-            <div class="step">
-              <div class="step-num">3</div>
-              <h3>Secure payment</h3>
-              <p>Escrow, milestones, and compliance checks built into every transaction.</p>
-            </div>
-            <div class="step">
-              <div class="step-num">4</div>
-              <h3>Track &amp; relax</h3>
-              <p>Live ETAs, geofenced milestones, and POD in your inbox.</p>
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="process-step__num">1</div>
+                <p class="process-step__label">Request Quote</p>
+              </div>
+              <div class="process-step">
+                <div class="process-step__num">2</div>
+                <p class="process-step__label">Confirm Booking</p>
+              </div>
+              <div class="process-step">
+                <div class="process-step__num">3</div>
+                <p class="process-step__label">Driver Assigned</p>
+              </div>
+              <div class="process-step">
+                <div class="process-step__num">4</div>
+                <p class="process-step__label">Delivery Complete</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Feature deep-dives -->
+      <!-- SECTION 5: FEATURES ZIGZAG -->
       <section class="section-features">
         <div class="layout">
+
+          <!-- Row 1: text left, map right -->
           <div class="feature-row">
             <div class="feature-copy">
-              <h2>Omniscient tracking</h2>
-              <p>
-                See every hand-off on a single map—ocean, air, road, and last mile—with unified
-                event timelines.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>Sub-minute telemetry refresh on supported lanes</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>Exception playbooks triggered before customers notice</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>Shareable tracking links with branded status pages</span>
-                </li>
-              </ul>
+              <p class="feature-kicker">LIVE VISIBILITY</p>
+              <h2>Real-Time Tracking Across Malaysia</h2>
+              <p>Our satellite-linked GPS system provides minute-by-minute updates. Whether your cargo is in the heart of KL or traveling through the Titiwangsa Range, you are always in control.</p>
             </div>
-            <div class="feature-media map-placeholder" role="img" aria-label="Route visualization"></div>
-          </div>
-
-          <div class="feature-row reverse">
-            <div class="feature-copy">
-              <h2>Predictive analytics</h2>
-              <p>
-                Forecast congestion, dwell time, and cost exposure using models trained on global
-                lane performance.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>Scenario planning for peak seasons and disruptions</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>Benchmarking across carriers, regions, and SKUs</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>Executive snapshots delivered on your schedule</span>
-                </li>
-              </ul>
-            </div>
-            <div class="feature-media light">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80"
-                alt=""
-                width="600"
-                height="400"
-              />
+            <div class="feature-media">
+              <img src="assets/feature-map.jpg" alt="Malaysia tracking map" width="576" height="576" />
             </div>
           </div>
 
-          <div class="feature-row">
-            <div class="feature-copy">
-              <h2>Uncompromising security</h2>
-              <p>
-                Zero-trust access, field-level encryption, and regional data residency for regulated
-                freight.
-              </p>
-              <ul class="feature-list">
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>SOC 2 Type II and ISO-aligned controls</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>Role-based policies down to the shipment level</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>Immutable audit trails for customs and finance</span>
-                </li>
-              </ul>
+          <!-- Row 2: chart left, text right -->
+          <div class="feature-row feature-row--reverse">
+            <div class="feature-media">
+              <img src="assets/feature-analytics.jpg" alt="Predictive analytics dashboard" width="576" height="576" />
             </div>
-            <div class="feature-media shield-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+            <div class="feature-copy">
+              <p class="feature-kicker">EFFICIENCY FIRST</p>
+              <h2>Smart Predictive Analytics</h2>
+              <p>We use AI to predict traffic patterns and weather disruptions, rerouting your shipments in real-time to ensure deadlines are met without compromise.</p>
             </div>
           </div>
+
+          <!-- Row 3: text left, image right -->
+          <div class="feature-row">
+            <div class="feature-copy">
+              <p class="feature-kicker">PEACE OF MIND</p>
+              <h2>Secure &amp; Trusted Deliveries</h2>
+              <p>Every shipment is insured and handled by certified professionals. Our secure-lock technology and chain-of-custody protocols provide end-to-end transparency.</p>
+            </div>
+            <div class="feature-media">
+              <img src="assets/feature-delivery.jpg" alt="Secure delivery" width="576" height="576" />
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <!-- Targeted solutions: Figma tokens border 1px #A6D2F3, bg rgba(166,210,243,.2), radius 16px -->
-      <section class="section-targeted" id="fleet">
+      <!-- SECTION 6: SOLUTIONS TAILORED -->
+      <section class="section-solutions">
         <div class="layout">
-          <div class="section-head">
-            <span class="section-kicker">Targeted solutions</span>
-            <h2>Customized experiences for every user</h2>
-            <p>Pick the surface that matches your role—same network, tuned workflows.</p>
+          <div class="solutions-header">
+            <h2>Solutions Tailored for Malaysia</h2>
+            <p>We understand the local landscape, from the north to the south.</p>
           </div>
-          <div class="targeted-grid">
-            <article class="target-card">
-              <h3>For riders</h3>
-              <p>
-                Consumer-grade tracking, delivery preferences, and proactive notifications when
-                your package is on the move.
-              </p>
-            </article>
-            <article class="target-card">
-              <h3>For drivers</h3>
-              <p>
-                Optimized manifests, one-tap document capture, and transparent earnings with faster
-                settlement cycles.
-              </p>
-            </article>
-            <article class="target-card">
-              <h3>For businesses</h3>
-              <p>
-                Multi-facility controls, contract rate cards, and API-first automation for high
-                volume shippers.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- App: glow per Figma specs -->
-      <section class="section-app">
-        <div class="app-glow" aria-hidden="true"></div>
-        <div class="layout">
-          <div class="section-head">
-            <h2>The app: Power in your pocket</h2>
-            <p>
-              Manage complex international supply chains or local deliveries with the same level of
-              precision and beauty.
-            </p>
-          </div>
-          <div class="app-showcase">
-            <div class="phone-frame">
-              <div class="phone-notch"><span></span></div>
-              <div class="phone-screen">
-                <img
-                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80"
-                  alt=""
-                  width="400"
-                  height="800"
-                />
+          <div class="solutions-grid">
+            <div class="solution-card">
+              <div class="solution-card__icon">
+                <img src="assets/icon-rider.png" width="36" height="21" alt="" />
               </div>
+              <h3>Riders</h3>
+              <p>Earn on your own terms. Join our network of agile urban delivery partners.</p>
+              <a href="riders.html" class="btn btn-outline-blue">Join as Rider</a>
+            </div>
+            <div class="solution-card">
+              <div class="solution-card__icon">
+                <img src="assets/icon-driver.png" width="33" height="24" alt="" />
+              </div>
+              <h3>Drivers</h3>
+              <p>Manage your truck or fleet with our advanced dispatching technology.</p>
+              <a href="drivers.html" class="btn btn-outline-blue">Join as Driver</a>
+            </div>
+            <div class="solution-card">
+              <div class="solution-card__icon">
+                <img src="assets/icon-business.png" width="30" height="27" alt="" />
+              </div>
+              <h3>Businesses</h3>
+              <p>Scale your operations with Malaysia's most reliable logistics partner.</p>
+              <a href="#" class="btn btn-primary">Open Business Account</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Logistics without friction -->
-      <section class="section-friction">
-        <div class="layout friction-grid">
-          <div class="friction-copy">
-            <h2>Logistics without the friction</h2>
-            <ul class="friction-list">
-              <li>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
+      <!-- SECTION 7: APP -->
+      <section class="section-app">
+        <div class="layout">
+          <div class="app-header">
+            <h2>CarryOn App — Deliver Anywhere</h2>
+            <p>The entire logistics network in the palm of your hand.</p>
+          </div>
+          <div class="app-content">
+            <ul class="app-features">
+              <li class="app-feature">
+                <div class="app-feature__icon">
+                  <img src="assets/icon-track.png" width="32" height="36" alt="" />
+                </div>
                 <div>
-                  <strong>Driver verification</strong>
-                  <span>Continuous credential checks and safety scores for every active carrier.</span>
+                  <h4>Track deliveries</h4>
+                  <p>Pinpoint precision for every shipment.</p>
                 </div>
               </li>
-              <li>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
+              <li class="app-feature">
+                <div class="app-feature__icon">
+                  <img src="assets/icon-book.png" width="33" height="37" alt="" />
+                </div>
                 <div>
-                  <strong>Full liability coverage</strong>
-                  <span>Tiered protection options with clear terms surfaced before you book.</span>
+                  <h4>Book instantly</h4>
+                  <p>Go from quote to booking in under 60 seconds.</p>
                 </div>
               </li>
-              <li>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
+              <li class="app-feature">
+                <div class="app-feature__icon">
+                  <img src="assets/icon-updates.png" width="36" height="36" alt="" />
+                </div>
                 <div>
-                  <strong>Seamless API integration</strong>
-                  <span
-                    >Connect CarryOn directly to your SAP, Oracle, or custom ERP systems with our
-                    robust REST API.</span
-                  >
+                  <h4>Live updates</h4>
+                  <p>Push notifications for every milestone.</p>
                 </div>
               </li>
             </ul>
-          </div>
-          <div class="friction-art" role="presentation"></div>
-        </div>
-      </section>
-
-      <!-- Testimonials: cards #A6D2F3, radius 24px -->
-      <section class="section-testimonials">
-        <div class="layout">
-          <div class="section-head">
-            <h2>Trusted on the road and in the boardroom</h2>
-            <p>Teams worldwide rely on CarryOn to keep promises to customers and crews.</p>
-          </div>
-          <div class="testimonial-grid">
-            <article class="testimonial-card">
-              <blockquote>
-                “CarryOn turned our fragmented carriers into a single command center. We cut
-                status meetings in half and finally trust our ETAs.”
-              </blockquote>
-              <div class="testimonial-author">
-                <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=128&q=80"
-                  alt=""
-                  width="52"
-                  height="52"
-                />
-                <div>
-                  <strong>Marcus Chen</strong>
-                  <span>VP Logistics, Northwind Freight</span>
+            <div class="app-phone">
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img
+                    src="assets/app-phone.jpg"
+                    alt="CarryOn app"
+                    width="288"
+                    height="580"
+                  />
                 </div>
               </div>
-            </article>
-            <article class="testimonial-card">
-              <blockquote>
-                “The driver interface is a game-changer. I no longer waste time on inefficient
-                routes or paperwork. Everything is digital, fast, and I get paid instantly.”
-              </blockquote>
-              <div class="testimonial-author">
-                <img
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=128&q=80"
-                  alt=""
-                  width="52"
-                  height="52"
-                />
-                <div>
-                  <strong>Sarah Jenkins</strong>
-                  <span>Director of Operations, OmniCorp</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Final CTA: radius 48px, bg #2F80ED -->
-      <section class="section-final-cta" id="cta">
-        <div class="layout">
-          <div class="cta-panel">
-            <h2>Ready to navigate the future?</h2>
-            <p>
-              Join thousands of businesses and drivers who are setting a new standard for global
-              logistics excellence.
-            </p>
-            <div class="cta-buttons">
-              <button type="button" class="btn btn-white">Get started now</button>
-              <button type="button" class="btn btn-outline-white">Contact sales</button>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- SECTION 8: BUILT FOR MODERN INFRASTRUCTURE -->
+      <section class="section-infra">
+        <div class="layout">
+          <div class="infra-inner">
+            <div class="infra-copy">
+              <h2>Built for Modern Infrastructure</h2>
+              <ul class="infra-list">
+                <li class="infra-item">
+                  <div class="infra-item__icon">
+                    <img src="assets/icon-api.png" width="22" height="22" alt="" />
+                  </div>
+                  <div>
+                    <h4>Seamless API Integration</h4>
+                    <p>Connect your e-commerce platform directly to our fleet.</p>
+                  </div>
+                </li>
+                <li class="infra-item">
+                  <div class="infra-item__icon">
+                    <img src="assets/icon-globe.png" width="20" height="20" alt="" />
+                  </div>
+                  <div>
+                    <h4>Global Delivery</h4>
+                    <p>Extending Malaysian business to international markets.</p>
+                  </div>
+                </li>
+                <li class="infra-item">
+                  <div class="infra-item__icon">
+                    <img src="assets/icon-compliance.png" width="16" height="20" alt="" />
+                  </div>
+                  <div>
+                    <h4>Compliance Ready</h4>
+                    <p>Meeting all regulatory standards for logistics in Malaysia.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="infra-media">
+              <img
+                src="assets/infra-facility.jpg"
+                alt="Modern logistics facility"
+                width="472"
+                height="472"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 9: TESTIMONIALS -->
+      <section class="section-testimonials">
+        <div class="layout">
+          <h2 class="testimonials-title">Trusted by Businesses</h2>
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <div class="testimonial-stars">
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+              </div>
+              <blockquote>
+                "CarryOn improved our delivery speed in KL significantly. Their tracking is the best in the market."
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-author__avatar">
+                  <img src="assets/avatar-ahmad.jpg" width="48" height="48" alt="Ahmad Rizal" />
+                </div>
+                <div>
+                  <strong>Ahmad Rizal</strong>
+                  <span>Logistics Manager, TechGlobal</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+                <img src="assets/icon-star.png" width="20" height="19" alt="★" />
+              </div>
+              <blockquote>
+                "The most reliable service for our e-commerce business. The integration was seamless and support is 10/10."
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-author__avatar">
+                  <img src="assets/avatar-linh.jpg" width="48" height="48" alt="Linh Tan" />
+                </div>
+                <div>
+                  <strong>Linh Tan</strong>
+                  <span>Founder, UrbanStyle Malaysia</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section-cta">
+        <div class="layout">
+          <div class="cta-panel">
+            <div class="cta-overlay" aria-hidden="true"></div>
+            <h2>Ready to navigate the future?</h2>
+            <p>Join thousands of businesses and drivers who are setting a new standard for global logistics excellence.</p>
+            <button type="button" class="btn btn-cta-white">Get Started Now</button>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="site-footer" id="contact">
-      <div class="layout footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="logo" aria-label="CarryOn home">
-            <img
-              class="brand-logo brand-logo--footer"
-              src="assets/carryon-logo.png"
-              width="200"
-              height="56"
-              alt=""
-            />
-          </a>
-          <p class="footer-copy">
-            © 2024 CarryOn Logistics. The precision navigator. All rights reserved.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Security</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:hello@carryon.io">hello@carryon.io</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Partner program</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Stay updated</h4>
-          <form class="newsletter" action="#" method="get" aria-label="Newsletter">
-            <input type="email" name="email" placeholder="Work email" autocomplete="email" />
-            <button type="submit" aria-label="Subscribe">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
-          </form>
-        </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-brand">CarryOn Malaysia</span>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">TERMS OF SERVICE</a>
+          <a href="#">FLEET PARTNERS</a>
+          <a href="#">CONTACT US</a>
+        </nav>
+        <span class="footer-copy">© 2024 CARRYON MALAYSIA. PRECISION LOGISTICS SOLUTIONS.</span>
       </div>
     </footer>
+
   </body>
 </html>

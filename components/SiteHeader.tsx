@@ -8,6 +8,7 @@ const NAV = [
   { href: "/drivers", label: "Drivers" },
   { href: "/riders", label: "Riders" },
   { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
 ] as const;
 
 export function SiteHeader() {
@@ -20,16 +21,19 @@ export function SiteHeader() {
           <img
             className="brand-logo"
             src="/assets/carryon-logo.png"
-            width={200}
-            height={56}
-            alt=""
+            width={141}
+            height={38}
+            alt="CarryOn"
           />
         </Link>
         <nav className="header-nav" aria-label="Primary">
           <ul className="nav-main">
             {NAV.map(({ href, label }) => {
+              const legalPaths = ["/terms", "/privacy"];
               const active =
-                href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+                href === "/" ? pathname === "/" :
+                href === "/about" ? pathname === href || pathname.startsWith(`${href}/`) || legalPaths.includes(pathname) :
+                pathname === href || pathname.startsWith(`${href}/`);
               return (
                 <li key={href}>
                   <Link

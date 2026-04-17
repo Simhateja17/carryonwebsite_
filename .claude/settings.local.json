@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma__whoami",
+      "Skill(update-config)",
+      "Bash(powershell.exe *)",
+      "mcp__figma__get_design_context",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/c5dd9d59-996a-41e3-aec7-fa1880c245a5\" -o hero-truck.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/2a5f9b74-f679-4423-af34-9d7ec17e6a02\" -o icon-pin.png)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/e7d45d81-85ff-4b77-9155-dfa6da7e85b0\" -o icon-delivery.png)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/26c31efd-34d1-49a9-b9bf-322d0271dea4\" -o eco-riders.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/a91de155-502e-411b-8be7-ce1cd4f9a6eb\" -o eco-drivers.jpg)",
+      "Bash(ls -la *.jpg *.png)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl *)",
+      "Bash(ls -la public/assets/*.svg)",
+      "Bash(ls *)",
+      "Bash(ls -la C:/Users/mg875/Desktop/carryonwebsite_/public/assets/icon-active* C:/Users/mg875/Desktop/carryonwebsite_/public/assets/icon-step*)",
+      "Bash(ls -la public/assets/icon-active* public/assets/icon-star-gold* public/assets/icon-chev*)",
+      "Bash(python3 *)",
+      "Bash(python -c \"print\\('hello'\\)\")",
+      "Bash(py -3 -c \"print\\('hello'\\)\")",
+      "Bash(py -c \"print\\('hello'\\)\")",
+      "Bash(py *)",
+      "Bash(npx tsc *)"
+    ]
+  }
+}

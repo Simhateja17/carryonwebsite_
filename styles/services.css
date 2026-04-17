@@ -1,0 +1,856 @@
+/* ================================================================
+   services.css — CarryOn Services Page
+   Tokens: primary #2F80ED | sky #A6D2F3 | sky-20 rgba(166,210,243,.2)
+   ================================================================ */
+
+/* ── Shared typography tokens ──────────────────────────────── */
+.sv-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #2f80ed;
+  margin: 0 0 16px;
+}
+.sv-label--center { text-align: center; display: block; }
+
+.sv-h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.11;
+  letter-spacing: -0.9px;
+  color: #000;
+  margin: 0 0 64px;
+}
+.sv-h2--center { text-align: center; }
+.sv-h2--white  { color: #fff; }
+
+.sv-h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #000;
+  margin: 0 0 8px;
+}
+.sv-h3--sm    { font-size: 20px; }
+.sv-h3--white { color: #fff; }
+
+.sv-body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  margin: 0;
+}
+.sv-body--sm      { font-size: 14px; line-height: 1.43; }
+.sv-body--gray    { color: #434654; }
+.sv-body--white-80 { color: rgba(255,255,255,.8); }
+
+/* ── Badges ────────────────────────────────────────────────── */
+.sv-badge {
+  display: inline-block;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 5px 9px;
+  border-radius: 2px;
+}
+.sv-badge--outline {
+  border: 1px solid rgba(0,61,155,.2);
+  color: #2f80ed;
+  background: transparent;
+}
+.sv-badge--green {
+  background: #dcfce7;
+  color: #15803d;
+  border-radius: 12px;
+  padding: 4px 12px;
+}
+.sv-badge--instant {
+  background: #fff;
+  border: 1px solid #a6d2f3;
+  color: #2f80ed;
+  border-radius: 2px;
+  padding: 3px 9px;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.sv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s;
+}
+.sv-btn:hover { opacity: 0.88; }
+
+.sv-btn--primary {
+  background: #2f80ed;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 16px 24px;
+  box-shadow: 0 12px 32px rgba(0,61,155,.2);
+}
+.sv-btn--hero {
+  width: 188px;
+  height: 60px;
+  border-radius: 4px;
+  font-size: 18px;
+}
+.sv-btn--track {
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 16px 32px;
+  height: 54px;
+  box-shadow: 0 10px 15px -3px rgba(47,128,237,.2), 0 4px 6px -4px rgba(47,128,237,.2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sv-btn--full {
+  width: 100%;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+}
+
+.sv-btn--cta-white {
+  background: #fff;
+  color: #2f80ed;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 21px 40px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+}
+.sv-btn--cta-ghost {
+  background: rgba(47,128,237,.2);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 21px 41px;
+  backdrop-filter: blur(6px);
+}
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.sv-hero {
+  background: #fff;
+  overflow: hidden;
+}
+.sv-hero__grid {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 96px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.sv-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  align-items: flex-start;
+}
+.sv-kicker-badge {
+  background: rgba(166,210,243,.2);
+  color: #2f80ed;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+.sv-hero__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -3.6px;
+  color: #000;
+  margin: 0;
+}
+.sv-blue { color: #2f80ed; }
+.sv-hero__lead {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.625;
+  color: #000;
+  max-width: 576px;
+  margin: 0;
+}
+.sv-hero__track {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  max-width: 448px;
+  width: 100%;
+  padding-top: 9px;
+}
+.sv-track__input-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.sv-track__icon {
+  position: absolute;
+  left: 16px;
+  pointer-events: none;
+}
+.sv-track__input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(166,210,243,.5);
+  border-radius: 8px;
+  padding: 17px 17px 17px 49px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  outline: none;
+  box-sizing: border-box;
+}
+.sv-track__input::placeholder { color: #6b7280; }
+
+.sv-hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sv-hero__img-wrap {
+  position: relative;
+  width: 512px;
+  height: 512px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+}
+.sv-hero__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.2);
+  mix-blend-mode: saturation;
+  z-index: 1;
+  border-radius: 32px;
+}
+.sv-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── BULK DELIVERY BENTO ───────────────────────────────────── */
+.sv-bulk {
+  background: rgba(166,210,243,.2);
+  padding: 96px 0;
+}
+.sv-bulk__shell {
+  max-width: 1536px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+.sv-bulk__header { margin-bottom: 0; }
+
+/* Bento grid — 3 equal columns, 2 rows */
+.sv-bulk__bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 264px 272px;
+  gap: 0;
+  position: relative;
+}
+
+/* Feature 1 — top-left, spans 2 cols */
+.sv-bento-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 12px 32px rgba(41,79,131,.06);
+  display: flex;
+  flex-direction: column;
+}
+.sv-bento-card--large {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  margin: 0 8px 8px 0;
+}
+.sv-bento-card__top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.sv-bento-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(166,210,243,.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Feature 2 — top-right, blue */
+.sv-bento-card--blue {
+  background: #2f80ed;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  margin: 0 0 0 8px;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sv-bento-card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sv-bento-metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 33px;
+}
+.sv-bento-metrics__label {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.sv-bento-metrics__value {
+  font-family: "Liberation Mono", monospace;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* Infrastructure diagram — overlaps grid center */
+.sv-bento-diagram {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  /* Positioned at left:40px, top:276px from grid top in Figma */
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0;
+}
+/* Use absolute positioning via wrapper trick */
+.sv-bulk__bento {
+  position: relative;
+}
+.sv-bento-diagram {
+  position: absolute;
+  left: 40px;
+  top: 276px;
+  width: 763px;
+  height: 292px;
+  z-index: 2;
+  pointer-events: none;
+}
+.sv-bento-diagram__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Feature 3 — bottom-left */
+.sv-bento-card--support {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 8px 8px 0 0;
+  gap: 16px;
+}
+
+/* Feature 4 — bottom-center+right (compliance) */
+.sv-bento-card--compliance {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 8px 8px 0 0;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+}
+.sv-bento-card__content { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+.sv-bento-bars {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.sv-bento-bar {
+  width: 48px;
+  border-radius: 4px;
+}
+
+/* ── VERSATILE SOLUTIONS ───────────────────────────────────── */
+.sv-versatile {
+  background: rgba(166,210,243,.2);
+  padding: 96px 0;
+}
+.sv-versatile__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+.sv-versatile__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.sv-versatile__card {
+  background: #fff;
+  border: 1px solid rgba(166,210,243,.2);
+  border-radius: 16px;
+  padding: 41px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sv-versatile__icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(166,210,243,.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── PRECISION FLEET ───────────────────────────────────────── */
+.sv-fleet {
+  background: #2f80ed;
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+/* Figma: skewed white overlay on right side */
+.sv-fleet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 76.67%;
+  background: rgba(255,255,255,.05);
+  transform: skewX(-15deg);
+  transform-origin: top left;
+}
+.sv-fleet__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 32px;
+  position: relative;
+  z-index: 1;
+}
+.sv-fleet__sub {
+  text-align: center;
+  color: rgba(255,255,255,.8);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: -48px 0 64px;
+}
+.sv-fleet__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+/* Glass cards (Bike & Truck) */
+.sv-fleet__card--glass {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 24px;
+  padding: 41px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  backdrop-filter: blur(6px);
+}
+
+/* Featured card (Pickup) */
+.sv-fleet__card--featured {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 24px;
+  padding: 41px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+  transform: scale(1.05);
+  position: relative;
+  z-index: 2;
+}
+
+.sv-fleet__badge {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+.sv-fleet__badge--white { background: #fff; color: #2f80ed; }
+.sv-fleet__badge--blue  { background: #2f80ed; color: #fff; }
+
+.sv-fleet__icon { display: block; margin-bottom: 16px; }
+
+.sv-fleet__name {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px;
+}
+.sv-fleet__name--dark { color: #000; }
+
+.sv-fleet__rate {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #a6d2f3;
+  margin: 0 0 24px;
+}
+.sv-fleet__rate--blue { color: #2f80ed; }
+
+.sv-fleet__tag {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.2);
+  border-radius: 12px;
+  padding: 4px 16px;
+}
+.sv-fleet__tag--dark {
+  color: #434654;
+  background: transparent;
+}
+
+/* ── TRANSPARENT PRICING ───────────────────────────────────── */
+.sv-pricing {
+  padding: 96px 0;
+  background: #fff;
+}
+.sv-pricing__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.sv-pricing__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16.5px;
+}
+.sv-pricing__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.9px;
+  color: #000;
+  margin: 0;
+}
+.sv-pricing__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #434654;
+  margin: 0;
+}
+.sv-pricing__list {
+  list-style: none;
+  margin: 15.5px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sv-pricing__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Estimator widget */
+.sv-estimator {
+  background: #f8fafc;
+  border: 1px solid rgba(166,210,243,.3);
+  border-radius: 40px;
+  padding: 49px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.sv-estimator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sv-estimator__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+.sv-estimator__label {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #434654;
+  margin: 0;
+}
+.sv-estimator__slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sv-estimator__slider-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4px;
+}
+.sv-estimator__slider {
+  width: 100%;
+  accent-color: #2f80ed;
+  height: 8px;
+  cursor: pointer;
+  appearance: none;
+  background: rgba(166,210,243,.3);
+  border-radius: 4px;
+}
+.sv-estimator__slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2f80ed;
+  cursor: pointer;
+}
+.sv-estimator__range-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+}
+.sv-estimator__vehicle-group { display: flex; flex-direction: column; gap: 12px; }
+.sv-estimator__vehicles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.sv-estimator__veh {
+  padding: 18px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #434654;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+.sv-estimator__veh.is-active {
+  border-color: #2f80ed;
+  color: #2f80ed;
+}
+.sv-estimator__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #a6d2f3;
+  padding-top: 25px;
+  margin-top: -8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+.sv-estimator__amount {
+  font-size: 36px;
+  font-weight: 800;
+  color: #2f80ed;
+  line-height: 1.11;
+}
+
+/* ── CUSTOMER STORIES ──────────────────────────────────────── */
+.sv-stories {
+  background: #f8fafc;
+  padding: 96px 0;
+}
+.sv-stories__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+.sv-stories__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.sv-stories__card {
+  background: #fff;
+  border: 1px solid rgba(166,210,243,.2);
+  border-radius: 32px;
+  padding: 49px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.sv-stars { font-size: 16px; display: flex; gap: 4px; }
+.sv-stories__quote {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.625;
+  color: #000;
+  margin: 0;
+}
+.sv-stories__author { display: flex; gap: 16px; align-items: center; padding-top: 9px; }
+.sv-stories__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 2px solid #a6d2f3;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.sv-stories__name {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 2px;
+}
+.sv-stories__role {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #434654;
+  margin: 0;
+}
+
+/* ── CTA ───────────────────────────────────────────────────── */
+.sv-cta-wrap {
+  padding: 96px 128px;
+  background: #fff;
+}
+.sv-cta {
+  max-width: 1024px;
+  margin-inline: auto;
+  background: #2f80ed;
+  border-radius: 48px;
+  padding: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  overflow: hidden;
+  position: relative;
+}
+.sv-cta__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.2px;
+  color: #fff;
+  margin: 0;
+}
+.sv-cta__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(255,255,255,.9);
+  margin: 0;
+  max-width: 672px;
+}
+.sv-cta__btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .sv-hero__title { font-size: 52px; }
+  .sv-cta-wrap { padding: 64px 32px; }
+  .sv-bento-diagram { display: none; }
+}
+@media (max-width: 768px) {
+  .sv-hero__grid { grid-template-columns: 1fr; padding: 60px 24px; }
+  .sv-hero__visual { display: none; }
+  .sv-hero__title { font-size: 42px; letter-spacing: -2px; }
+  .sv-hero__track { flex-direction: column; }
+  .sv-bulk__bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .sv-bento-card--large  { grid-column: 1; grid-row: auto; margin: 0 0 8px; }
+  .sv-bento-card--blue   { grid-column: 1; grid-row: auto; margin: 0 0 8px; }
+  .sv-bento-card--support    { grid-column: 1; grid-row: auto; margin: 0 0 8px; }
+  .sv-bento-card--compliance { grid-column: 1; grid-row: auto; margin: 0; flex-direction: column; }
+  .sv-versatile__grid    { grid-template-columns: 1fr; }
+  .sv-fleet__grid        { grid-template-columns: 1fr; }
+  .sv-fleet__card--featured  { transform: none; }
+  .sv-pricing__shell     { grid-template-columns: 1fr; }
+  .sv-stories__grid      { grid-template-columns: 1fr; }
+  .sv-cta__title         { font-size: 32px; }
+  .sv-cta__btns          { flex-direction: column; align-items: center; }
+}

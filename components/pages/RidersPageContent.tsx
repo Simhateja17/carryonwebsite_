@@ -36,58 +36,50 @@ export function RidersPageContent() {
       
                   {/*311-3173: button group*/}
                   <div className="r-hero__btns">
-                    {/*311-3175: primary button with shadow*/}
                     <a href="#book" className="r-btn r-btn--primary">
-                      Book a Delivery
+                      Book Delivery
+                      <img src="/assets/icon-book-delivery.svg" width={16} height={16} alt="" />
                     </a>
-                    <a href="#how" className="r-btn r-btn--ghost">
-                      How It Works
+                    <a href="#pricing" className="r-btn r-btn--ghost">
+                      View Pricing
                     </a>
+                  </div>
+
+                  {/*Trust badge — stacked avatars + label*/}
+                  <div className="r-hero__trust">
+                    <div className="r-hero__avatars">
+                      <img src="/assets/rider-avatar1.jpg" width={40} height={40} alt="" className="r-hero__avatar" />
+                      <img src="/assets/rider-avatar2.jpg" width={40} height={40} alt="" className="r-hero__avatar" />
+                      <img src="/assets/rider-avatar3.jpg" width={40} height={40} alt="" className="r-hero__avatar" />
+                    </div>
+                    <span className="r-hero__trust-label">TRUSTED BY 10K+ RIDERS</span>
                   </div>
       
                 </div>{/*/r-hero__copy*/}
       
-                {/*311-3176: right column — phone/map mockup*/}
-                <div className="r-hero__visual" aria-hidden="true">
+                {/*311-3176: right column — phone mockup with map*/}
+                <div className="r-hero__visual">
                   <div className="r-phone">
                     <div className="r-phone__frame">
                       <div className="r-phone__screen">
-                        {/*Map background*/}
-                        <div className="r-phone__map">
-                          <div className="r-phone__map-grid"></div>
-                          {/*Route line*/}
-                          <svg className="r-phone__route" viewBox="0 0 260 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M80 340 C80 300 140 280 140 240 C140 200 100 180 100 140 C100 100 130 80 130 60" stroke="#2F80ED" strokeWidth="3" strokeDasharray="8 4" strokeLinecap="round"/>
-                            <circle cx="80" cy="340" r="10" fill="#2F80ED"/>
-                            <circle cx="80" cy="340" r="6" fill="#fff"/>
-                            <circle cx="130" cy="60" r="10" fill="#22c55e"/>
-                            <circle cx="130" cy="60" r="6" fill="#fff"/>
-                          </svg>
-                          {/*Delivery pin*/}
-                          <div className="r-phone__pin r-phone__pin--dest">
-                            <svg width="28" height="36" viewBox="0 0 24 30" fill="none">
-                              <path d="M12 0C5.373 0 0 5.373 0 12c0 9 12 18 12 18S24 21 24 12C24 5.373 18.627 0 12 0z" fill="#2F80ED"/>
-                              <circle cx="12" cy="12" r="4" fill="#fff"/>
-                            </svg>
-                          </div>
+                        <img src="/assets/rider-hero-map.jpg" alt="" className="r-phone__map-img" />
+                        <div className="r-phone__pin">
+                          <img src="/assets/icon-map-pin.svg" width={36} height={40} alt="" />
                         </div>
-                        {/*Status bar*/}
-                        <div className="r-phone__status">
-                          <div className="r-phone__status-card">
-                            <div className="r-phone__status-icon">
-                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2.5">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                              </svg>
+                        <div className="r-phone__status-card">
+                          <div className="r-phone__status-top">
+                            <span className="r-phone__status-badge">IN TRANSIT</span>
+                            <span className="r-phone__status-eta">Arrival: 12:45 PM</span>
+                          </div>
+                          <div className="r-phone__status-row">
+                            <img src="/assets/icon-transit.svg" width={20} height={20} alt="" />
+                            <div className="r-phone__status-info">
+                              <span className="r-phone__status-name">James Wilson</span>
+                              <span className="r-phone__status-sub">WhiteFord Transit · KM-4402</span>
                             </div>
-                            <div className="r-phone__status-text">
-                              <span className="r-phone__status-label">En Route</span>
-                              <span className="r-phone__status-eta">ETA 8 min</span>
-                            </div>
-                            <div className="r-phone__status-pulse"></div>
                           </div>
                         </div>
                       </div>
-                      {/*Phone notch*/}
                       <div className="r-phone__notch"></div>
                     </div>
                   </div>
@@ -120,38 +112,31 @@ export function RidersPageContent() {
                   {/*311-3225: card — padding 40px, radius 16px, white, shadow*/}
                   <article className="r-solutions__card">
                     <div className="r-solutions__card-icon">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
-                        <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
-                      </svg>
+                      <img src="/assets/icon-usecase1.svg" width={22} height={25} alt="" />
                     </div>
-                    {/*311-3229 / 3230: content + title*/}
                     <div className="r-solutions__card-body">
                       <h3 className="r-solutions__card-title">Parcel Delivery</h3>
-                      <p className="r-solutions__card-desc">Door-to-door parcel delivery for individuals and small businesses. Fast, tracked, and insured for every shipment.</p>
+                      <p className="r-solutions__card-desc">Perfect for documents, small gifts, or everyday essentials that need to get there fast.</p>
                     </div>
                   </article>
-      
+
                   <article className="r-solutions__card">
                     <div className="r-solutions__card-icon">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
-                        <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-                      </svg>
+                      <img src="/assets/icon-usecase2.svg" width={25} height={22} alt="" />
                     </div>
                     <div className="r-solutions__card-body">
-                      <h3 className="r-solutions__card-title">Business Freight</h3>
-                      <p className="r-solutions__card-desc">Scale your B2B logistics with dedicated fleet options, bulk pricing, and API integration for high-volume operations.</p>
+                      <h3 className="r-solutions__card-title">Business Shipments</h3>
+                      <p className="r-solutions__card-desc">Scalable logistics for retail, e-commerce, and corporate supply chains with bulk rates.</p>
                     </div>
                   </article>
-      
+
                   <article className="r-solutions__card">
                     <div className="r-solutions__card-icon">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
-                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                      </svg>
+                      <img src="/assets/icon-usecase3.svg" width={27} height={22} alt="" />
                     </div>
                     <div className="r-solutions__card-body">
-                      <h3 className="r-solutions__card-title">Same-Day Rush</h3>
-                      <p className="r-solutions__card-desc">Urgent delivery in under 2 hours within city limits. Guaranteed same-day fulfilment for time-critical shipments.</p>
+                      <h3 className="r-solutions__card-title">Personal Moves</h3>
+                      <p className="r-solutions__card-desc">Easily transport furniture or household items across the city without the stress.</p>
                     </div>
                   </article>
       
@@ -166,58 +151,57 @@ export function RidersPageContent() {
             <section className="r-steps" id="how">
               <div className="r-steps__wrap">
       
-                {/*311-3250: header row — flex, space-between, align flex-end*/}
+                {/*Header row — kicker+title on left, desc on right*/}
                 <div className="r-steps__header">
-                  {/*311-3253: title — Manrope 800, 36px, #000, -0.9px*/}
-                  <h2 className="r-steps__title">Four Steps to Delivery</h2>
-                  {/*311-3254 / 3255: right desc — max-width 384px, right-aligned*/}
+                  <div className="r-steps__header-left">
+                    <span className="r-kicker">THE PROCESS</span>
+                    <h2 className="r-steps__title">Four Steps to Delivery</h2>
+                  </div>
                   <div className="r-steps__header-desc">
                     <p>Seamlessly integrated from the moment you book until the final handover.</p>
                   </div>
                 </div>
-      
-                {/*Steps 4-col grid*/}
+
+                {/*Steps 4-col grid — connector line runs behind the boxes*/}
                 <div className="r-steps__grid">
-      
-                  {/*Step 1 — 311-3258 / 3260 / 3261 / 3264*/}
+                  <div className="r-steps__connector" aria-hidden="true"></div>
+
+                  {/*Step 1 — solid blue box (active)*/}
                   <div className="r-steps__item">
-                    {/*311-3260: icon box — 80×80, radius 12, blue shadow*/}
-                    <div className="r-steps__icon">
-                      {/*311-3261: number — Manrope 900, 24px, #FFF*/}
+                    <div className="r-steps__icon r-steps__icon--active">
                       <span className="r-steps__num">1</span>
                     </div>
-                    {/*311-3264: title — Manrope 700, 18px, #000, 28px*/}
                     <h3 className="r-steps__item-title">Enter Details</h3>
-                    <p className="r-steps__item-desc">Input your pickup and drop-off location with package dimensions and weight.</p>
+                    <p className="r-steps__item-desc">Provide pickup and drop-off locations with a few simple taps.</p>
                   </div>
-      
-                  {/*Step 2*/}
+
+                  {/*Step 2 — outlined box*/}
                   <div className="r-steps__item">
-                    <div className="r-steps__icon">
+                    <div className="r-steps__icon r-steps__icon--outline">
                       <span className="r-steps__num">2</span>
                     </div>
                     <h3 className="r-steps__item-title">Choose Vehicle</h3>
-                    <p className="r-steps__item-desc">Pick the right vehicle for your cargo — from bikes for small parcels to trucks for bulk freight.</p>
+                    <p className="r-steps__item-desc">Select from bike to heavy-duty trucks based on your cargo size.</p>
                   </div>
-      
-                  {/*Step 3*/}
+
+                  {/*Step 3 — outlined box*/}
                   <div className="r-steps__item">
-                    <div className="r-steps__icon">
+                    <div className="r-steps__icon r-steps__icon--outline">
                       <span className="r-steps__num">3</span>
                     </div>
                     <h3 className="r-steps__item-title">Track Live</h3>
-                    <p className="r-steps__item-desc">Follow your delivery in real-time on our precision map with live driver location.</p>
+                    <p className="r-steps__item-desc">Monitor your driver in real-time with precise GPS telemetry.</p>
                   </div>
-      
-                  {/*Step 4*/}
+
+                  {/*Step 4 — outlined box*/}
                   <div className="r-steps__item">
-                    <div className="r-steps__icon">
+                    <div className="r-steps__icon r-steps__icon--outline">
                       <span className="r-steps__num">4</span>
                     </div>
-                    <h3 className="r-steps__item-title">Delivery Complete</h3>
-                    <p className="r-steps__item-desc">Receive instant confirmation and digital proof of delivery straight to your inbox.</p>
+                    <h3 className="r-steps__item-title">Delivered</h3>
+                    <p className="r-steps__item-desc">Secure confirmation and digital receipt upon successful arrival.</p>
                   </div>
-      
+
                 </div>{/*/r-steps__grid*/}
               </div>{/*/r-steps__wrap*/}
             </section>
@@ -245,64 +229,36 @@ export function RidersPageContent() {
                 {/*311-3300: fleet cards grid — repeat(4,1fr), radius 16px, glass bg*/}
                 <div className="r-fleet__grid">
       
-                  {/*Vehicle 1: Bike — 311-3300 / 3303 / 3304 / 3305*/}
                   <div className="r-fleet__card">
                     <div className="r-fleet__card-icon">
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/>
-                        <path d="M15 6a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v1h7V6z"/><path d="M9 7l3 10.5"/><path d="M15 7l1.5 5.5"/><path d="M9.5 12h5"/>
-                      </svg>
+                      <img src="/assets/icon-bike.svg" width={48} height={32} alt="" />
                     </div>
-                    {/*311-3303 / 3304: content + name — Manrope 700, 24px, #FFF*/}
                     <div className="r-fleet__card-info">
                       <h3 className="r-fleet__card-name">Bike</h3>
-                      {/*311-3305: subtitle*/}
-                      <p className="r-fleet__card-spec">Up to 5 kg · City centre</p>
+                      <p className="r-fleet__card-spec">Small packages &amp; documents</p>
+                      <span className="r-fleet__card-badge">ULTRA FAST</span>
                     </div>
                   </div>
-      
-                  {/*Vehicle 2: Scooter*/}
-                  <div className="r-fleet__card">
+
+                  <div className="r-fleet__card r-fleet__card--featured">
                     <div className="r-fleet__card-icon">
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/>
-                        <path d="M6 18H3V9h3l3-4h5l2 4h2l1 5H6"/><path d="M12 5v4"/>
-                      </svg>
+                      <img src="/assets/icon-pickup.svg" width={44} height={32} alt="" />
                     </div>
                     <div className="r-fleet__card-info">
-                      <h3 className="r-fleet__card-name">Scooter</h3>
-                      <p className="r-fleet__card-spec">Up to 15 kg · Urban zone</p>
+                      <h3 className="r-fleet__card-name">Pickup</h3>
+                      <p className="r-fleet__card-spec">Medium loads &amp; appliances</p>
+                      <span className="r-fleet__card-badge">MOST POPULAR</span>
                     </div>
                   </div>
-      
-                  {/*Vehicle 3: Van*/}
+
                   <div className="r-fleet__card">
                     <div className="r-fleet__card-icon">
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="1" y="3" width="15" height="13" rx="2"/>
-                        <path d="M16 8h4l3 3v5h-7V8z"/>
-                        <circle cx="5.5" cy="18.5" r="2.5"/>
-                        <circle cx="18.5" cy="18.5" r="2.5"/>
-                      </svg>
-                    </div>
-                    <div className="r-fleet__card-info">
-                      <h3 className="r-fleet__card-name">Van</h3>
-                      <p className="r-fleet__card-spec">Up to 500 kg · Metro area</p>
-                    </div>
-                  </div>
-      
-                  {/*Vehicle 4: Truck*/}
-                  <div className="r-fleet__card">
-                    <div className="r-fleet__card-icon">
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/>
-                        <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-                        <path d="M16 3h2l2 3"/>
-                      </svg>
+                      <img src="/assets/icon-truck-fleet.svg" width={32} height={40} alt="" />
                     </div>
                     <div className="r-fleet__card-info">
                       <h3 className="r-fleet__card-name">Truck</h3>
-                      <p className="r-fleet__card-spec">Up to 5 000 kg · Nationwide</p>
+                      <p className="r-fleet__card-spec">Heavy goods &amp; industrial</p>
+                      <span className="r-fleet__card-badge">HIGH CAPACITY</span>
                     </div>
                   </div>
       
@@ -418,50 +374,9 @@ export function RidersPageContent() {
               {/*311-3379: 2-col grid, max-width 1280px, padding 0 32px, gap 80px, rows 568px*/}
               <div className="r-app__grid">
       
-                {/*Left col: phone mockup*/}
+                {/*Left col: app screenshot*/}
                 <div className="r-app__phone-col">
-                  <div className="r-app__phone">
-                    <div className="r-app__phone-frame">
-                      <div className="r-app__phone-screen">
-                        <div className="r-app__ui">
-                          {/*App header*/}
-                          <div className="r-app__ui-header">
-                            <span className="r-app__ui-greeting">Good morning, Alex 👋</span>
-                            <div className="r-app__ui-avatar"></div>
-                          </div>
-                          {/*Active delivery card*/}
-                          <div className="r-app__ui-card">
-                            <div className="r-app__ui-card-top">
-                              <span className="r-app__ui-badge">Active</span>
-                              <span className="r-app__ui-eta">ETA 12 min</span>
-                            </div>
-                            <div className="r-app__ui-progress">
-                              <div className="r-app__ui-bar">
-                                <div className="r-app__ui-fill"></div>
-                              </div>
-                            </div>
-                            <p className="r-app__ui-addr">456 Commerce Ave, Dallas</p>
-                          </div>
-                          {/*Map mini*/}
-                          <div className="r-app__ui-map">
-                            <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <rect width="200" height="100" fill="#E8F4FD"/>
-                              <path d="M0 60 L40 50 L80 55 L120 45 L160 50 L200 45" stroke="#C8DFF0" strokeWidth="8"/>
-                              <path d="M0 80 L50 70 L90 75 L130 65 L200 70" stroke="#C8DFF0" strokeWidth="5"/>
-                              <circle cx="150" cy="48" r="8" fill="#2F80ED"/>
-                              <circle cx="150" cy="48" r="4" fill="#fff"/>
-                            </svg>
-                          </div>
-                          {/*Notification*/}
-                          <div className="r-app__ui-notif">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                            <span>Package picked up · just now</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="r-app__phone-notch"></div>
-                    </div>
-                  </div>
+                  <img src="/assets/rider-app.jpg" alt="CarryOn app interface" className="r-app__screenshot" />
                 </div>
       
                 {/*311-3380: right column — flex col, gap 40px, col 2 span 1*/}
@@ -478,38 +393,33 @@ export function RidersPageContent() {
                   {/*311-3391: features list — flex col*/}
                   <div className="r-app__features">
       
-                    {/*Feature 1 — 311-3392 / 3394*/}
-                    <div className="r-app__feature">
+                      <div className="r-app__feature">
                       <div className="r-app__feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2" strokeLinecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                        <img src="/assets/icon-notif.svg" width={20} height={20} alt="" />
                       </div>
                       <div className="r-app__feature-text">
-                        {/*311-3392: feature title — Manrope 700, 20px, #000, 28px*/}
                         <h4 className="r-app__feature-title">Instant Notifications</h4>
-                        {/*311-3394: feature desc — Manrope 400, 16px, #000, 26px*/}
                         <p className="r-app__feature-desc">Get real-time updates for every milestone—from dispatch to door.</p>
                       </div>
                     </div>
-      
-                    {/*Feature 2*/}
+
                     <div className="r-app__feature">
                       <div className="r-app__feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2" strokeLinecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <img src="/assets/icon-payment.svg" width={22} height={16} alt="" />
                       </div>
                       <div className="r-app__feature-text">
-                        <h4 className="r-app__feature-title">Schedule Deliveries</h4>
-                        <p className="r-app__feature-desc">Plan ahead and schedule deliveries up to 7 days in advance.</p>
+                        <h4 className="r-app__feature-title">Easy Payments</h4>
+                        <p className="r-app__feature-desc">Secure digital wallets, card payments, or business billing options.</p>
                       </div>
                     </div>
-      
-                    {/*Feature 3*/}
+
                     <div className="r-app__feature">
                       <div className="r-app__feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="2" strokeLinecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <img src="/assets/icon-share-track.svg" width={20} height={20} alt="" />
                       </div>
                       <div className="r-app__feature-text">
-                        <h4 className="r-app__feature-title">Contact Driver</h4>
-                        <p className="r-app__feature-desc">Direct in-app chat or call with your driver at any point during the delivery.</p>
+                        <h4 className="r-app__feature-title">Live Share Tracking</h4>
+                        <p className="r-app__feature-desc">Share live tracking links with your recipients for a seamless handover.</p>
                       </div>
                     </div>
       
@@ -543,40 +453,31 @@ export function RidersPageContent() {
                   {/*311-3422: card — padding 40px, radius 24px, border #A6D2F3*/}
                   <article className="r-trust__card">
                     <div className="r-trust__card-icon">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                      </svg>
+                      <img src="/assets/icon-verified.svg" width={24} height={30} alt="" />
                     </div>
-                    {/*311-3424 / 3425: content + title — Manrope 700, 20px, #000*/}
                     <div className="r-trust__card-body">
                       <h3 className="r-trust__card-title">Verified Drivers</h3>
-                      {/*311-3427: desc*/}
-                      <p className="r-trust__card-desc">Every driver completes comprehensive background checks, vehicle inspections, and training before their first delivery.</p>
+                      <p className="r-trust__card-desc">Every driver undergoes a rigorous background check and safety training program.</p>
                     </div>
                   </article>
-      
+
                   <article className="r-trust__card">
                     <div className="r-trust__card-icon">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                      </svg>
+                      <img src="/assets/icon-secure-pay.svg" width={30} height={30} alt="" />
                     </div>
                     <div className="r-trust__card-body">
-                      <h3 className="r-trust__card-title">Live GPS Tracking</h3>
-                      <p className="r-trust__card-desc">Follow your package in real-time from pickup to delivery with our precision GPS system and live map view.</p>
+                      <h3 className="r-trust__card-title">Secure Payments</h3>
+                      <p className="r-trust__card-desc">Industry-standard encryption for every transaction you make on our platform.</p>
                     </div>
                   </article>
-      
+
                   <article className="r-trust__card">
                     <div className="r-trust__card-icon">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75" strokeLinecap="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
-                      </svg>
+                      <img src="/assets/icon-247support.svg" width={30} height={27} alt="" />
                     </div>
                     <div className="r-trust__card-body">
-                      <h3 className="r-trust__card-title">Insurance Coverage</h3>
-                      <p className="r-trust__card-desc">Every delivery is insured from the moment it's picked up. We protect your cargo so you never have to worry.</p>
+                      <h3 className="r-trust__card-title">24/7 Support</h3>
+                      <p className="r-trust__card-desc">Our dedicated concierge team is always online to assist with your delivery concerns.</p>
                     </div>
                   </article>
       
@@ -687,37 +588,33 @@ export function RidersPageContent() {
                 <div className="r-reviews__grid">
                   <article className="r-reviews__card">
                     <div className="r-reviews__stars" aria-label="5 out of 5 stars">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src="/assets/icon-star.svg" width={20} height={19} alt="★" />
+                      ))}
                     </div>
                     <blockquote className="r-reviews__quote">
                       Fast and reliable delivery every time. CarryOn has completely changed how we handle our last-mile distribution.
                     </blockquote>
                     <div className="r-reviews__author">
-                      <div className="r-reviews__avatar" role="img" aria-label=""></div>
+                      <img src="/assets/avatar-david.jpg" width={48} height={48} alt="David Chen" className="r-reviews__avatar" />
                       <div className="r-reviews__author-info">
                         <span className="r-reviews__name">David Chen</span>
                         <span className="r-reviews__role">E-commerce Owner &bull; Austin, TX</span>
                       </div>
                     </div>
                   </article>
-      
+
                   <article className="r-reviews__card">
                     <div className="r-reviews__stars" aria-label="5 out of 5 stars">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src="/assets/icon-star.svg" width={20} height={19} alt="★" />
+                      ))}
                     </div>
                     <blockquote className="r-reviews__quote">
-                      The tracking is the most precise I've seen in any logistics app. It's actually accurate to the minute.
+                      The tracking is the most precise I&apos;ve seen in any logistics app. It&apos;s actually accurate to the minute.
                     </blockquote>
                     <div className="r-reviews__author">
-                      <div className="r-reviews__avatar r-reviews__avatar--2" role="img" aria-label=""></div>
+                      <img src="/assets/avatar-sarah.jpg" width={48} height={48} alt="Sarah Williams" className="r-reviews__avatar" />
                       <div className="r-reviews__author-info">
                         <span className="r-reviews__name">Sarah Williams</span>
                         <span className="r-reviews__role">Project Manager &ndash; Chicago, IL</span>
@@ -750,12 +647,11 @@ export function RidersPageContent() {
                 </p>
                 {/*311-3788: button row — flex, center, gap 16px, padding-top 16px*/}
                 <div className="r-cta__btns">
-                  {/*311-3790 / 3791 / 3792: Book Delivery button — white, #2F80ED text, shadow*/}
                   <a href="#book" className="r-cta__btn r-cta__btn--primary">
                     Book Delivery
                   </a>
-                  <a href="#" className="r-cta__btn r-cta__btn--ghost">
-                    Download App
+                  <a href="#pricing" className="r-cta__btn r-cta__btn--ghost">
+                    View Pricing
                   </a>
                 </div>
               </div>
@@ -779,14 +675,14 @@ export function RidersPageContent() {
                     Precision logistics for every mile. Sending anything, anywhere made simple and reliable.
                   </p>
                   <div className="r-footer__social" aria-label="Social media">
-                    <a href="#" className="r-footer__social-link" aria-label="X (Twitter)">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <a href="#" className="r-footer__social-link" aria-label="Twitter">
+                      <img src="/assets/icon-social1.svg" width={20} height={20} alt="" />
                     </a>
                     <a href="#" className="r-footer__social-link" aria-label="LinkedIn">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                      <img src="/assets/icon-social2.svg" width={20} height={20} alt="" />
                     </a>
                     <a href="#" className="r-footer__social-link" aria-label="Facebook">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      <img src="/assets/icon-social3.svg" width={20} height={20} alt="" />
                     </a>
                   </div>
                 </div>
@@ -828,8 +724,8 @@ export function RidersPageContent() {
               <div className="r-footer__bottom">
                 <p className="r-footer__copy">© 2024 CarryOn Logistics. All rights reserved.</p>
                 <nav className="r-footer__legal" aria-label="Legal">
-                  <a href="#">Privacy Policy</a>
-                  <a href="#">Terms of Service</a>
+                  <a href="/privacy">Privacy Policy</a>
+                  <a href="/terms">Terms of Service</a>
                   <a href="#">Cookie Policy</a>
                 </nav>
               </div>

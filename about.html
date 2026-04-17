@@ -63,7 +63,77 @@
             <div class="a-hero__visual" aria-hidden="true">
               <div class="a-hero__visual-inner">
                 <span class="a-hero__future">FUTURE</span>
-                <p class="a-hero__visual-tag">Next-gen logistics</p>
+                <div class="a-hero__truck">
+                  <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background boxes/pallets -->
+                    <rect x="280" y="80" width="40" height="40" fill="#3a4a5a" opacity="0.6"/>
+                    <rect x="325" y="70" width="35" height="50" fill="#3a4a5a" opacity="0.5"/>
+                    <rect x="300" y="60" width="45" height="35" fill="#3a4a5a" opacity="0.4"/>
+                    
+                    <!-- Truck body - main cabin -->
+                    <rect x="60" y="70" width="180" height="110" rx="4" fill="#e8e8e8"/>
+                    <rect x="60" y="70" width="180" height="110" rx="4" stroke="#c0c0c0" stroke-width="1"/>
+                    
+                    <!-- Truck cabin top curve -->
+                    <path d="M60 85 Q60 70 75 70 L240 70 L240 85 L60 85 Z" fill="#d0d0d0"/>
+                    
+                    <!-- Door -->
+                    <rect x="130" y="85" width="55" height="85" rx="3" fill="#f5f5f5" stroke="#c0c0c0" stroke-width="1.5"/>
+                    <rect x="140" y="95" width="35" height="45" rx="2" fill="#4a5568"/>
+                    <rect x="145" y="100" width="25" height="35" rx="1" fill="#2d3748"/>
+                    <!-- Door handle -->
+                    <rect x="175" y="125" width="8" height="3" rx="1" fill="#666"/>
+                    
+                    <!-- Side window -->
+                    <rect x="70" y="85" width="45" height="40" rx="3" fill="#4a5568"/>
+                    <rect x="75" y="90" width="35" height="30" rx="2" fill="#2d3748"/>
+                    
+                    <!-- Front/bonnet area -->
+                    <path d="M50 110 L60 110 L60 160 L50 160 Q45 160 45 150 L45 120 Q45 110 50 110 Z" fill="#d0d0d0"/>
+                    
+                    <!-- Cargo bed -->
+                    <rect x="245" y="90" width="120" height="70" rx="3" fill="#e8e8e8" stroke="#c0c0c0" stroke-width="1"/>
+                    <rect x="245" y="85" width="120" height="8" rx="2" fill="#d0d0d0"/>
+                    
+                    <!-- Bed sides detail -->
+                    <line x1="245" y1="115" x2="365" y2="115" stroke="#c0c0c0" stroke-width="1"/>
+                    <line x1="245" y1="140" x2="365" y2="140" stroke="#c0c0c0" stroke-width="1"/>
+                    
+                    <!-- Wheels -->
+                    <circle cx="95" cy="165" r="22" fill="#2d3748"/>
+                    <circle cx="95" cy="165" r="14" fill="#4a5568"/>
+                    <circle cx="95" cy="165" r="7" fill="#718096"/>
+                    
+                    <circle cx="170" cy="165" r="22" fill="#2d3748"/>
+                    <circle cx="170" cy="165" r="14" fill="#4a5568"/>
+                    <circle cx="170" cy="165" r="7" fill="#718096"/>
+                    
+                    <circle cx="280" cy="165" r="20" fill="#2d3748"/>
+                    <circle cx="280" cy="165" r="12" fill="#4a5568"/>
+                    <circle cx="280" cy="165" r="6" fill="#718096"/>
+                    
+                    <!-- Wheel wells -->
+                    <path d="M70 160 Q70 140 95 140 Q120 140 120 160" fill="#1a202c"/>
+                    <path d="M145 160 Q145 140 170 140 Q195 140 195 160" fill="#1a202c"/>
+                    <path d="M255 160 Q255 145 280 145 Q305 145 305 160" fill="#1a202c"/>
+                    
+                    <!-- Headlight -->
+                    <rect x="48" y="125" width="8" height="15" rx="2" fill="#f6e05e"/>
+                    
+                    <!-- Taillight -->
+                    <rect x="362" y="105" width="5" height="20" rx="1" fill="#e53e3e"/>
+                    
+                    <!-- Side step -->
+                    <rect x="135" y="165" width="50" height="6" rx="2" fill="#666"/>
+                    
+                    <!-- Bumper -->
+                    <rect x="45" y="155" width="20" height="12" rx="2" fill="#999"/>
+                    <rect x="360" y="155" width="10" height="10" rx="2" fill="#999"/>
+                    
+                    <!-- Green progress line at bottom -->
+                    <line x1="0" y1="195" x2="400" y2="195" stroke="#22c55e" stroke-width="2"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -219,14 +289,174 @@
           </div>
           <div class="a-precision__visual">
             <div class="a-precision__frame">
-              <img
-                class="a-precision__img"
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=960&amp;h=720&amp;fit=crop&amp;q=80"
-                width="960"
-                height="720"
-                alt=""
-                loading="lazy"
-              />
+              <!-- Hand holding device - matching Figma design exactly -->
+              <svg class="a-precision__img" viewBox="0 0 520 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <!-- Deep blue background -->
+                  <linearGradient id="deepBlueBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0a1929"/>
+                    <stop offset="50%" stop-color="#0d2137"/>
+                    <stop offset="100%" stop-color="#061220"/>
+                  </linearGradient>
+                  
+                  <!-- Cyan glow -->
+                  <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.6"/>
+                    <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+                  </radialGradient>
+                  
+                  <!-- Soft glow behind device -->
+                  <radialGradient id="deviceGlow" cx="50%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#1a4a6e" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#0a1929" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                
+                <!-- Background -->
+                <rect width="520" height="400" fill="url(#deepBlueBg)"/>
+                
+                <!-- Ambient glow spots -->
+                <circle cx="100" cy="100" r="80" fill="url(#cyanGlow)" opacity="0.15"/>
+                <circle cx="420" cy="150" r="100" fill="url(#cyanGlow)" opacity="0.1"/>
+                <circle cx="380" cy="320" r="60" fill="url(#cyanGlow)" opacity="0.12"/>
+                
+                <!-- Subtle horizontal lines (tech grid effect) -->
+                <g opacity="0.06" stroke="#00d4ff" stroke-width="1">
+                  <line x1="0" y1="100" x2="520" y2="100"/>
+                  <line x1="0" y1="200" x2="520" y2="200"/>
+                  <line x1="0" y1="300" x2="520" y2="300"/>
+                </g>
+                
+                <!-- Floating data points -->
+                <circle cx="80" cy="80" r="3" fill="#00d4ff" opacity="0.5"/>
+                <circle cx="450" cy="120" r="4" fill="#00d4ff" opacity="0.4"/>
+                <circle cx="60" cy="280" r="2" fill="#00d4ff" opacity="0.6"/>
+                <circle cx="480" cy="340" r="3" fill="#00d4ff" opacity="0.5"/>
+                <circle cx="200" cy="60" r="2" fill="#00d4ff" opacity="0.4"/>
+                
+                <!-- Main composition - hand and device -->
+                <g transform="translate(100, 60)">
+                  <!-- Glow behind device -->
+                  <ellipse cx="160" cy="140" rx="140" ry="120" fill="url(#deviceGlow)"/>
+                  
+                  <!-- Hand - wrist and palm (entering from right) -->
+                  <path d="M280 280 
+                           L320 320 
+                           Q340 340 360 320 
+                           L380 300 
+                           Q390 290 380 270 
+                           L360 220 
+                           Q350 200 330 210 
+                           L300 180 
+                           Q280 160 260 180 
+                           L240 220 
+                           Q230 240 250 260 Z" 
+                        fill="#d4a574"/>
+                  
+                  <!-- Hand shadow/depth -->
+                  <path d="M290 290 L325 325 Q340 340 355 325" fill="none" stroke="#b8935f" stroke-width="2" opacity="0.5"/>
+                  
+                  <!-- Fingers wrapping around device (from right side) -->
+                  <!-- Index finger -->
+                  <ellipse cx="275" cy="130" rx="20" ry="35" fill="#d4a574"/>
+                  <ellipse cx="278" cy="130" rx="15" ry="28" fill="#e8c4a0"/>
+                  
+                  <!-- Middle finger -->
+                  <ellipse cx="285" cy="170" rx="18" ry="38" fill="#d4a574"/>
+                  <ellipse cx="288" cy="170" rx="14" ry="30" fill="#e8c4a0"/>
+                  
+                  <!-- Ring finger -->
+                  <ellipse cx="290" cy="210" rx="17" ry="36" fill="#d4a574"/>
+                  <ellipse cx="293" cy="210" rx="13" ry="28" fill="#e8c4a0"/>
+                  
+                  <!-- Pinky -->
+                  <ellipse cx="285" cy="248" rx="15" ry="30" fill="#d4a574"/>
+                  <ellipse cx="287" cy="248" rx="12" ry="24" fill="#e8c4a0"/>
+                  
+                  <!-- Thumb (from bottom right) -->
+                  <ellipse cx="240" cy="270" rx="35" ry="22" fill="#d4a574"/>
+                  <ellipse cx="245" cy="265" rx="25" ry="16" fill="#e8c4a0"/>
+                  <ellipse cx="235" cy="268" rx="15" ry="10" fill="#f0d0b0"/>
+                  
+                  <!-- Smartphone/Tablet device -->
+                  <rect x="80" y="40" width="200" height="240" rx="16" fill="#1a1a1a"/>
+                  <rect x="84" y="44" width="192" height="232" rx="13" fill="#0d0d0d"/>
+                  
+                  <!-- Screen area -->
+                  <rect x="90" y="50" width="180" height="220" rx="10" fill="#0a1520"/>
+                  
+                  <!-- Screen content - telemetry interface -->
+                  <!-- Top status bar -->
+                  <rect x="90" y="50" width="180" height="25" rx="10" fill="#0d1f2d"/>
+                  <rect x="90" y="60" width="180" height="15" fill="#0d1f2d"/>
+                  
+                  <!-- Signal dots -->
+                  <circle cx="105" cy="62" r="2.5" fill="#00d4ff" opacity="0.9"/>
+                  <circle cx="115" cy="62" r="2.5" fill="#00d4ff" opacity="0.7"/>
+                  <circle cx="125" cy="62" r="2.5" fill="#00d4ff" opacity="0.5"/>
+                  <circle cx="135" cy="62" r="2.5" fill="#00d4ff" opacity="0.3"/>
+                  
+                  <!-- Battery icon -->
+                  <rect x="250" y="58" width="12" height="8" rx="1" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.8"/>
+                  <rect x="252" y="60" width="6" height="4" rx="0.5" fill="#00d4ff" opacity="0.8"/>
+                  
+                  <!-- Large circular gauge/chart (center) -->
+                  <circle cx="180" cy="120" r="40" fill="none" stroke="#1e3a5f" stroke-width="3" opacity="0.5"/>
+                  <path d="M180 80 A40 40 0 0 1 215 105" fill="none" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M215 105 A40 40 0 0 1 220 140" fill="none" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+                  <circle cx="180" cy="120" r="28" fill="#0d2137"/>
+                  <text x="180" y="125" text-anchor="middle" fill="#00d4ff" font-size="16" font-family="Arial" font-weight="bold">84%</text>
+                  
+                  <!-- Data bars below gauge -->
+                  <rect x="110" y="170" width="10" height="40" rx="2" fill="#1e3a5f"/>
+                  <rect x="110" y="190" width="10" height="20" rx="2" fill="#00d4ff" opacity="0.8"/>
+                  
+                  <rect x="128" y="160" width="10" height="50" rx="2" fill="#1e3a5f"/>
+                  <rect x="128" y="175" width="10" height="35" rx="2" fill="#00d4ff"/>
+                  
+                  <rect x="146" y="165" width="10" height="45" rx="2" fill="#1e3a5f"/>
+                  <rect x="146" y="185" width="10" height="25" rx="2" fill="#00d4ff" opacity="0.9"/>
+                  
+                  <rect x="164" y="155" width="10" height="55" rx="2" fill="#1e3a5f"/>
+                  <rect x="164" y="170" width="10" height="40" rx="2" fill="#00d4ff"/>
+                  
+                  <rect x="182" y="168" width="10" height="42" rx="2" fill="#1e3a5f"/>
+                  <rect x="182" y="188" width="10" height="22" rx="2" fill="#00d4ff" opacity="0.7"/>
+                  
+                  <rect x="200" y="162" width="10" height="48" rx="2" fill="#1e3a5f"/>
+                  <rect x="200" y="178" width="10" height="32" rx="2" fill="#00d4ff" opacity="0.85"/>
+                  
+                  <rect x="218" y="170" width="10" height="40" rx="2" fill="#1e3a5f"/>
+                  <rect x="218" y="195" width="10" height="15" rx="2" fill="#00d4ff" opacity="0.5"/>
+                  
+                  <rect x="236" y="165" width="10" height="45" rx="2" fill="#1e3a5f"/>
+                  <rect x="236" y="180" width="10" height="30" rx="2" fill="#00d4ff" opacity="0.75"/>
+                  
+                  <!-- Line graph overlay -->
+                  <path d="M110 230 L130 225 L150 228 L170 220 L190 215 L210 218 L230 210 L250 205" 
+                        fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                  
+                  <!-- Data points on line -->
+                  <circle cx="110" cy="230" r="3" fill="#00d4ff"/>
+                  <circle cx="130" cy="225" r="3" fill="#00d4ff"/>
+                  <circle cx="150" cy="228" r="3" fill="#00d4ff"/>
+                  <circle cx="170" cy="220" r="3" fill="#00d4ff"/>
+                  <circle cx="190" cy="215" r="3" fill="#00d4ff"/>
+                  <circle cx="210" cy="218" r="3" fill="#00d4ff"/>
+                  <circle cx="230" cy="210" r="3" fill="#00d4ff"/>
+                  <circle cx="250" cy="205" r="3" fill="#00d4ff"/>
+                  
+                  <!-- Bottom info labels -->
+                  <text x="110" y="260" fill="#5a7a94" font-size="9" font-family="Arial">GPS</text>
+                  <text x="110" y="272" fill="#00d4ff" font-size="10" font-family="Arial" font-weight="bold">ACTIVE</text>
+                  
+                  <text x="180" y="260" fill="#5a7a94" font-size="9" font-family="Arial">ETA</text>
+                  <text x="180" y="272" fill="#00d4ff" font-size="10" font-family="Arial" font-weight="bold">12:34</text>
+                  
+                  <text x="240" y="260" fill="#5a7a94" font-size="9" font-family="Arial">SPEED</text>
+                  <text x="240" y="272" fill="#00d4ff" font-size="10" font-family="Arial" font-weight="bold">45mph</text>
+                </g>
+              </svg>
               <div class="a-precision__float-card">
                 <span class="a-precision__float-kicker">Live telemetry</span>
                 <p class="a-precision__float-text">
@@ -235,6 +465,57 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- 311-4070 Why Choose CarryOn -->
+      <section class="a-why">
+        <div class="a-why__head">
+          <h2 class="a-why__title">Why Choose CarryOn</h2>
+          <p class="a-why__subtitle">Enterprise-grade features designed for the complexities of modern commerce.</p>
+        </div>
+        <div class="a-why__grid">
+          <article class="a-why__card">
+            <div class="a-why__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h3 class="a-why__card-title">Real-time Tracking</h3>
+            <p class="a-why__card-desc">Precision GPS tracking for every asset in your fleet, updated every second.</p>
+          </article>
+          <article class="a-why__card">
+            <div class="a-why__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <h3 class="a-why__card-title">AI Optimization</h3>
+            <p class="a-why__card-desc">Machine learning algorithms that predict traffic and optimize routes dynamically.</p>
+          </article>
+          <article class="a-why__card">
+            <div class="a-why__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="12" rx="2"/>
+                <path d="M12 16v4"/>
+                <path d="M8 20h8"/>
+                <path d="M8 10l4-2 4 2"/>
+              </svg>
+            </div>
+            <h3 class="a-why__card-title">Transparent Pricing</h3>
+            <p class="a-why__card-desc">Upfront quotes with no hidden surcharges. Full cost visibility from start to finish.</p>
+          </article>
+          <article class="a-why__card">
+            <div class="a-why__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="a-why__card-title">24/7 Safety</h3>
+            <p class="a-why__card-desc">Dedicated monitoring and emergency response teams available around the clock.</p>
+          </article>
         </div>
       </section>
 

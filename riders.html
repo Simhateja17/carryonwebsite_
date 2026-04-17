@@ -197,8 +197,11 @@
 
           <!-- 311-3250: header row — flex, space-between, align flex-end -->
           <div class="r-steps__header">
-            <!-- 311-3253: title — Manrope 800, 36px, #000, -0.9px -->
-            <h2 class="r-steps__title">Four Steps to Delivery</h2>
+            <!-- 311-3252 / 3253: left paragraph — kicker + title -->
+            <div class="r-steps__title-group">
+              <span class="r-kicker">THE PROCESS</span>
+              <h2 class="r-steps__title">Four Steps to Delivery</h2>
+            </div>
             <!-- 311-3254 / 3255: right desc — max-width 384px, right-aligned -->
             <div class="r-steps__header-desc">
               <p>Seamlessly integrated from the moment you book until the final handover.</p>
@@ -208,43 +211,51 @@
           <!-- Steps 4-col grid -->
           <div class="r-steps__grid">
 
-            <!-- Step 1 — 311-3258 / 3260 / 3261 / 3264 -->
+            <!-- Horizontal connector line -->
+            <div class="r-steps__line" aria-hidden="true"></div>
+
+            <!-- Step 1 — filled blue icon -->
             <div class="r-steps__item">
-              <!-- 311-3260: icon box — 80×80, radius 12, blue shadow -->
-              <div class="r-steps__icon">
-                <!-- 311-3261: number — Manrope 900, 24px, #FFF -->
+              <div class="r-steps__icon r-steps__icon--filled">
                 <span class="r-steps__num">1</span>
               </div>
-              <!-- 311-3264: title — Manrope 700, 18px, #000, 28px -->
-              <h3 class="r-steps__item-title">Enter Details</h3>
-              <p class="r-steps__item-desc">Input your pickup and drop-off location with package dimensions and weight.</p>
+              <div class="r-steps__item-body">
+                <h3 class="r-steps__item-title">Enter Details</h3>
+                <p class="r-steps__item-desc">Provide pickup and drop-off locations with a few simple taps.</p>
+              </div>
             </div>
 
-            <!-- Step 2 -->
+            <!-- Step 2 — outline icon -->
             <div class="r-steps__item">
-              <div class="r-steps__icon">
-                <span class="r-steps__num">2</span>
+              <div class="r-steps__icon r-steps__icon--outline">
+                <span class="r-steps__num r-steps__num--blue">2</span>
               </div>
-              <h3 class="r-steps__item-title">Choose Vehicle</h3>
-              <p class="r-steps__item-desc">Pick the right vehicle for your cargo — from bikes for small parcels to trucks for bulk freight.</p>
+              <div class="r-steps__item-body">
+                <h3 class="r-steps__item-title">Choose Vehicle</h3>
+                <p class="r-steps__item-desc">Select from bike to heavy-duty trucks based on your cargo size.</p>
+              </div>
             </div>
 
-            <!-- Step 3 -->
+            <!-- Step 3 — outline icon -->
             <div class="r-steps__item">
-              <div class="r-steps__icon">
-                <span class="r-steps__num">3</span>
+              <div class="r-steps__icon r-steps__icon--outline">
+                <span class="r-steps__num r-steps__num--blue">3</span>
               </div>
-              <h3 class="r-steps__item-title">Track Live</h3>
-              <p class="r-steps__item-desc">Follow your delivery in real-time on our precision map with live driver location.</p>
+              <div class="r-steps__item-body">
+                <h3 class="r-steps__item-title">Track Live</h3>
+                <p class="r-steps__item-desc">Monitor your driver in real-time with precise GPS telemetry.</p>
+              </div>
             </div>
 
-            <!-- Step 4 -->
+            <!-- Step 4 — outline icon -->
             <div class="r-steps__item">
-              <div class="r-steps__icon">
-                <span class="r-steps__num">4</span>
+              <div class="r-steps__icon r-steps__icon--outline">
+                <span class="r-steps__num r-steps__num--blue">4</span>
               </div>
-              <h3 class="r-steps__item-title">Delivery Complete</h3>
-              <p class="r-steps__item-desc">Receive instant confirmation and digital proof of delivery straight to your inbox.</p>
+              <div class="r-steps__item-body">
+                <h3 class="r-steps__item-title">Delivered</h3>
+                <p class="r-steps__item-desc">Secure confirmation and digital receipt upon successful arrival.</p>
+              </div>
             </div>
 
           </div><!-- /r-steps__grid -->

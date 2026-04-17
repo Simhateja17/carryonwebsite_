@@ -469,6 +469,14 @@
   align-self: stretch;
 }
 
+/* Left group: kicker + title stacked */
+.r-steps__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16.5px;
+  align-items: flex-start;
+}
+
 /* 311-3253: title — Manrope 800, 36px, #000, -0.9px */
 .r-steps__title {
   margin: 0;
@@ -505,6 +513,18 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 32px;
   align-self: stretch;
+  position: relative;
+}
+
+/* 1:765: horizontal connector line at mid-icon height */
+.r-steps__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 48px;
+  height: 2px;
+  background: #2F80ED;
+  z-index: 0;
 }
 
 /* 311-3258: step item — flex col, gap 24px */
@@ -513,9 +533,11 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  position: relative;
+  z-index: 1;
 }
 
-/* 311-3260: step icon — 80×80, radius 12, blue shadow */
+/* 311-3260: step icon — 80×80, radius 12, blue fill + shadow (step 1) */
 .r-steps__icon {
   position: relative;
   width: 80px;
@@ -527,6 +549,18 @@
   justify-content: center;
   box-shadow: 0 20px 25px -5px rgba(0, 61, 155, 0.20),
               0 8px 10px -6px rgba(0, 61, 155, 0.20);
+  flex-shrink: 0;
+}
+
+/* Steps 2–4: white background with blue border */
+.r-steps__icon--filled {
+  background: #2F80ED;
+}
+
+.r-steps__icon--outline {
+  background: #fff;
+  border: 3.5px solid #2F80ED;
+  box-shadow: none;
 }
 
 /* 311-3261: step number — Manrope 900, 24px, #FFF */
@@ -537,6 +571,19 @@
   font-size: 24px;
   font-weight: 900;
   line-height: 32px;
+}
+
+/* Blue number for outline icons (steps 2–4) */
+.r-steps__num--blue {
+  color: #2F80ED;
+}
+
+/* Item body (title + desc wrapper) */
+.r-steps__item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6.875px;
+  align-self: stretch;
 }
 
 /* 311-3264: step title — Manrope 700, 18px, #000, 28px */

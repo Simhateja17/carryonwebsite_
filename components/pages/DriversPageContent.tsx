@@ -29,19 +29,14 @@ export function DriversPageContent() {
                   {/*cols 6–12: visual*/}
                   <div className="d-hero__visual">
                     <img
-                      src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=85"
+                      src="/assets/driver-hero.jpg"
                       alt="Driver standing with delivery van"
                       width="700"
                       height="420"
                     />
                     <div className="d-hero__badge">
                       <div className="d-hero__badge-icon" aria-hidden="true">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.75">
-                          <rect x="1" y="3" width="15" height="13" rx="1"/>
-                          <path d="M16 8h4l3 3v5h-7V8z"/>
-                          <circle cx="5.5" cy="18.5" r="2.5"/>
-                          <circle cx="18.5" cy="18.5" r="2.5"/>
-                        </svg>
+                        <img src="/assets/icon-active-drivers.svg" width={22} height={22} alt="" />
                       </div>
                       <div>
                         <p className="d-hero__badge-label">Active Drivers</p>
@@ -108,12 +103,7 @@ export function DriversPageContent() {
                       <div className="d-step d-step--active" role="listitem">
                         <span className="d-step__num">01</span>
                         <div className="d-step__icon">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-                            <rect x="3" y="3" width="7" height="7" rx="1.5"/>
-                            <rect x="14" y="3" width="7" height="7" rx="1.5"/>
-                            <rect x="3" y="14" width="7" height="7" rx="1.5"/>
-                            <rect x="14" y="14" width="7" height="7" rx="1.5"/>
-                          </svg>
+                          <img src="/assets/icon-step-signup.svg" width={24} height={24} alt="" aria-hidden="true" />
                         </div>
                         <h3 className="d-step__label">Sign up</h3>
                         <p className="d-step__desc">Complete our digital application in under 5 minutes.</p>
@@ -123,10 +113,7 @@ export function DriversPageContent() {
                       <div className="d-step" role="listitem">
                         <span className="d-step__num">02</span>
                         <div className="d-step__icon">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
+                          <img src="/assets/icon-step-verify.svg" width={24} height={24} alt="" aria-hidden="true" />
                         </div>
                         <h3 className="d-step__label">Get verified</h3>
                         <p className="d-step__desc">Automated background checks and vehicle precision audits.</p>
@@ -136,10 +123,7 @@ export function DriversPageContent() {
                       <div className="d-step" role="listitem">
                         <span className="d-step__num">03</span>
                         <div className="d-step__icon">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                          </svg>
+                          <img src="/assets/icon-step-orders.svg" width={24} height={24} alt="" aria-hidden="true" />
                         </div>
                         <h3 className="d-step__label">Accept orders</h3>
                         <p className="d-step__desc">Select high-yield routes directly through the Driver App.</p>
@@ -149,10 +133,7 @@ export function DriversPageContent() {
                       <div className="d-step" role="listitem">
                         <span className="d-step__num">04</span>
                         <div className="d-step__icon">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-                            <rect x="2" y="5" width="20" height="14" rx="2"/>
-                            <line x1="2" y1="10" x2="22" y2="10"/>
-                          </svg>
+                          <img src="/assets/icon-step-earn.svg" width={24} height={24} alt="" aria-hidden="true" />
                         </div>
                         <h3 className="d-step__label">Earn</h3>
                         <p className="d-step__desc">Instant payout capabilities for every successful delivery.</p>
@@ -186,11 +167,7 @@ export function DriversPageContent() {
                       <div className="d-fleet-features">
                         <div className="d-fleet-feat">
                           <div className="d-fleet-feat__icon" aria-hidden="true">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                              <rect x="3" y="4" width="18" height="18" rx="2"/>
-                              <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
-                              <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
+                            <img src="/assets/icon-flexibility.svg" width={18} height={18} alt="" />
                           </div>
                           <div className="d-fleet-feat__text">
                             <h3>Flexibility</h3>
@@ -199,11 +176,7 @@ export function DriversPageContent() {
                         </div>
                         <div className="d-fleet-feat">
                           <div className="d-fleet-feat__icon" aria-hidden="true">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                              <line x1="3" y1="22" x2="3" y2="2"/><line x1="21" y1="22" x2="21" y2="2"/>
-                              <line x1="12" y1="22" x2="12" y2="12"/>
-                              <path d="M6 10h12M6 6h12M6 2h12"/>
-                            </svg>
+                            <img src="/assets/icon-payouts.svg" width={18} height={18} alt="" />
                           </div>
                           <div className="d-fleet-feat__text">
                             <h3>Weekly Payouts</h3>
@@ -212,9 +185,7 @@ export function DriversPageContent() {
                         </div>
                         <div className="d-fleet-feat">
                           <div className="d-fleet-feat__icon" aria-hidden="true">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                              <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                            </svg>
+                            <img src="/assets/icon-highvolume.svg" width={18} height={18} alt="" />
                           </div>
                           <div className="d-fleet-feat__text">
                             <h3>High Volume</h3>
@@ -223,10 +194,7 @@ export function DriversPageContent() {
                         </div>
                         <div className="d-fleet-feat">
                           <div className="d-fleet-feat__icon" aria-hidden="true">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                              <circle cx="12" cy="12" r="3"/>
-                              <path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M12 2v2M12 20v2M4.93 4.93l1.41 1.41M18.66 18.66l1.41 1.41M2 12h2M20 12h2"/>
-                            </svg>
+                            <img src="/assets/icon-smartrouting.svg" width={18} height={18} alt="" />
                           </div>
                           <div className="d-fleet-feat__text">
                             <h3>Smart Routing</h3>
@@ -249,7 +217,7 @@ export function DriversPageContent() {
                     <div className="d-fleet-card__phone-col">
                       <div className="d-fleet-card__phone-img">
                         <img
-                          src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=900&q=85"
+                          src="/assets/driver-app.jpg"
                           alt="Driver app navigation interface"
                           width="560"
                           height="600"
@@ -274,7 +242,7 @@ export function DriversPageContent() {
                   {/*Left: phone image (cols 1–6, inferred)*/}
                   <div className="d-hub__phone">
                     <img
-                      src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=85"
+                      src="/assets/driver-app.jpg"
                       alt="Driver app interface"
                       width="600"
                       height="544"
@@ -295,37 +263,29 @@ export function DriversPageContent() {
                     {/*311-3003: Feature 1 — flex row, gap 24px*/}
                     <div className="d-hub__feat">
                       <div className="d-hub__feat-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                        </svg>
+                        <img src="/assets/icon-alerts.svg" width={20} height={20} alt="" />
                       </div>
                       <div className="d-hub__feat-text">
                         <h3>Instant Order Alerts</h3>
                         <p>Real-time alerts for nearby high-value shipments with transparent pricing and instant acceptance.</p>
                       </div>
                     </div>
-      
+
                     {/*311-3012: Feature 2*/}
                     <div className="d-hub__feat">
                       <div className="d-hub__feat-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                          <polygon points="3 11 22 2 13 21 11 13 3 11"/>
-                        </svg>
+                        <img src="/assets/icon-fleet-nav.svg" width={20} height={20} alt="" />
                       </div>
                       <div className="d-hub__feat-text">
                         <h3>Fleet Navigation</h3>
                         <p>Turn-by-turn routing optimized for heavy fleet vehicles, including traffic avoidance and dock locations.</p>
                       </div>
                     </div>
-      
+
                     {/*311-3021: Feature 3*/}
                     <div className="d-hub__feat">
                       <div className="d-hub__feat-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                          <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
-                          <line x1="6" y1="20" x2="6" y2="14"/>
-                        </svg>
+                        <img src="/assets/icon-earnings.svg" width={20} height={20} alt="" />
                       </div>
                       <div className="d-hub__feat-text">
                         <h3>Real-time Earnings</h3>
@@ -348,28 +308,19 @@ export function DriversPageContent() {
                 {/*Card 1: 24/7 Priority Support — dark blue*/}
                 <article className="d-support__card d-support__card--primary">
                   <div className="d-support__card-icon" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
+                    <img src="/assets/icon-support247.svg" alt="" />
                   </div>
                   <h3>24/7 Priority Support</h3>
                   <p>A dedicated dispatcher team is always on standby to assist with route issues or delivery complications via phone or in-app chat.</p>
                 </article>
-      
+
                 {/*Card 2: Emergency Protection — light blue*/}
                 <article className="d-support__card d-support__card--secondary">
-                  {/*311-3044: content wrapper — flex col, max-width 384px*/}
-                  <div className="d-support__card-content">
-                    <div className="d-support__card-icon" aria-hidden="true">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <h3>Emergency Protection</h3>
-                    {/*311-3045: Manrope 400, 18px, #000, line-height 28px*/}
-                    <p className="d-support__card-desc">Comprehensive insurance coverage and roadside assistance are included for every active partner on the platform for total peace of mind.</p>
+                  <div className="d-support__card-icon" aria-hidden="true">
+                    <img src="/assets/icon-emergency.svg" alt="" />
                   </div>
+                  <h3>Emergency Protection</h3>
+                  <p className="d-support__card-desc">Comprehensive insurance coverage and roadside assistance are included for every active partner on the platform for total peace of mind.</p>
                 </article>
       
               </div>
@@ -394,7 +345,7 @@ export function DriversPageContent() {
                     {/*311-3064: avatar + stars — flex col, center*/}
                     <div className="d-testimonial__top">
                       <img
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+                        src="/assets/avatar-marcus.jpg"
                         alt="Marcus Chen"
                         width="80"
                         height="80"
@@ -580,7 +531,7 @@ export function DriversPageContent() {
                   <h4 className="d-footer__col-head">Support</h4>
                   <ul className="d-footer__col-list">
                     <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
                   </ul>
                 </div>
       
@@ -596,11 +547,7 @@ export function DriversPageContent() {
       
             {/*311-3160: floating Apply to Drive CTA — absolute, right, shadow*/}
             <a href="#" className="d-footer__fab" aria-label="Apply to Drive">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
+              <img src="/assets/icon-apply-drive.svg" width={20} height={20} alt="" />
               Apply to Drive
             </a>
       

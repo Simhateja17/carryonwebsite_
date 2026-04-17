@@ -751,108 +751,122 @@
   overflow: hidden;
 }
 
-/* 311-3030 — inline-grid, 2 cols, row 334px, gap 32px, padding 80px 0 208px 0 */
+/* 311-3030 — inline-grid, 2 cols, gap 32px, padding 80px 0 208px 0 */
 .d-support__grid {
-  display: inline-grid;
+  display: grid;
   padding: 80px 0 208px 0;
   row-gap: 32px;
   column-gap: 32px;
   align-self: stretch;
-  grid-template-rows: 334px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
+  align-items: start;
 }
 
-/* Both cards — common styles matching 311-3032 shadow */
+/* Both cards */
 .d-support__card {
   border-radius: 16px;
-  padding: 40px 40px 48px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 16px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,.10), 0 8px 10px -6px rgba(0,0,0,.10);
 }
 
-/* Card 1: 24/7 Priority Support — dark blue gradient */
+/* Card 1: 24/7 Priority Support — solid blue, Figma token */
 .d-support__card--primary {
-  background: linear-gradient(140deg, #1a4fa0 0%, #2F80ED 100%);
+  background: #2f80ed;
   color: #fff;
+  padding: 48px 48px 78px 48px;
 }
 
 .d-support__card--primary .d-support__card-icon {
-  color: rgba(255, 255, 255, 0.90);
+  position: relative;
+  height: 36px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.d-support__card--primary .d-support__card-icon img {
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
 }
 
 .d-support__card--primary h3 {
   margin: 0;
+  padding-top: 8px;
   font-family: "Manrope", var(--font);
-  font-size: 1.375rem;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
   color: #fff;
-  letter-spacing: -0.02em;
 }
 
 .d-support__card--primary p {
   margin: 0;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.80);
+  font-size: 18px;
+  line-height: 28px;
+  color: #c4d2ff;
+  max-width: 384px;
 }
 
-/* Card 2: Emergency Protection — light blue */
+/* Card 2: Emergency Protection — light blue, Figma token */
 .d-support__card--secondary {
-  border: 1px solid rgba(195, 198, 214, 0.05);
-  background: rgba(166, 210, 243, 0.20);
+  border: 1px solid rgba(195, 198, 214, 0.10);
+  background: #a6d2f3;
+  padding: 49px;
 }
 
 .d-support__card--secondary .d-support__card-icon {
-  color: #2F80ED;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.d-support__card--secondary .d-support__card-icon img {
+  position: absolute;
+  display: block;
+  inset: 0 92.83% 0 0;  /* mirrors Figma: inset-[0_92.83%_0_0] — icon occupies left ~7% */
+  max-width: none;
+  width: auto;
+  height: 100%;
 }
 
 .d-support__card--secondary h3 {
   margin: 0;
+  padding-top: 8px;
   font-family: "Manrope", var(--font);
-  font-size: 1.375rem;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
   color: #2F80ED;
-  letter-spacing: -0.02em;
 }
 
-/* 311-3045 — description: exact Figma tokens */
 .d-support__card--secondary p,
 .d-support__card-desc {
   margin: 0;
   color: #000;
   font-family: "Manrope", sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 28px; /* 155.556% */
+  line-height: 28px;
+  max-width: 384px;
 }
 
-/* 311-3044 — content wrapper: flex col, max-width 384px */
-.d-support__card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 384px;
-  max-width: 100%;
-  gap: 20px;
-}
-
-/* Decorative circle behind card content */
-.d-support__card::after {
+/* Figma overlay shadow on card 1 */
+.d-support__card--primary::after {
   content: "";
   position: absolute;
-  right: -40px;
-  top: -40px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
+  inset: 0;
+  border-radius: 16px;
+  box-shadow: 0px 20px 25px -5px rgba(0,0,0,0.10), 0px 8px 10px -6px rgba(0,0,0,0.10);
   pointer-events: none;
 }
 
