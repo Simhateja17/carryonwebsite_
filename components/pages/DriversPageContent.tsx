@@ -242,10 +242,10 @@ export function DriversPageContent() {
                   {/*Left: phone image (cols 1–6, inferred)*/}
                   <div className="d-hub__phone">
                     <img
-                      src="/assets/driver-app.jpg"
+                      src="/assets/driver-hub.svg"
                       alt="Driver app interface"
-                      width="600"
-                      height="544"
+                      width={600}
+                      height={544}
                     />
                   </div>
       

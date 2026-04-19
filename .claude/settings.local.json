@@ -24,7 +24,12 @@
       "Bash(py -3 -c \"print\\('hello'\\)\")",
       "Bash(py -c \"print\\('hello'\\)\")",
       "Bash(py *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(node *)",
+      "Bash(xxd \"C:/Users/mg875/Desktop/carryonwebsite_/assets/hero-truck.png\")",
+      "Bash(identify \"C:/Users/mg875/Desktop/carryonwebsite_/assets/hero-truck-raw.png\")",
+      "Read(//c/Users/mg875/Desktop/carryonwebsite_//**)",
+      "Read(//c/Users/mg875/Desktop/carryonwebsite_/**)"
     ]
   }
 }

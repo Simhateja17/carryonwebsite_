@@ -25,6 +25,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="drivers.html" class="is-active" aria-current="page">Drivers</a></li>
             <li><a href="riders.html">Riders</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </nav>
@@ -50,25 +51,25 @@
               </p>
               <div class="btn-group d-hero__btns">
                 <button type="button" class="btn btn-primary">Apply to Drive</button>
-                <a href="#" class="d-hero__learn-more">Learn More</a>
               </div>
             </div>
 
             <!-- cols 6–12: visual -->
             <div class="d-hero__visual">
               <img
-                src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=85"
-                alt="Driver standing with delivery van"
+                src="assets/drivers/hero-vans.png"
+                alt="CarryOn fleet of delivery vans"
                 width="700"
                 height="420"
               />
               <div class="d-hero__badge">
                 <div class="d-hero__badge-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" stroke-width="1.75">
-                    <rect x="1" y="3" width="15" height="13" rx="1"/>
-                    <path d="M16 8h4l3 3v5h-7V8z"/>
-                    <circle cx="5.5" cy="18.5" r="2.5"/>
-                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                  <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
+                    <rect x="0" y="0" width="14" height="11" rx="1" fill="#2F80ED" opacity="0.2"/>
+                    <rect x="0" y="0" width="14" height="11" rx="1" stroke="#2F80ED" stroke-width="1.5"/>
+                    <path d="M14 3h4l4 3v5h-8V3z" stroke="#2F80ED" stroke-width="1.5"/>
+                    <circle cx="4" cy="14" r="2" stroke="#2F80ED" stroke-width="1.5"/>
+                    <circle cx="16" cy="14" r="2" stroke="#2F80ED" stroke-width="1.5"/>
                   </svg>
                 </div>
                 <div>
@@ -273,12 +274,12 @@
 
               </div><!-- /d-fleet-card__copy -->
 
-              <!-- Right col: tilted phone with dark map app -->
+              <!-- Right col: precision driver hub phone UI -->
               <div class="d-fleet-card__phone-col">
                 <div class="d-fleet-card__phone-img">
                   <img
-                    src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=900&q=85"
-                    alt="Driver app navigation interface"
+                    src="assets/fleet-app.svg"
+                    alt="Precision Driver Hub app interface"
                     width="560"
                     height="600"
                   />
@@ -299,11 +300,11 @@
         <div class="d-hub__shell">
           <div class="d-hub__grid layout">
 
-            <!-- Left: phone image (cols 1–6, inferred) -->
+            <!-- Left: precision driver hub phone screens -->
             <div class="d-hub__phone">
               <img
-                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=85"
-                alt="Driver app interface"
+                src="assets/drivers/driver-hub-phone.svg"
+                alt="Driver app interface screens"
                 width="600"
                 height="544"
               />
@@ -323,10 +324,7 @@
               <!-- 311-3003: Feature 1 — flex row, gap 24px -->
               <div class="d-hub__feat">
                 <div class="d-hub__feat-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                  </svg>
+                  <img src="assets/drivers/hub-icon-alert.svg" alt="" width="20" height="20" style="display:block;width:20px;height:20px;object-fit:contain;" />
                 </div>
                 <div class="d-hub__feat-text">
                   <h3>Instant Order Alerts</h3>
@@ -337,9 +335,7 @@
               <!-- 311-3012: Feature 2 -->
               <div class="d-hub__feat">
                 <div class="d-hub__feat-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                    <polygon points="3 11 22 2 13 21 11 13 3 11"/>
-                  </svg>
+                  <img src="assets/drivers/hub-icon-nav.svg" alt="" width="20" height="20" style="display:block;width:20px;height:20px;object-fit:contain;" />
                 </div>
                 <div class="d-hub__feat-text">
                   <h3>Fleet Navigation</h3>
@@ -350,10 +346,7 @@
               <!-- 311-3021: Feature 3 -->
               <div class="d-hub__feat">
                 <div class="d-hub__feat-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                    <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
-                    <line x1="6" y1="20" x2="6" y2="14"/>
-                  </svg>
+                  <img src="assets/drivers/hub-icon-earnings.svg" alt="" width="20" height="20" style="display:block;width:20px;height:20px;object-fit:contain;" />
                 </div>
                 <div class="d-hub__feat-text">
                   <h3>Real-time Earnings</h3>
@@ -373,12 +366,10 @@
       <section class="d-support">
         <div class="d-support__grid layout">
 
-          <!-- Card 1: 24/7 Priority Support — dark blue -->
+          <!-- Card 1: 24/7 Priority Support — solid blue -->
           <article class="d-support__card d-support__card--primary">
             <div class="d-support__card-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
+              <img src="assets/drivers/icon-headset.svg" alt="" width="36" height="36" style="display:block;height:36px;width:auto;object-fit:contain;" />
             </div>
             <h3>24/7 Priority Support</h3>
             <p>A dedicated dispatcher team is always on standby to assist with route issues or delivery complications via phone or in-app chat.</p>
@@ -386,16 +377,11 @@
 
           <!-- Card 2: Emergency Protection — light blue -->
           <article class="d-support__card d-support__card--secondary">
-            <!-- 311-3044: content wrapper — flex col, max-width 384px -->
             <div class="d-support__card-content">
               <div class="d-support__card-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="assets/drivers/icon-shield.svg" alt="" width="40" height="40" style="display:block;height:40px;width:auto;object-fit:contain;" />
               </div>
               <h3>Emergency Protection</h3>
-              <!-- 311-3045: Manrope 400, 18px, #000, line-height 28px -->
               <p class="d-support__card-desc">Comprehensive insurance coverage and roadside assistance are included for every active partner on the platform for total peace of mind.</p>
             </div>
           </article>
@@ -422,10 +408,10 @@
               <!-- 311-3064: avatar + stars — flex col, center -->
               <div class="d-testimonial__top">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+                  src="assets/drivers/driver-portrait.png"
                   alt="Marcus Chen"
-                  width="80"
-                  height="80"
+                  width="96"
+                  height="96"
                   class="d-testimonial__avatar"
                 />
                 <div class="d-testimonial__stars" aria-label="5 out of 5 stars">
@@ -555,7 +541,7 @@
               </p>
               <div class="cta-buttons">
                 <button type="button" class="btn btn-primary">Apply Now</button>
-                <button type="button" class="btn btn-outline-demo">Contact Support</button>
+                <button type="button" class="btn btn-sky">Contact Support</button>
               </div>
             </div>
           </div>

@@ -27,23 +27,34 @@ export function HomePageContent() {
 
             <div className="hero-visual">
               <div className="hero-img-wrap">
-                <img src="/assets/hero-truck.jpg" alt="CarryOn logistics truck" width={720} height={438} />
+                <img src="/assets/hero-truck.svg" alt="CarryOn logistics truck" width={584} height={453} />
               </div>
-              <div className="hero-badge hero-badge--bl">
-                <div className="hero-badge__icon">
-                  <img src="/assets/icon-pin.svg" width={16} height={20} alt="" />
-                </div>
-                <div className="hero-badge__body">
-                  <p className="hero-badge__label">REAL-TIME STATUS</p>
-                  <p className="hero-badge__value">Live tracking enabled</p>
-                </div>
-              </div>
-              <div className="hero-badge hero-badge--tr">
-                <div className="hero-badge__icon hero-badge__icon--sm">
-                  <img src="/assets/icon-delivery.svg" width={16} height={20} alt="" />
-                </div>
-                <p className="hero-badge__value">Fast delivery across KL</p>
-              </div>
+              {/* Bottom-left badge */}
+              <svg className="hero-badge-svg hero-badge-svg--bl" xmlns="http://www.w3.org/2000/svg" width="236" height="72" viewBox="0 0 236 72" fill="none" aria-label="Real-time status: Live tracking enabled">
+                <defs>
+                  <filter id="badge-shadow-bl" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="10" floodColor="rgba(0,0,0,0.10)"/>
+                  </filter>
+                </defs>
+                <rect x="1" y="1" width="234" height="70" rx="16" fill="white" filter="url(#badge-shadow-bl)"/>
+                <circle cx="36" cy="36" r="18" fill="#EFF6FF"/>
+                <path d="M36 24c-4.418 0-8 3.582-8 8 0 5.523 8 16 8 16s8-10.477 8-16c0-4.418-3.582-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="#2563EB"/>
+                <text x="64" y="29" fontFamily="Manrope, sans-serif" fontSize="10" fontWeight="700" fill="#2563EB" letterSpacing="0.08em">REAL-TIME STATUS</text>
+                <text x="64" y="48" fontFamily="Manrope, sans-serif" fontSize="14" fontWeight="600" fill="#111827">Live tracking enabled</text>
+              </svg>
+
+              {/* Top-right badge */}
+              <svg className="hero-badge-svg hero-badge-svg--tr" xmlns="http://www.w3.org/2000/svg" width="280" height="64" viewBox="0 0 280 64" fill="none" aria-label="Fast delivery across KL">
+                <defs>
+                  <filter id="badge-shadow-tr" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="10" floodColor="rgba(0,0,0,0.10)"/>
+                  </filter>
+                </defs>
+                <rect x="1" y="1" width="278" height="62" rx="16" fill="white" filter="url(#badge-shadow-tr)"/>
+                <circle cx="33" cy="32" r="18" fill="#DBEAFE"/>
+                <path d="M35 21l-7 13h6l-2 9 8-13h-6l1-9z" fill="#2563EB"/>
+                <text x="61" y="37" fontFamily="Manrope, sans-serif" fontSize="15" fontWeight="600" fill="#111827">Fast delivery across KL</text>
+              </svg>
             </div>
           </div>
         </section>
@@ -125,34 +136,27 @@ export function HomePageContent() {
 
         {/* PROCESS */}
         <section className="section-process">
-          <div className="layout">
+          <div className="process-card">
             <div className="process-header">
-              <div className="process-header__left">
-                <span className="process-kicker">THE PROCESS</span>
-                <h2 className="process-title">Four Steps to Delivery</h2>
-              </div>
-              <p className="process-subtitle">Seamlessly integrated from the moment you book until the final handover.</p>
+              <h2 className="process-title">Streamlined Efficiency</h2>
+              <p className="process-subtitle">From clicking &apos;Order&apos; to the final doorstep, we handle every detail.</p>
             </div>
             <div className="process-steps">
               <div className="process-step">
-                <div className="process-step__num process-step__num--active">1</div>
-                <h3 className="process-step__title">Enter Details</h3>
-                <p className="process-step__desc">Provide pickup and drop-off locations with a few simple taps.</p>
+                <div className="process-step__num">1</div>
+                <p className="process-step__label">Request Quote</p>
               </div>
               <div className="process-step">
                 <div className="process-step__num">2</div>
-                <h3 className="process-step__title">Choose Vehicle</h3>
-                <p className="process-step__desc">Select from bike to heavy-duty trucks based on your cargo size.</p>
+                <p className="process-step__label">Confirm Booking</p>
               </div>
               <div className="process-step">
                 <div className="process-step__num">3</div>
-                <h3 className="process-step__title">Track Live</h3>
-                <p className="process-step__desc">Monitor your driver in real-time with precise GPS telemetry.</p>
+                <p className="process-step__label">Driver Assigned</p>
               </div>
               <div className="process-step">
                 <div className="process-step__num">4</div>
-                <h3 className="process-step__title">Delivered</h3>
-                <p className="process-step__desc">Secure confirmation and digital receipt upon successful arrival.</p>
+                <p className="process-step__label">Delivery Complete</p>
               </div>
             </div>
           </div>
@@ -168,13 +172,13 @@ export function HomePageContent() {
                 <p>Our satellite-linked GPS system provides minute-by-minute updates. Whether your cargo is in the heart of KL or traveling through the Titiwangsa Range, you are always in control.</p>
               </div>
               <div className="feature-media">
-                <img src="/assets/feature-map.jpg" alt="Malaysia tracking map" width={576} height={576} />
+                <img src="/assets/feature-map.svg" alt="Malaysia tracking map" width={560} height={410} />
               </div>
             </div>
 
-            <div className="feature-row feature-row--reverse">
+            <div className="feature-row">
               <div className="feature-media">
-                <img src="/assets/feature-analytics.jpg" alt="Predictive analytics dashboard" width={576} height={576} />
+                <img src="/assets/feature-analytics.svg" alt="Predictive analytics dashboard" width={560} height={410} />
               </div>
               <div className="feature-copy">
                 <p className="feature-kicker">EFFICIENCY FIRST</p>
@@ -190,7 +194,7 @@ export function HomePageContent() {
                 <p>Every shipment is insured and handled by certified professionals. Our secure-lock technology and chain-of-custody protocols provide end-to-end transparency.</p>
               </div>
               <div className="feature-media">
-                <img src="/assets/feature-delivery.jpg" alt="Secure delivery" width={576} height={576} />
+                <img src="/assets/feature-delivery.svg" alt="Secure delivery" width={560} height={410} />
               </div>
             </div>
           </div>
@@ -234,47 +238,45 @@ export function HomePageContent() {
 
         {/* APP */}
         <section className="section-app">
-          <div className="layout">
-            <div className="app-header">
-              <h2>CarryOn App — Deliver Anywhere</h2>
-              <p>The entire logistics network in the palm of your hand.</p>
-            </div>
-            <div className="app-content">
-              <ul className="app-features">
-                <li className="app-feature">
-                  <div className="app-feature__icon">
-                    <img src="/assets/icon-track.svg" width={32} height={36} alt="" />
-                  </div>
-                  <div>
-                    <h4>Track deliveries</h4>
-                    <p>Pinpoint precision for every shipment.</p>
-                  </div>
-                </li>
-                <li className="app-feature">
-                  <div className="app-feature__icon">
-                    <img src="/assets/icon-book.svg" width={33} height={37} alt="" />
-                  </div>
-                  <div>
-                    <h4>Book instantly</h4>
-                    <p>Go from quote to booking in under 60 seconds.</p>
-                  </div>
-                </li>
-                <li className="app-feature">
-                  <div className="app-feature__icon">
-                    <img src="/assets/icon-updates.svg" width={36} height={36} alt="" />
-                  </div>
-                  <div>
-                    <h4>Live updates</h4>
-                    <p>Push notifications for every milestone.</p>
-                  </div>
-                </li>
-              </ul>
-              <div className="app-phone">
-                <div className="phone-frame">
-                  <div className="phone-notch"></div>
-                  <div className="phone-screen">
-                    <img src="/assets/app-phone.jpg" alt="CarryOn app" width={288} height={580} />
-                  </div>
+          <div className="app-header">
+            <h2>CarryOn App — Deliver Anywhere</h2>
+            <p>The entire logistics network in the palm of your hand.</p>
+          </div>
+          <div className="app-content">
+            <ul className="app-features">
+              <li className="app-feature">
+                <div className="app-feature__icon">
+                  <img src="/assets/icon-pin.svg" width={28} height={28} alt="" />
+                </div>
+                <div>
+                  <h4>Track deliveries</h4>
+                  <p>Pinpoint precision for every shipment.</p>
+                </div>
+              </li>
+              <li className="app-feature">
+                <div className="app-feature__icon">
+                  <img src="/assets/icon-book-delivery.svg" width={28} height={28} alt="" />
+                </div>
+                <div>
+                  <h4>Book instantly</h4>
+                  <p>Go from quote to booking in under 60 seconds.</p>
+                </div>
+              </li>
+              <li className="app-feature">
+                <div className="app-feature__icon">
+                  <img src="/assets/icon-notif.svg" width={28} height={28} alt="" />
+                </div>
+                <div>
+                  <h4>Live updates</h4>
+                  <p>Push notifications for every milestone.</p>
+                </div>
+              </li>
+            </ul>
+            <div className="app-phone">
+              <div className="phone-frame">
+                <div className="phone-notch"></div>
+                <div className="phone-screen">
+                  <img src="/assets/app-screen.svg" alt="CarryOn app" width={288} height={580} />
                 </div>
               </div>
             </div>

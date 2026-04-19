@@ -58,29 +58,47 @@
           <div class="hero-visual">
             <div class="hero-img-wrap">
               <img
-                src="assets/hero-truck.jpg"
+                src="assets/hero-truck.svg"
                 alt="CarryOn logistics truck"
-                width="720"
-                height="438"
+                width="584"
+                height="453"
               />
             </div>
-            <!-- Bottom-left badge -->
-            <div class="hero-badge hero-badge--bl">
-              <div class="hero-badge__icon">
-                <img src="assets/icon-pin.png" width="16" height="20" alt="" />
-              </div>
-              <div class="hero-badge__body">
-                <p class="hero-badge__label">REAL-TIME STATUS</p>
-                <p class="hero-badge__value">Live tracking enabled</p>
-              </div>
-            </div>
-            <!-- Top-right badge -->
-            <div class="hero-badge hero-badge--tr">
-              <div class="hero-badge__icon hero-badge__icon--sm">
-                <img src="assets/icon-delivery.png" width="16" height="20" alt="" />
-              </div>
-              <p class="hero-badge__value">Fast delivery across KL</p>
-            </div>
+            <!-- Bottom-left badge (SVG) -->
+            <svg class="hero-badge-svg hero-badge-svg--bl" xmlns="http://www.w3.org/2000/svg" width="236" height="72" viewBox="0 0 236 72" fill="none" aria-label="Real-time status: Live tracking enabled">
+              <defs>
+                <filter id="badge-shadow-bl" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="rgba(0,0,0,0.10)"/>
+                </filter>
+              </defs>
+              <!-- Card -->
+              <rect x="1" y="1" width="234" height="70" rx="16" fill="white" filter="url(#badge-shadow-bl)"/>
+              <!-- Pin icon circle -->
+              <circle cx="36" cy="36" r="18" fill="#EFF6FF"/>
+              <!-- Pin icon -->
+              <path d="M36 24c-4.418 0-8 3.582-8 8 0 5.523 8 16 8 16s8-10.477 8-16c0-4.418-3.582-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="#2563EB"/>
+              <!-- Label -->
+              <text x="64" y="29" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="0.08em">REAL-TIME STATUS</text>
+              <!-- Value -->
+              <text x="64" y="48" font-family="Manrope, sans-serif" font-size="14" font-weight="600" fill="#111827">Live tracking enabled</text>
+            </svg>
+
+            <!-- Top-right badge (SVG) -->
+            <svg class="hero-badge-svg hero-badge-svg--tr" xmlns="http://www.w3.org/2000/svg" width="280" height="64" viewBox="0 0 280 64" fill="none" aria-label="Fast delivery across KL">
+              <defs>
+                <filter id="badge-shadow-tr" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="rgba(0,0,0,0.10)"/>
+                </filter>
+              </defs>
+              <!-- Card -->
+              <rect x="1" y="1" width="278" height="62" rx="16" fill="white" filter="url(#badge-shadow-tr)"/>
+              <!-- Lightning circle -->
+              <circle cx="33" cy="32" r="18" fill="#DBEAFE"/>
+              <!-- Lightning bolt -->
+              <path d="M35 21l-7 13h6l-2 9 8-13h-6l1-9z" fill="#2563EB"/>
+              <!-- Text -->
+              <text x="61" y="37" font-family="Manrope, sans-serif" font-size="15" font-weight="600" fill="#111827">Fast delivery across KL</text>
+            </svg>
           </div>
         </div>
       </section>
@@ -162,8 +180,7 @@
 
       <!-- SECTION 4: PROCESS (blue card) -->
       <section class="section-process">
-        <div class="layout">
-          <div class="process-card">
+        <div class="process-card">
             <div class="process-header">
               <h2 class="process-title">Streamlined Efficiency</h2>
               <p class="process-subtitle">From clicking 'Order' to the final doorstep, we handle every detail.</p>
@@ -187,7 +204,6 @@
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <!-- SECTION 5: FEATURES ZIGZAG -->
@@ -332,7 +348,9 @@
               <ul class="infra-list">
                 <li class="infra-item">
                   <div class="infra-item__icon">
-                    <img src="assets/icon-api.png" width="22" height="22" alt="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                   </div>
                   <div>
                     <h4>Seamless API Integration</h4>
@@ -341,7 +359,10 @@
                 </li>
                 <li class="infra-item">
                   <div class="infra-item__icon">
-                    <img src="assets/icon-globe.png" width="20" height="20" alt="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+                      <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="white" stroke-width="2"/>
+                    </svg>
                   </div>
                   <div>
                     <h4>Global Delivery</h4>
@@ -350,7 +371,9 @@
                 </li>
                 <li class="infra-item">
                   <div class="infra-item__icon">
-                    <img src="assets/icon-compliance.png" width="16" height="20" alt="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                   </div>
                   <div>
                     <h4>Compliance Ready</h4>
@@ -361,10 +384,10 @@
             </div>
             <div class="infra-media">
               <img
-                src="assets/infra-facility.jpg"
-                alt="Modern logistics facility"
-                width="472"
-                height="472"
+                src="assets/infra-diagram.svg"
+                alt="CarryOn API Gateway architecture diagram"
+                width="520"
+                height="420"
               />
             </div>
           </div>

@@ -44,16 +44,14 @@
 .d-hero__visual {
   grid-column: 6 / span 7;
   position: relative;
-  border-radius: 20px;
   overflow: hidden;
-  background: #dbeafe;
-  box-shadow: var(--shadow-soft);
+  background: transparent;
 }
 
 .d-hero__visual img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -99,43 +97,45 @@
   text-decoration: none;
 }
 
-/* Badge card — bottom-right of visual */
+/* Badge card — bottom-left of visual (Figma position) */
 .d-hero__badge {
   position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
+  left: 1.25rem;
+  bottom: 1.5rem;
   background: #fff;
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  box-shadow: var(--shadow-soft);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(195, 198, 214, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 1rem;
 }
 
 .d-hero__badge-icon {
-  width: 38px;
-  height: 38px;
-  background: rgba(166, 210, 243, 0.25);
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  background: rgba(166, 210, 243, 0.2);
+  border-radius: 12px;
   display: grid;
   place-items: center;
   flex-shrink: 0;
 }
 
 .d-hero__badge-label {
-  margin: 0 0 1px;
+  margin: 0 0 2px;
+  font-family: "Manrope", var(--font);
   font-size: 0.6rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #434654;
 }
 
 .d-hero__badge-value {
   margin: 0;
   font-family: "Manrope", var(--font);
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary);
   line-height: 1;
@@ -541,7 +541,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 16px;
 }
 
 /* Phone/app image — tilted perspective matching screenshot */
@@ -557,15 +556,8 @@
 .d-fleet-card__phone-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(47, 128, 237, 0.25);
-  transform: perspective(800px) rotateY(-6deg) rotateX(2deg);
-  transition: transform 0.3s ease;
-}
-
-.d-fleet-card__phone-img img:hover {
-  transform: perspective(800px) rotateY(-3deg) rotateX(1deg);
+  object-fit: contain;
+  display: block;
 }
 
 /* ── Responsive ── */
@@ -657,17 +649,17 @@
 .d-hub__phone {
   grid-row: 1 / span 1;
   grid-column: 1 / span 6;
-  border-radius: 16px;
   overflow: hidden;
-  background: #0a1628;
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,.10), 0 8px 10px -6px rgba(0,0,0,.10);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .d-hub__phone img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -676,11 +668,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 48px;
+  gap: 32px;
   grid-row: 1 / span 1;
   grid-column: 7 / span 6;
   justify-self: stretch;
   min-height: 0;
+  justify-content: center;
 }
 
 /* 311-2999 — title: Manrope 800, 48px, #2F80ED, -1.2px */
@@ -717,29 +710,31 @@
 }
 
 .d-hub__feat-icon {
-  width: 40px;
-  height: 40px;
-  background: rgba(166, 210, 243, 0.35);
-  border-radius: 10px;
+  width: 56px;
+  height: 56px;
+  background: #A6D2F3;
+  border-radius: 8px;
   display: grid;
   place-items: center;
   color: #2F80ED;
   flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .d-hub__feat-text h3 {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   font-family: "Manrope", var(--font);
-  font-size: 1rem;
+  font-size: 24px;
   font-weight: 700;
+  line-height: 32px;
   color: #2F80ED;
 }
 
 .d-hub__feat-text p {
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -763,62 +758,70 @@
   width: 100%;
 }
 
-/* Both cards — common styles matching 311-3032 shadow */
+/* Both cards — common styles */
 .d-support__card {
   border-radius: 16px;
-  padding: 40px 40px 48px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 16px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,.10), 0 8px 10px -6px rgba(0,0,0,.10);
 }
 
-/* Card 1: 24/7 Priority Support — dark blue gradient */
+/* Card 1: 24/7 Priority Support — solid blue */
 .d-support__card--primary {
-  background: linear-gradient(140deg, #1a4fa0 0%, #2F80ED 100%);
+  background: #2F80ED;
   color: #fff;
+  padding: 48px 48px 78px 48px;
 }
 
 .d-support__card--primary .d-support__card-icon {
-  color: rgba(255, 255, 255, 0.90);
+  height: 36px;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .d-support__card--primary h3 {
   margin: 0;
+  padding-top: 8px;
   font-family: "Manrope", var(--font);
-  font-size: 1.375rem;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
   color: #fff;
-  letter-spacing: -0.02em;
 }
 
 .d-support__card--primary p {
   margin: 0;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.80);
+  font-size: 18px;
+  line-height: 28px;
+  color: #c4d2ff;
+  max-width: 384px;
 }
 
-/* Card 2: Emergency Protection — light blue */
+/* Card 2: Emergency Protection — solid sky blue */
 .d-support__card--secondary {
-  border: 1px solid rgba(195, 198, 214, 0.05);
-  background: rgba(166, 210, 243, 0.20);
+  border: 1px solid rgba(195, 198, 214, 0.10);
+  background: #A6D2F3;
+  padding: 49px;
 }
 
 .d-support__card--secondary .d-support__card-icon {
-  color: #2F80ED;
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .d-support__card--secondary h3 {
   margin: 0;
+  padding-top: 8px;
   font-family: "Manrope", var(--font);
-  font-size: 1.375rem;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
   color: #2F80ED;
-  letter-spacing: -0.02em;
 }
 
 /* 311-3045 — description: exact Figma tokens */
@@ -830,7 +833,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; /* 155.556% */
+  line-height: 28px;
 }
 
 /* 311-3044 — content wrapper: flex col, max-width 384px */
@@ -840,20 +843,7 @@
   align-items: flex-start;
   width: 384px;
   max-width: 100%;
-  gap: 20px;
-}
-
-/* Decorative circle behind card content */
-.d-support__card::after {
-  content: "";
-  position: absolute;
-  right: -40px;
-  top: -40px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
-  pointer-events: none;
+  gap: 16px;
 }
 
 /* Responsive */
@@ -952,14 +942,15 @@
   gap: 12px;
 }
 
-/* Avatar: rounded square */
+/* Avatar: rounded square with white border — Figma 1:571 */
 .d-testimonial__avatar {
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   border-radius: 12px;
   object-fit: cover;
   display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 4px rgba(0,61,155,0.05), 0 25px 50px -12px rgba(0,0,0,0.25);
 }
 
 /* Stars row — amber/gold color */
@@ -1225,13 +1216,11 @@
 }
 
 .d-cta__card {
-  border-radius: 16px;
+  border-radius: 24px;
   background: #fff;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(166, 210, 243, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  border: 1px solid rgba(166, 210, 243, 0.2);
   overflow: hidden;
-  max-width: 700px;
-  margin-inline: auto;
   text-align: center;
 }
 
@@ -1245,14 +1234,14 @@
   display: flex;
   max-width: 672px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
   align-self: stretch;
-  padding: clamp(2rem, 5vw, 3.5rem);
+  padding: 129px 224px;
   margin-inline: auto;
 }
 
-/* 311-3099: heading — Manrope 800, 48px, #2F80ED, -1.2px */
+/* 311-3099: heading — Manrope 800, 48px, #2F80ED, -2.4px */
 .d-cta__body h2 {
   margin: 0;
   font-family: "Manrope", sans-serif;
@@ -1260,8 +1249,9 @@
   font-style: normal;
   font-weight: 800;
   line-height: 48px;
-  letter-spacing: -1.2px;
+  letter-spacing: -2.4px;
   color: #2F80ED;
+  text-align: center;
   align-self: stretch;
 }
 
@@ -1275,11 +1265,50 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; /* 140% */
+  line-height: 28px;
 }
 
 .d-cta__body .cta-buttons {
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+/* Sky blue secondary button matching Figma */
+.btn-sky {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 21px 49px;
+  background: #A6D2F3;
+  color: #2F80ED;
+  border: 1px solid rgba(195, 198, 214, 0.1);
+  border-radius: 4px;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.btn-sky:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .d-cta__body {
+    padding: 64px 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .d-cta__body {
+    padding: 48px 24px;
+  }
+  .d-cta__body h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -1328,10 +1357,10 @@
 }
 
 .d-footer__logo {
-  color: #1A3D6B;
+  color: #2F80ED;
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1354,9 +1383,9 @@
 
 .d-footer__col-head {
   margin: 0;
-  color: #1A3D6B;
+  color: #2F80ED;
   font-family: "Manrope", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.04em;
@@ -1419,7 +1448,7 @@
 .d-footer__fab {
   position: fixed;
   bottom: 24px;
-  right: 0;
+  right: 24px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
