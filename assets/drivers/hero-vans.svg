@@ -1,0 +1,87 @@
+<svg width="700" height="420" viewBox="0 0 700 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Van 1 (foreground) with logo -->
+  <g id="van1">
+    <!-- Van body -->
+    <path d="M80 180 L80 280 L280 280 L280 220 L260 180 L80 180 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <!-- Van cabin -->
+    <path d="M260 180 L280 220 L280 280 L240 280 L240 200 L260 180 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <!-- Roof -->
+    <path d="M80 180 L260 180 L260 170 L80 170 L80 180 Z" fill="#F3F4F6"/>
+    <!-- Side panel -->
+    <rect x="90" y="190" width="140" height="70" fill="#FFFFFF"/>
+    <!-- Windows -->
+    <path d="M245 185 L275 185 L275 215 L245 210 L245 185 Z" fill="#1F2937" opacity="0.7"/>
+    <!-- Wheels -->
+    <circle cx="130" cy="280" r="22" fill="#1F2937"/>
+    <circle cx="130" cy="280" r="12" fill="#6B7280"/>
+    <circle cx="250" cy="280" r="22" fill="#1F2937"/>
+    <circle cx="250" cy="280" r="12" fill="#6B7280"/>
+    <!-- Headlights -->
+    <ellipse cx="278" cy="240" rx="6" ry="8" fill="#FEF3C7"/>
+    <!-- Grille -->
+    <rect x="276" y="250" width="8" height="15" rx="2" fill="#374151"/>
+    <!-- CarryOn Logo on side panel -->
+    <g transform="translate(100, 200) scale(0.9)">
+      <!-- Running person icon -->
+      <circle cx="25" cy="20" r="10" fill="#2F80ED"/>
+      <rect x="30" y="25" width="20" height="20" rx="3" fill="#F59E0B"/>
+      <path d="M35 33 Q38 36 41 33" stroke="#78350F" stroke-width="1.5" fill="none"/>
+      <circle cx="36" cy="30" r="1.5" fill="#78350F"/>
+      <circle cx="39" cy="30" r="1.5" fill="#78350F"/>
+      <path d="M10 28 L22 28" stroke="#2F80ED" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M5 35 L17 35" stroke="#2F80ED" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M8 20 L18 20" stroke="#2F80ED" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- CarryOn text -->
+      <text x="55" y="35" font-family="Manrope, sans-serif" font-size="22" font-weight="700" fill="#2F80ED">Carry</text>
+      <text x="110" y="35" font-family="Manrope, sans-serif" font-size="22" font-weight="700" fill="#1E3A8A">On</text>
+    </g>
+  </g>
+  
+  <!-- Van 2 -->
+  <g id="van2" transform="translate(140, -20) scale(0.9)">
+    <path d="M80 180 L80 280 L280 280 L280 220 L260 180 L80 180 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <path d="M260 180 L280 220 L280 280 L240 280 L240 200 L260 180 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <path d="M80 180 L260 180 L260 170 L80 170 L80 180 Z" fill="#F3F4F6"/>
+    <path d="M245 185 L275 185 L275 215 L245 210 L245 185 Z" fill="#1F2937" opacity="0.7"/>
+    <circle cx="130" cy="280" r="22" fill="#1F2937"/>
+    <circle cx="130" cy="280" r="12" fill="#6B7280"/>
+    <circle cx="250" cy="280" r="22" fill="#1F2937"/>
+    <circle cx="250" cy="280" r="12" fill="#6B7280"/>
+    <ellipse cx="278" cy="240" rx="6" ry="8" fill="#FEF3C7"/>
+    <rect x="276" y="250" width="8" height="15" rx="2" fill="#374151"/>
+  </g>
+  
+  <!-- Van 3 -->
+  <g id="van3" transform="translate(260, -35) scale(0.8)">
+    <path d="M80 180 L80 280 L280 280 L280 220 L260 180 L80 180 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <path d="M260 180 L280 220 L280 280 L240 280 L240 200 L260 180 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <path d="M80 180 L260 180 L260 170 L80 170 L80 180 Z" fill="#F3F4F6"/>
+    <path d="M245 185 L275 185 L275 215 L245 210 L245 185 Z" fill="#1F2937" opacity="0.7"/>
+    <circle cx="130" cy="280" r="22" fill="#1F2937"/>
+    <circle cx="130" cy="280" r="12" fill="#6B7280"/>
+    <circle cx="250" cy="280" r="22" fill="#1F2937"/>
+    <circle cx="250" cy="280" r="12" fill="#6B7280"/>
+    <ellipse cx="278" cy="240" rx="6" ry="8" fill="#FEF3C7"/>
+    <rect x="276" y="250" width="8" height="15" rx="2" fill="#374151"/>
+  </g>
+  
+  <!-- Van 4 -->
+  <g id="van4" transform="translate(370, -45) scale(0.75)">
+    <path d="M80 180 L80 280 L280 280 L280 220 L260 180 L80 180 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <path d="M260 180 L280 220 L280 280 L240 280 L240 200 L260 180 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <path d="M80 180 L260 180 L260 170 L80 170 L80 180 Z" fill="#F3F4F6"/>
+    <path d="M245 185 L275 185 L275 215 L245 210 L245 185 Z" fill="#1F2937" opacity="0.7"/>
+    <circle cx="130" cy="280" r="22" fill="#1F2937"/>
+    <circle cx="130" cy="280" r="12" fill="#6B7280"/>
+    <circle cx="250" cy="280" r="22" fill="#1F2937"/>
+    <circle cx="250" cy="280" r="12" fill="#6B7280"/>
+    <ellipse cx="278" cy="240" rx="6" ry="8" fill="#FEF3C7"/>
+    <rect x="276" y="250" width="8" height="15" rx="2" fill="#374151"/>
+  </g>
+  
+  <!-- Shadows under vans -->
+  <ellipse cx="190" cy="305" rx="100" ry="12" fill="#000" opacity="0.15"/>
+  <ellipse cx="340" cy="285" rx="85" ry="10" fill="#000" opacity="0.12"/>
+  <ellipse cx="470" cy="270" rx="70" ry="8" fill="#000" opacity="0.1"/>
+  <ellipse cx="590" cy="260" rx="60" ry="7" fill="#000" opacity="0.08"/>
+</svg>

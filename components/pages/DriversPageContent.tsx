@@ -22,21 +22,22 @@ export function DriversPageContent() {
                     </p>
                     <div className="btn-group d-hero__btns">
                       <button type="button" className="btn btn-primary">Apply to Drive</button>
-                      <a href="#" className="d-hero__learn-more">Learn More</a>
                     </div>
                   </div>
       
-                  {/*cols 6–12: visual*/}
-                  <div className="d-hero__visual">
-                    <img
-                      src="/assets/driver-hero.jpg"
-                      alt="Driver standing with delivery van"
-                      width="700"
-                      height="420"
-                    />
+                  {/*cols 6–12: visual + badge wrapper*/}
+                  <div className="d-hero__visual-wrap">
+                    <div className="d-hero__visual">
+                      <img
+                        src="/assets/driver-hero-new.png"
+                        alt="CarryOn fleet of delivery vans"
+                        width="700"
+                        height="420"
+                      />
+                    </div>
                     <div className="d-hero__badge">
                       <div className="d-hero__badge-icon" aria-hidden="true">
-                        <img src="/assets/icon-active-drivers.svg" width={22} height={22} alt="" />
+                        <img src="/assets/icon-active-drivers.svg" width={24} height={24} alt="" />
                       </div>
                       <div>
                         <p className="d-hero__badge-label">Active Drivers</p>
@@ -213,14 +214,14 @@ export function DriversPageContent() {
       
                     </div>{/*/d-fleet-card__copy*/}
       
-                    {/*Right col: tilted phone with dark map app*/}
+                    {/*Right col: precision driver hub phone UI*/}
                     <div className="d-fleet-card__phone-col">
                       <div className="d-fleet-card__phone-img">
                         <img
-                          src="/assets/driver-app.jpg"
-                          alt="Driver app navigation interface"
-                          width="560"
-                          height="600"
+                          src="/assets/12345.png"
+                          alt="Precision Driver Hub app interface"
+                          width={560}
+                          height={600}
                         />
                       </div>
                     </div>
@@ -242,10 +243,10 @@ export function DriversPageContent() {
                   {/*Left: phone image (cols 1–6, inferred)*/}
                   <div className="d-hub__phone">
                     <img
-                      src="/assets/driver-hub.svg"
-                      alt="Driver app interface"
-                      width={600}
-                      height={544}
+                      src="/assets/built_for_modern_infrastructure.png"
+                      alt="Driver hub infrastructure illustration"
+                      width={1832}
+                      height={1384}
                     />
                   </div>
       
@@ -308,7 +309,7 @@ export function DriversPageContent() {
                 {/*Card 1: 24/7 Priority Support — dark blue*/}
                 <article className="d-support__card d-support__card--primary">
                   <div className="d-support__card-icon" aria-hidden="true">
-                    <img src="/assets/icon-support247.svg" alt="" />
+                    <img src="/assets/drivers/icon-headset.svg" alt="" width="36" height="36" />
                   </div>
                   <h3>24/7 Priority Support</h3>
                   <p>A dedicated dispatcher team is always on standby to assist with route issues or delivery complications via phone or in-app chat.</p>
@@ -317,7 +318,7 @@ export function DriversPageContent() {
                 {/*Card 2: Emergency Protection — light blue*/}
                 <article className="d-support__card d-support__card--secondary">
                   <div className="d-support__card-icon" aria-hidden="true">
-                    <img src="/assets/icon-emergency.svg" alt="" />
+                    <img src="/assets/drivers/icon-shield.svg" alt="" width="40" height="40" />
                   </div>
                   <h3>Emergency Protection</h3>
                   <p className="d-support__card-desc">Comprehensive insurance coverage and roadside assistance are included for every active partner on the platform for total peace of mind.</p>
@@ -327,65 +328,66 @@ export function DriversPageContent() {
             </section>
       
             {/*══════════════════════════════════════════════════════════════
-                 TESTIMONIAL — Figma 311-3046
-                 card: padding 96px 175px, radius 32px, bg rgba(166,210,243,.2)
+                 TESTIMONIALS — Figma 1-954 / 1-966
+                 2-card grid, light blue background
                  ══════════════════════════════════════════════════════════════*/}
-            <section className="d-testimonial">
+            <section className="d-testimonials">
               <div className="layout">
-      
-                {/*311-3046: card container*/}
-                <div className="d-testimonial__card">
-      
-                  {/*311-3047: "99" quote decoration — absolute, top-right, opacity 0.05*/}
-                  <div className="d-testimonial__deco" aria-hidden="true">"</div>
-      
-                  {/*311-3050: main content — flex col, center, gap 16px*/}
-                  <div className="d-testimonial__content">
-      
-                    {/*311-3064: avatar + stars — flex col, center*/}
-                    <div className="d-testimonial__top">
-                      <img
-                        src="/assets/avatar-marcus.jpg"
-                        alt="Marcus Chen"
-                        width="80"
-                        height="80"
-                        className="d-testimonial__avatar"
-                      />
-                      <div className="d-testimonial__stars" aria-label="5 out of 5 stars">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      </div>
+                <div className="d-testimonials__grid">
+
+                  {/* Card 1 — David Chen */}
+                  <div className="d-testimonial-card">
+                    <div className="d-testimonial-card__quote-icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10 8H6C4.9 8 4 8.9 4 10V14C4 15.1 4.9 16 6 16H8L6 20H8.5L10.5 16H10C11.1 16 12 15.1 12 14V10C12 8.9 11.1 8 10 8Z" fill="#2F80ED"/>
+                        <path d="M20 8H16C14.9 8 14 8.9 14 10V14C14 15.1 14.9 16 16 16H18L16 20H18.5L20.5 16H20C21.1 16 22 15.1 22 14V10C22 8.9 21.1 8 20 8Z" fill="#2F80ED" opacity="0.4"/>
+                      </svg>
                     </div>
-      
-                    {/*311-3065: quote — Manrope 500, 30px, #2F80ED, -0.75px*/}
-                    <blockquote className="d-testimonial__quote">
-                      "CarryOn transformed my logistics business. The route optimization
-                      alone saves me two hours a day, which means more time with my
-                      family and more money in my pocket."
+                    <blockquote className="d-testimonial-card__text">
+                      "Fast and reliable delivery every time. CarryOn has completely changed how we handle our last-mile distribution."
                     </blockquote>
-      
-                    {/*311-3066: author info block — flex col, gap 4px*/}
-                    <div className="d-testimonial__author-block">
-      
-                      {/*311-3067: name wrapper — flex col, center*/}
-                      <div className="d-testimonial__name-wrap">
-                        {/*311-3068: MARCUS CHEN — Manrope 900, 16px, uppercase, 1.6px spacing*/}
-                        <span className="d-testimonial__name">Marcus Chen</span>
+                    <div className="d-testimonial-card__author">
+                      <img
+                        src="/assets/avatar-david.jpg"
+                        alt="David Chen"
+                        width="48"
+                        height="48"
+                        className="d-testimonial-card__avatar"
+                      />
+                      <div className="d-testimonial-card__info">
+                        <span className="d-testimonial-card__name">David Chen</span>
+                        <span className="d-testimonial-card__role">E-COMMERCE OWNER</span>
                       </div>
-      
-                      {/*311-3070: subtitle — Manrope 600, 14px, #434654*/}
-                      <p className="d-testimonial__sub">Austin, TX &bull; Partner since 2021</p>
-      
-                      {/*311-3071: stats line*/}
-                      <p className="d-testimonial__stats">5,000+ Precision Deliveries completed</p>
-      
                     </div>
-      
-                  </div>{/*/d-testimonial__content*/}
-                </div>{/*/d-testimonial__card*/}
+                  </div>
+
+                  {/* Card 2 — Sarah Williams */}
+                  <div className="d-testimonial-card">
+                    <div className="d-testimonial-card__quote-icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10 8H6C4.9 8 4 8.9 4 10V14C4 15.1 4.9 16 6 16H8L6 20H8.5L10.5 16H10C11.1 16 12 15.1 12 14V10C12 8.9 11.1 8 10 8Z" fill="#2F80ED"/>
+                        <path d="M20 8H16C14.9 8 14 8.9 14 10V14C14 15.1 14.9 16 16 16H18L16 20H18.5L20.5 16H20C21.1 16 22 15.1 22 14V10C22 8.9 21.1 8 20 8Z" fill="#2F80ED" opacity="0.4"/>
+                      </svg>
+                    </div>
+                    <blockquote className="d-testimonial-card__text">
+                      "The tracking is the most precise I've seen in any logistics app. It's actually accurate to the minute."
+                    </blockquote>
+                    <div className="d-testimonial-card__author">
+                      <img
+                        src="/assets/avatar-sarah.jpg"
+                        alt="Sarah Williams"
+                        width="48"
+                        height="48"
+                        className="d-testimonial-card__avatar"
+                      />
+                      <div className="d-testimonial-card__info">
+                        <span className="d-testimonial-card__name">Sarah Williams</span>
+                        <span className="d-testimonial-card__role">PROJECT MANAGER</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </section>
       

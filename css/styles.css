@@ -340,16 +340,19 @@ a:hover { text-decoration: underline; }
    SECTION 2: STATS
    ============================================================ */
 .section-stats {
-  padding: 24px 32px 48px;
+  background: #EDF5FF;
+  padding: 48px 32px;
 }
 
 .stats-strip {
-  background: var(--sky-20);
-  border-radius: var(--radius-card);
-  padding: 40px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
+  max-width: var(--layout-max);
+  margin-inline: auto;
 }
 
 .stats-item {
@@ -430,6 +433,7 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(166, 210, 243, 0.5);
 }
 
 .eco-card__img {
@@ -437,8 +441,8 @@ a:hover { text-decoration: underline; }
   height: 207px;
   overflow: hidden;
   border-radius: var(--radius-card);
-  margin: 8px;
-  width: calc(100% - 16px);
+  margin: 12px;
+  width: calc(100% - 24px);
 }
 
 .eco-card__img img {
@@ -716,18 +720,22 @@ a:hover { text-decoration: underline; }
 }
 
 .solution-card__icon {
-  width: 64px;
-  height: 64px;
-  background: var(--sky-20);
-  border-radius: var(--radius-card);
+  width: 56px;
+  height: 56px;
+  background: var(--primary);
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-.solution-card__icon img { display: block; }
+.solution-card__icon svg { 
+  display: block;
+  color: #fff;
+}
 
 .solution-card h3 {
   margin: 0 0 0;
@@ -823,7 +831,18 @@ a:hover { text-decoration: underline; }
 
 .app-feature__icon {
   flex-shrink: 0;
-  line-height: 0;
+  width: 40px;
+  height: 40px;
+  background: #EFF6FF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-feature__icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .app-feature h4 {
@@ -843,43 +862,12 @@ a:hover { text-decoration: underline; }
   font-weight: 400;
 }
 
-.app-phone { display: flex; justify-content: center; }
+.app-phone { display: flex; justify-content: flex-end; }
 
-.phone-frame {
-  width: 288px;
-  height: 580px;
-  background: #000;
-  border: 8px solid #eceef3;
-  border-radius: 48px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: var(--shadow-hero);
-  display: flex;
-  flex-direction: column;
-}
-
-.phone-notch {
-  width: 96px;
-  height: 24px;
-  background: #000;
-  border-radius: 0 0 12px 12px;
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-.phone-screen {
-  flex: 1;
-  overflow: hidden;
-}
-
-.phone-screen img {
+.app-phone img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  max-width: 320px;
+  height: auto;
   display: block;
 }
 
@@ -931,7 +919,7 @@ a:hover { text-decoration: underline; }
   width: 48px;
   height: 48px;
   background: var(--primary);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -942,6 +930,7 @@ a:hover { text-decoration: underline; }
   width: 24px;
   height: 24px;
   display: block;
+  color: #fff;
 }
 
 .infra-item h4 {
@@ -1080,7 +1069,8 @@ a:hover { text-decoration: underline; }
    FINAL CTA
    ============================================================ */
 .section-cta {
-  padding: 0 32px 128px;
+  padding: 64px 32px 128px;
+  background: var(--bg-page);
 }
 
 .cta-panel {

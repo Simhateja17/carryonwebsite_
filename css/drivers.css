@@ -4,9 +4,9 @@
    ============================================================ */
 
 /* ── Driver Hero — Figma 311-2830 ─────────────────────────── */
-/* Outer section: white background, overflow hidden */
+/* Outer section: light gray-blue background matching Figma design */
 .d-hero {
-  background: #fff;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   overflow: hidden;
 }
 
@@ -44,14 +44,18 @@
 .d-hero__visual {
   grid-column: 6 / span 7;
   position: relative;
-  overflow: hidden;
-  background: transparent;
+  overflow: visible;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 420px;
 }
 
 .d-hero__visual img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
+  object-position: center bottom;
   display: block;
 }
 
@@ -98,24 +102,29 @@
 }
 
 /* Badge card — bottom-left of visual (Figma position) */
+.d-hero__logo-overlay {
+  display: none;
+}
+
 .d-hero__badge {
   position: absolute;
-  left: 1.25rem;
-  bottom: 1.5rem;
+  left: 1rem;
+  bottom: 1rem;
   background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  border: 1px solid rgba(195, 198, 214, 0.1);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(195, 198, 214, 0.2);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.875rem;
+  z-index: 10;
 }
 
 .d-hero__badge-icon {
-  width: 48px;
-  height: 48px;
-  background: rgba(166, 210, 243, 0.2);
+  width: 44px;
+  height: 44px;
+  background: #eff6ff;
   border-radius: 12px;
   display: grid;
   place-items: center;
@@ -123,21 +132,21 @@
 }
 
 .d-hero__badge-label {
-  margin: 0 0 2px;
+  margin: 0 0 4px;
   font-family: "Manrope", var(--font);
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #434654;
+  color: #64748b;
 }
 
 .d-hero__badge-value {
   margin: 0;
   font-family: "Manrope", var(--font);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  color: var(--primary);
+  color: #2f80ed;
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -157,8 +166,20 @@
 
   .d-hero__visual {
     grid-column: 1 / -1;
-    aspect-ratio: 16 / 9;
-    min-height: 260px;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .d-hero__visual img {
+    max-height: 260px;
+  }
+
+  .d-hero__badge {
+    left: 0.75rem;
+    bottom: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
   }
 }
 
@@ -619,11 +640,12 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
-   THE PRECISION DRIVER HUB — Figma 311-2991
+   THE PRECISION DRIVER HUB — Figma 1-1839
    ══════════════════════════════════════════════════════════════ */
 .d-hub {
   background: var(--bg-page);
   overflow: hidden;
+  padding: 96px 0;
 }
 
 .d-hub__shell {
@@ -632,93 +654,93 @@
   width: 100%;
 }
 
-/* 311-2991 — inline-grid, 12-col, row 544px, padding 208px 0 128px 0 */
+/* 2-col grid layout */
 .d-hub__grid {
-  display: inline-grid;
-  padding: 208px 0 128px 0;
-  row-gap: 48px;
-  column-gap: 48px;
-  align-self: stretch;
-  grid-template-rows: 544px;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  width: 100%;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1024px;
 }
 
-/* Left phone image — cols 1-6 */
-.d-hub__phone {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 6;
-  overflow: hidden;
-  position: relative;
+/* Left illustration */
+.d-hub__illustration {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.d-hub__phone img {
+.d-hub__illustration img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  max-width: 458px;
+  height: auto;
   display: block;
 }
 
-/* 311-2996 — right copy: flex col, gap 48px, col 7/span 6 */
+/* Right copy: flex col, gap 32px */
 .d-hub__copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
-  grid-row: 1 / span 1;
-  grid-column: 7 / span 6;
-  justify-self: stretch;
-  min-height: 0;
-  justify-content: center;
 }
 
-/* 311-2999 — title: Manrope 800, 48px, #2F80ED, -1.2px */
+/* Title */
 .d-hub__title {
   margin: 0;
-  align-self: stretch;
   color: #2F80ED;
   font-family: "Manrope", var(--font);
-  font-size: 48px;
-  font-style: normal;
+  font-size: 36px;
   font-weight: 800;
-  line-height: 48px;
-  letter-spacing: -1.2px;
+  line-height: 40px;
+  letter-spacing: -0.9px;
 }
 
-/* 311-3001 — description: Manrope 400, 18px, #000, 28px */
+/* Description */
 .d-hub__desc {
   margin: 0;
-  align-self: stretch;
   color: #000;
-  font-family: "Manrope", var(--font);
-  font-size: 18px;
-  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
-  line-height: 28px;
 }
 
-/* 311-3003 / 3012 / 3021 — feature items: flex row, gap 24px */
+/* Feature items */
 .d-hub__feat {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
-  align-self: stretch;
+  gap: 16px;
 }
 
 .d-hub__feat-icon {
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   background: #A6D2F3;
   border-radius: 8px;
-  display: grid;
-  place-items: center;
-  color: #2F80ED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.d-hub__feat-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.d-hub__feat-text h3 {
+  margin: 0 0 4px;
+  font-family: "Manrope", var(--font);
+  font-size: 16px;
+  font-weight: 700;
+  color: #2F80ED;
+}
+
+.d-hub__feat-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-muted);
 }
 
 .d-hub__feat-text h3 {

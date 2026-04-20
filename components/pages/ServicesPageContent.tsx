@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export function ServicesPageContent() {
@@ -46,8 +47,10 @@ export function ServicesPageContent() {
             <div className="sv-hero__img-wrap">
               <div className="sv-hero__img-overlay" />
               <img
-                src="/assets/sv-logistics-hub.jpg"
+                src="/assets/services-hero.svg"
                 alt="Global logistics infrastructure"
+                width={584}
+                height={453}
                 className="sv-hero__img"
               />
             </div>
@@ -272,7 +275,7 @@ export function ServicesPageContent() {
               <span>Estimated Total</span>
               <span className="sv-estimator__amount">RM{total}</span>
             </div>
-            <button type="button" className="sv-btn sv-btn--primary sv-btn--full">Book Delivery</button>
+            <Link href="/book-delivery" className="sv-btn sv-btn--primary sv-btn--full">Book Delivery</Link>
           </div>
         </div>
       </section>
@@ -323,7 +326,7 @@ export function ServicesPageContent() {
             Join thousands of riders who experience the precision of CarryOn every single day.
           </p>
           <div className="sv-cta__btns">
-            <button type="button" className="sv-btn sv-btn--cta-white">Book Delivery</button>
+            <Link href="/book-delivery" className="sv-btn sv-btn--cta-white">Book Delivery</Link>
             <button type="button" className="sv-btn sv-btn--cta-ghost">View Pricing</button>
           </div>
         </div>

@@ -1791,25 +1791,34 @@
 
 .r-cta {
   position: relative;
-  background: #2F80ED;
+  background: #f8fafc;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 96px 32px;
+}
+
+.r-cta__card {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  min-height: 382px;
+  border-radius: 48px;
+  background: #2F80ED;
   overflow: hidden;
-  padding: 80px 32px;
+  padding: 64px;
+  box-sizing: border-box;
 }
 
 /* 311-3782: gradient glow overlay */
 .r-cta__glow {
   position: absolute;
-  width: 1024px;
-  height: 382px;
+  inset: 0;
   opacity: 0.5;
-  background: radial-gradient(134.35% 134.35% at 50% 50%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 100%);
+  background:
+    radial-gradient(120% 95% at 50% 100%, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 72%),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%);
   pointer-events: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* 311-3783: content col — flex col, center, gap 32px */
@@ -1820,8 +1829,9 @@
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  align-self: stretch;
-  max-width: 800px;
+  width: 100%;
+  max-width: 896px;
+  margin-inline: auto;
   text-align: center;
 }
 
@@ -1848,11 +1858,13 @@
 .r-cta__desc {
   margin: 0;
   color: #FFF;
+  opacity: 0.9;
   text-align: center;
   font-family: "Manrope", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
+  max-width: 672px;
 }
 
 /* 311-3788: button row — flex, center, gap 16px, padding-top 16px */
@@ -1870,21 +1882,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 40px;
-  border-radius: 12px;
+  padding: 21px 40px;
+  border-radius: 16px;
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 28px;
   text-decoration: none;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .r-cta__btn--primary {
   background: #fff;
   color: #2F80ED;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 28px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
@@ -1894,9 +1904,11 @@
 }
 
 .r-cta__btn--ghost {
-  background: rgba(255,255,255,0.12);
+  background: rgba(47, 128, 237, 0.2);
   color: #fff;
-  border: 1.5px solid rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .r-cta__btn--ghost:hover {
@@ -2258,12 +2270,12 @@
 
 /* ── App section: real screenshot ── */
 .r-app__screenshot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 40px;
+  width: min(100%, 560px);
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
   display: block;
-  box-shadow: 0 24px 48px rgba(0,0,0,0.2);
+  box-shadow: none;
 }
 
 /* ── Trust cards: icon sizing ── */
@@ -2352,6 +2364,16 @@
 
   .r-fleet__grid { grid-template-columns: repeat(2, 1fr); }
 
+  .r-cta {
+    padding: 72px 24px;
+  }
+
+  .r-cta__card {
+    min-height: auto;
+    border-radius: 36px;
+    padding: 56px 32px;
+  }
+
   .r-cta__title { font-size: 36px; line-height: 40px; }
 
   .r-faq__container { width: 100%; max-width: 100%; padding: 64px 24px 96px; }
@@ -2372,5 +2394,9 @@
     align-items: flex-start;
   }
 
-  .r-cta__btns { flex-direction: column; align-items: center; }
+  .r-cta { padding: 56px 16px; }
+  .r-cta__card { border-radius: 28px; padding: 40px 20px; }
+  .r-cta__desc { font-size: 18px; line-height: 26px; }
+  .r-cta__btns { flex-direction: column; align-items: center; width: 100%; }
+  .r-cta__btn { width: 100%; max-width: 240px; }
 }

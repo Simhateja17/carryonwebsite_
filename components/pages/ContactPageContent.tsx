@@ -35,7 +35,7 @@ export function ContactPageContent() {
                 {/*1-663: right column — contact illustration*/}
                 <div className="c-hero__visual">
                   <div className="c-hero__illustration">
-                    <img src="/assets/hero-contact.jpg" alt="Customer support team" className="c-hero__img" />
+                    <img src="/assets/sv-logistics-hub.jpg" alt="Customer support team" className="c-hero__img" />
                   </div>
                 </div>{/*/c-hero__visual*/}
       
@@ -99,7 +99,7 @@ export function ContactPageContent() {
       
                       <button type="submit" className="c-form__submit">
                         Send Message
-                        <img src="/assets/icon-arrow.svg" width={16} height={16} alt="" className="c-form__submit-icon" />
+                        <img src="/assets/ab-icon-arrow.svg" width={16} height={16} alt="" className="c-form__submit-icon" />
                       </button>
                     </form>
                   </div>{/*/c-form-card*/}
@@ -125,7 +125,7 @@ export function ContactPageContent() {
       
                       <div className="c-info-item">
                         <div className="c-info-item__icon">
-                          <img src="/assets/icon-phone.svg" width={24} height={24} alt="" />
+                          <img src="/assets/ab-icon-phone.svg" width={24} height={24} alt="" />
                         </div>
                         <div className="c-info-item__content">
                           <span className="c-info-item__label">Phone</span>
@@ -135,7 +135,7 @@ export function ContactPageContent() {
       
                       <div className="c-info-item">
                         <div className="c-info-item__icon">
-                          <img src="/assets/icon-email.svg" width={24} height={24} alt="" />
+                          <img src="/assets/ab-icon-email.svg" width={24} height={24} alt="" />
                         </div>
                         <div className="c-info-item__content">
                           <span className="c-info-item__label">Email</span>
@@ -295,7 +295,7 @@ export function ContactPageContent() {
       
                   <div className="c-location-card">
                     <div className="c-location-card__map">
-                      <img src="/assets/map-sanfran.jpg" alt="San Francisco office location" className="c-location-card__map-img" />
+                      <img src="/assets/rider-hero-map.jpg" alt="San Francisco office location" className="c-location-card__map-img" />
                     </div>
                     <div className="c-location-card__content">
                       <h3 className="c-location-card__title">San Francisco (HQ)</h3>
@@ -310,7 +310,7 @@ export function ContactPageContent() {
       
                   <div className="c-location-card">
                     <div className="c-location-card__map">
-                      <img src="/assets/map-newyork.jpg" alt="New York office location" className="c-location-card__map-img" />
+                      <img src="/assets/feature-map.jpg" alt="New York office location" className="c-location-card__map-img" />
                     </div>
                     <div className="c-location-card__content">
                       <h3 className="c-location-card__title">New York</h3>
@@ -325,7 +325,7 @@ export function ContactPageContent() {
       
                   <div className="c-location-card">
                     <div className="c-location-card__map">
-                      <img src="/assets/map-chicago.jpg" alt="Chicago office location" className="c-location-card__map-img" />
+                      <img src="/assets/feature-map.png" alt="Chicago office location" className="c-location-card__map-img" />
                     </div>
                     <div className="c-location-card__content">
                       <h3 className="c-location-card__title">Chicago</h3>
@@ -360,7 +360,7 @@ export function ContactPageContent() {
       
                   <div className="c-support-card">
                     <div className="c-support-card__icon">
-                      <img src="/assets/icon-phone.svg" width={40} height={40} alt="" />
+                      <img src="/assets/ab-icon-phone.svg" width={40} height={40} alt="" />
                     </div>
                     <h3 className="c-support-card__title">Call Us</h3>
                     <p className="c-support-card__desc">Speak directly with our support team</p>
@@ -371,7 +371,7 @@ export function ContactPageContent() {
                   <div className="c-support-card c-support-card--featured">
                     <div className="c-support-card__ribbon">Fastest Response</div>
                     <div className="c-support-card__icon">
-                      <img src="/assets/icon-email.svg" width={40} height={40} alt="" />
+                      <img src="/assets/ab-icon-email.svg" width={40} height={40} alt="" />
                     </div>
                     <h3 className="c-support-card__title">Email Support</h3>
                     <p className="c-support-card__desc">Get detailed help via email</p>
@@ -420,7 +420,7 @@ export function ContactPageContent() {
                   delivery needs.
                 </p>
                 <div className="c-cta__btns">
-                  <a href="#book" className="c-cta__btn c-cta__btn--primary">
+                  <a href="/book-delivery" className="c-cta__btn c-cta__btn--primary">
                     Book a Delivery
                   </a>
                   <a href="/drivers" className="c-cta__btn c-cta__btn--ghost">

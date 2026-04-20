@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 const FAQ_ITEMS = [
@@ -31,7 +32,7 @@ export function AboutPageContent() {
                 CarryOn is redefining moving and delivery through precision technology and a fleet managed with editorial care. Experience a new standard in operational excellence.
               </p>
               <div className="a-hero__btns">
-                <button type="button" className="a-btn a-btn--primary">Book Delivery</button>
+                <Link href="/book-delivery" className="a-btn a-btn--primary">Book Delivery</Link>
                 <button type="button" className="a-btn a-btn--outline">Become Driver</button>
               </div>
               <div className="a-hero__proof">
@@ -373,7 +374,7 @@ export function AboutPageContent() {
               Join thousands of businesses and individuals who trust CarryOn for their daily logistics needs and experience the future of delivery.
             </p>
             <div className="a-cta__btns">
-              <button type="button" className="a-cta__btn a-cta__btn--primary">Book Delivery Now</button>
+              <Link href="/book-delivery" className="a-cta__btn a-cta__btn--primary">Book Delivery Now</Link>
               <button type="button" className="a-cta__btn a-cta__btn--outline">Become a Driver</button>
             </div>
           </div>

@@ -9,6 +9,7 @@ const NAV = [
   { href: "/riders", label: "Riders" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/track", label: "Track" },
 ] as const;
 
 export function SiteHeader() {
@@ -30,8 +31,10 @@ export function SiteHeader() {
           <ul className="nav-main">
             {NAV.map(({ href, label }) => {
               const legalPaths = ["/terms", "/privacy"];
+              const servicePaths = ["/services", "/book-delivery"];
               const active =
                 href === "/" ? pathname === "/" :
+                href === "/services" ? servicePaths.some((path) => pathname === path || pathname.startsWith(`${path}/`)) :
                 href === "/about" ? pathname === href || pathname.startsWith(`${href}/`) || legalPaths.includes(pathname) :
                 pathname === href || pathname.startsWith(`${href}/`);
               return (

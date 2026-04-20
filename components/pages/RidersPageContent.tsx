@@ -36,7 +36,7 @@ export function RidersPageContent() {
       
                   {/*311-3173: button group*/}
                   <div className="r-hero__btns">
-                    <a href="#book" className="r-btn r-btn--primary">
+                    <a href="/book-delivery" className="r-btn r-btn--primary">
                       Book Delivery
                       <img src="/assets/icon-book-delivery.svg" width={16} height={16} alt="" />
                     </a>
@@ -376,7 +376,7 @@ export function RidersPageContent() {
       
                 {/*Left col: app screenshot*/}
                 <div className="r-app__phone-col">
-                  <img src="/assets/rider-app.jpg" alt="CarryOn app interface" className="r-app__screenshot" />
+                  <img src="/assets/rider-security-visual.png" alt="Delivery safety and tracking visual" className="r-app__screenshot" />
                 </div>
       
                 {/*311-3380: right column — flex col, gap 40px, col 2 span 1*/}
@@ -631,11 +631,12 @@ export function RidersPageContent() {
                  Title 48px white 800 · Subtitle 20px white 400 · Buttons
                  ══════════════════════════════════════════════════════════════*/}
             <section className="r-cta">
-              {/*311-3782: decorative gradient overlay*/}
-              <div className="r-cta__glow" aria-hidden="true"></div>
-      
-              {/*311-3783: content col — flex col, center, gap 32px*/}
-              <div className="r-cta__content">
+              <div className="r-cta__card">
+                {/*311-3782: decorative gradient overlay*/}
+                <div className="r-cta__glow" aria-hidden="true"></div>
+        
+                {/*311-3783: content col — flex col, center, gap 32px*/}
+                <div className="r-cta__content">
                 {/*311-3784 / 3785: title group + text — Manrope 800, 48px, #FFF, -1.2px*/}
                 <div className="r-cta__title-group">
                   <h2 className="r-cta__title">Ready to Send Your First Delivery?</h2>
@@ -646,13 +647,14 @@ export function RidersPageContent() {
                   single day.
                 </p>
                 {/*311-3788: button row — flex, center, gap 16px, padding-top 16px*/}
-                <div className="r-cta__btns">
-                  <a href="#book" className="r-cta__btn r-cta__btn--primary">
-                    Book Delivery
-                  </a>
-                  <a href="#pricing" className="r-cta__btn r-cta__btn--ghost">
-                    View Pricing
-                  </a>
+                  <div className="r-cta__btns">
+                    <a href="/book-delivery" className="r-cta__btn r-cta__btn--primary">
+                      Book Delivery
+                    </a>
+                    <a href="#pricing" className="r-cta__btn r-cta__btn--ghost">
+                      View Pricing
+                    </a>
+                  </div>
                 </div>
               </div>
             </section>

@@ -29,7 +29,11 @@
       "Bash(xxd \"C:/Users/mg875/Desktop/carryonwebsite_/assets/hero-truck.png\")",
       "Bash(identify \"C:/Users/mg875/Desktop/carryonwebsite_/assets/hero-truck-raw.png\")",
       "Read(//c/Users/mg875/Desktop/carryonwebsite_//**)",
-      "Read(//c/Users/mg875/Desktop/carryonwebsite_/**)"
+      "Read(//c/Users/mg875/Desktop/carryonwebsite_/**)",
+      "Bash(grep -o 'name=\\\\\\\\\"[^\\\\\\\\\"]*\\\\\\\\\"' \"C:/Users/mg875/.claude/projects/C--Users-mg875-Desktop-carryonwebsite-/51e0879e-2dc4-4c5c-8610-7e015b1e9bca/tool-results/toolu_01KxrPYegsUxoj2jgNu5bo4Q.json\")",
+      "Bash(grep -o 'name=\\\\\\\\\"[^\\\\\\\\\"]*\\\\\\\\\"' \"C:/Users/mg875/.claude/projects/C--Users-mg875-Desktop-carryonwebsite-/51e0879e-2dc4-4c5c-8610-7e015b1e9bca/tool-results/toolu_01EouGP1LhvTV6jivVjh9FB4.json\")",
+      "Bash(grep -o 'name=\\\\\\\\\"[^\\\\\\\\\"]*\\\\\\\\\"' \"C:/Users/mg875/.claude/projects/C--Users-mg875-Desktop-carryonwebsite-/51e0879e-2dc4-4c5c-8610-7e015b1e9bca/tool-results/mcp-figma-get_design_context-1776609086098.txt\")",
+      "Bash(grep -o 'name=\\\\\\\\\"[^\\\\\\\\\"]*\\\\\\\\\"' \"C:/Users/mg875/.claude/projects/C--Users-mg875-Desktop-carryonwebsite-/51e0879e-2dc4-4c5c-8610-7e015b1e9bca/tool-results/mcp-figma-get_design_context-1776609239670.txt\")"
     ]
   }
 }

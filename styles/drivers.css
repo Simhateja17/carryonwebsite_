@@ -40,14 +40,14 @@
   gap: 0;
 }
 
-/* Visual — cols 6-12 */
-.d-hero__visual {
+/* Visual wrapper — cols 6-12 */
+.d-hero__visual-wrap {
   grid-column: 6 / span 7;
   position: relative;
-  border-radius: 20px;
+}
+
+.d-hero__visual {
   overflow: hidden;
-  background: #dbeafe;
-  box-shadow: var(--shadow-soft);
 }
 
 .d-hero__visual img {
@@ -55,6 +55,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 /* Title */
@@ -99,25 +100,25 @@
   text-decoration: none;
 }
 
-/* Badge card — bottom-right of visual */
+/* Badge card — below visual, left-aligned */
 .d-hero__badge {
   position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
+  left: 0;
+  bottom: -48px;
   background: #fff;
   border-radius: 12px;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.25rem;
   box-shadow: var(--shadow-soft);
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 .d-hero__badge-icon {
-  width: 38px;
-  height: 38px;
-  background: rgba(166, 210, 243, 0.25);
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  background: rgba(166, 210, 243, 0.35);
+  border-radius: 12px;
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -155,8 +156,11 @@
     grid-column: 1 / -1;
   }
 
-  .d-hero__visual {
+  .d-hero__visual-wrap {
     grid-column: 1 / -1;
+  }
+
+  .d-hero__visual {
     aspect-ratio: 16 / 9;
     min-height: 260px;
   }
@@ -659,15 +663,15 @@
   grid-column: 1 / span 6;
   border-radius: 16px;
   overflow: hidden;
-  background: #0a1628;
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,.10), 0 8px 10px -6px rgba(0,0,0,.10);
+  background: transparent;
+  box-shadow: none;
   position: relative;
 }
 
 .d-hub__phone img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -783,19 +787,20 @@
 }
 
 .d-support__card--primary .d-support__card-icon {
-  position: relative;
+  width: 36px;
   height: 36px;
-  width: 100%;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .d-support__card--primary .d-support__card-icon img {
-  position: absolute;
+  width: 36px;
+  height: 36px;
   display: block;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none;
+  object-fit: contain;
+  color: #fff;
 }
 
 .d-support__card--primary h3 {
@@ -824,19 +829,20 @@
 }
 
 .d-support__card--secondary .d-support__card-icon {
-  position: relative;
+  width: 40px;
   height: 40px;
-  width: 100%;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .d-support__card--secondary .d-support__card-icon img {
-  position: absolute;
+  width: 40px;
+  height: 40px;
   display: block;
-  inset: 0 92.83% 0 0;  /* mirrors Figma: inset-[0_92.83%_0_0] — icon occupies left ~7% */
-  max-width: none;
-  width: auto;
-  height: 100%;
+  object-fit: contain;
+  color: #2F80ED;
 }
 
 .d-support__card--secondary h3 {
@@ -881,7 +887,7 @@
 
   .d-hub__phone {
     grid-column: 1 / -1;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     min-height: 260px;
   }
 
@@ -907,168 +913,92 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
-   TESTIMONIAL — exact Figma token match
-   311-3046 / 3047 / 3050 / 3064 / 3065 / 3066 / 3067 / 3068 / 3070 / 3071
+   TESTIMONIALS — Figma 1-954 / 1-966
+   2-card grid, light blue background
    ══════════════════════════════════════════════════════════════ */
-.d-testimonial {
+.d-testimonials {
   background: var(--bg-page);
-  padding-block: clamp(2rem, 5vw, 3rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
 }
 
-/* 311-3046 — card: padding 96px 175px, radius 32px */
-.d-testimonial__card {
-  display: flex;
-  padding: 96px 175px;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
-  border-radius: 32px;
-  border: 1px solid rgba(195, 198, 214, 0.05);
-  background: rgba(166, 210, 243, 0.20);
-  position: relative;
-  overflow: hidden;
+.d-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  align-items: stretch;
 }
 
-/* 311-3047 — "99" quote decoration: absolute, top-right, opacity 0.05 */
-.d-testimonial__deco {
+.d-testimonial-card {
   display: flex;
-  padding: 48px;
   flex-direction: column;
-  align-items: center;
-  position: absolute;
-  right: 1px;
-  top: 1px;
-  opacity: 0.05;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.d-testimonial-card__quote-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.d-testimonial-card__text {
+  margin: 0;
   font-family: "Manrope", var(--font);
-  font-size: 220px;
-  font-weight: 900;
-  line-height: 0.85;
-  color: #2F80ED;
-  pointer-events: none;
-  user-select: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #1a1a2e;
 }
 
-/* 311-3050 — main content: flex col, center, gap 16px */
-.d-testimonial__content {
+.d-testimonial-card__author {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 16px;
-  align-self: stretch;
+  margin-top: auto;
 }
 
-/* 311-3064 — avatar + stars: flex col, center */
-.d-testimonial__top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
-  gap: 12px;
-}
-
-/* Avatar: rounded square */
-.d-testimonial__avatar {
-  width: 80px;
-  height: 80px;
+.d-testimonial-card__avatar {
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   object-fit: cover;
   display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
 }
 
-/* Stars row — amber/gold color */
-.d-testimonial__stars {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-
-/* 311-3065 — quote: Manrope 500, 30px, #2F80ED, line-height 41.25px, -0.75px */
-.d-testimonial__quote {
-  margin: 0;
-  align-self: stretch;
-  color: #2F80ED;
-  text-align: center;
-  font-family: "Manrope", var(--font);
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 41.25px;
-  letter-spacing: -0.75px;
-}
-
-/* 311-3066 — author info: flex col, gap 4px */
-.d-testimonial__author-block {
+.d-testimonial-card__info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  align-self: stretch;
+  gap: 2px;
 }
 
-/* 311-3067 — name wrapper: flex col, center */
-.d-testimonial__name-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
-}
-
-/* 311-3068 — MARCUS CHEN: Manrope 900, 16px, uppercase, #2F80ED, 1.6px spacing */
-.d-testimonial__name {
-  color: #2F80ED;
-  text-align: center;
+.d-testimonial-card__name {
   font-family: "Manrope", var(--font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 24px;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
 }
 
-/* 311-3070 — subtitle: Manrope 600, 14px, #434654 */
-.d-testimonial__sub {
-  margin: 0;
-  align-self: stretch;
-  color: #434654;
-  text-align: center;
-  font-family: "Manrope", var(--font);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-}
-
-/* 311-3071 — stats: small muted */
-.d-testimonial__stats {
-  margin: 0;
-  align-self: stretch;
-  color: var(--text-muted);
-  text-align: center;
+.d-testimonial-card__role {
   font-family: "Manrope", var(--font);
   font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .d-testimonial__card {
-    padding: 64px 80px;
+@media (max-width: 768px) {
+  .d-testimonials__grid {
+    grid-template-columns: 1fr;
   }
 
-  .d-testimonial__quote {
-    font-size: clamp(1.1rem, 3vw, 30px);
-    line-height: 1.5;
-  }
-}
-
-@media (max-width: 560px) {
-  .d-testimonial__card {
-    padding: 48px 32px;
-    border-radius: 20px;
+  .d-testimonial-card {
+    padding: 32px;
   }
 }
 

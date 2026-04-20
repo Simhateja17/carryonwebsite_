@@ -57,11 +57,19 @@
             <!-- cols 6–12: visual -->
             <div class="d-hero__visual">
               <img
-                src="assets/drivers/hero-vans.png"
+                src="assets/drivers/hero-vans-new.png"
                 alt="CarryOn fleet of delivery vans"
                 width="700"
                 height="420"
               />
+              <div class="d-hero__logo-overlay">
+                <img
+                  src="assets/carryon-logo.png"
+                  alt="CarryOn"
+                  width="120"
+                  height="40"
+                />
+              </div>
               <div class="d-hero__badge">
                 <div class="d-hero__badge-icon" aria-hidden="true">
                   <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
@@ -277,12 +285,12 @@
               <!-- Right col: precision driver hub phone UI -->
               <div class="d-fleet-card__phone-col">
                 <div class="d-fleet-card__phone-img">
-                  <img
-                    src="assets/fleet-app.svg"
-                    alt="Precision Driver Hub app interface"
-                    width="560"
-                    height="600"
-                  />
+                   <img
+                     src="assets/12345.png"
+                     alt="Precision Driver Hub app interface"
+                     width="560"
+                     height="600"
+                   />
                 </div>
               </div>
 
@@ -293,38 +301,40 @@
       </section><!-- /d-features -->
 
       <!-- ══════════════════════════════════════════════════════════════
-           THE PRECISION DRIVER HUB — Figma 311-2991
-           inline-grid, 12-col, row 544px, padding 208px 0 128px 0
+           THE PRECISION DRIVER HUB — Figma 1-1839
+           inline-grid, 2-col, gap 64px
            ══════════════════════════════════════════════════════════════ -->
       <section class="d-hub">
-        <div class="d-hub__shell">
-          <div class="d-hub__grid layout">
+        <div class="d-hub__shell layout">
+          <div class="d-hub__grid">
 
-            <!-- Left: precision driver hub phone screens -->
-            <div class="d-hub__phone">
+            <!-- Left: illustration -->
+            <div class="d-hub__illustration">
               <img
                 src="assets/drivers/driver-hub-phone.svg"
-                alt="Driver app interface screens"
-                width="600"
-                height="544"
+                alt="Driver hub network illustration"
+                width="458"
+                height="346"
               />
             </div>
 
-            <!-- 311-2996: Right copy — flex col, gap 48px, col 7/span 6 -->
+            <!-- Right copy — flex col, gap 32px -->
             <div class="d-hub__copy">
 
-              <!-- 311-2999: Title -->
+              <!-- Title -->
               <h2 class="d-hub__title">The Precision Driver Hub</h2>
 
-              <!-- 311-3001: Description -->
+              <!-- Description -->
               <p class="d-hub__desc">
                 Everything you need to succeed, packed into a powerful mobile experience.
               </p>
 
-              <!-- 311-3003: Feature 1 — flex row, gap 24px -->
+              <!-- Feature 1 -->
               <div class="d-hub__feat">
                 <div class="d-hub__feat-icon" aria-hidden="true">
-                  <img src="assets/drivers/hub-icon-alert.svg" alt="" width="20" height="20" style="display:block;width:20px;height:20px;object-fit:contain;" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" fill="#2F80ED"/>
+                  </svg>
                 </div>
                 <div class="d-hub__feat-text">
                   <h3>Instant Order Alerts</h3>
@@ -332,10 +342,12 @@
                 </div>
               </div>
 
-              <!-- 311-3012: Feature 2 -->
+              <!-- Feature 2 -->
               <div class="d-hub__feat">
                 <div class="d-hub__feat-icon" aria-hidden="true">
-                  <img src="assets/drivers/hub-icon-nav.svg" alt="" width="20" height="20" style="display:block;width:20px;height:20px;object-fit:contain;" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z" fill="#2F80ED"/>
+                  </svg>
                 </div>
                 <div class="d-hub__feat-text">
                   <h3>Fleet Navigation</h3>
@@ -343,10 +355,12 @@
                 </div>
               </div>
 
-              <!-- 311-3021: Feature 3 -->
+              <!-- Feature 3 -->
               <div class="d-hub__feat">
                 <div class="d-hub__feat-icon" aria-hidden="true">
-                  <img src="assets/drivers/hub-icon-earnings.svg" alt="" width="20" height="20" style="display:block;width:20px;height:20px;object-fit:contain;" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" fill="#2F80ED"/>
+                  </svg>
                 </div>
                 <div class="d-hub__feat-text">
                   <h3>Real-time Earnings</h3>
@@ -369,7 +383,7 @@
           <!-- Card 1: 24/7 Priority Support — solid blue -->
           <article class="d-support__card d-support__card--primary">
             <div class="d-support__card-icon" aria-hidden="true">
-              <img src="assets/drivers/icon-headset.svg" alt="" width="36" height="36" style="display:block;height:36px;width:auto;object-fit:contain;" />
+              <img src="assets/drivers/icon-headset.svg?v=2" alt="" width="36" height="36" style="display:block;height:36px;width:auto;object-fit:contain;" />
             </div>
             <h3>24/7 Priority Support</h3>
             <p>A dedicated dispatcher team is always on standby to assist with route issues or delivery complications via phone or in-app chat.</p>
@@ -379,7 +393,7 @@
           <article class="d-support__card d-support__card--secondary">
             <div class="d-support__card-content">
               <div class="d-support__card-icon" aria-hidden="true">
-                <img src="assets/drivers/icon-shield.svg" alt="" width="40" height="40" style="display:block;height:40px;width:auto;object-fit:contain;" />
+                <img src="assets/drivers/icon-shield.svg?v=2" alt="" width="40" height="40" style="display:block;height:40px;width:auto;object-fit:contain;" />
               </div>
               <h3>Emergency Protection</h3>
               <p class="d-support__card-desc">Comprehensive insurance coverage and roadside assistance are included for every active partner on the platform for total peace of mind.</p>

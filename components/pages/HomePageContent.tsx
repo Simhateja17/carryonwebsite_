@@ -20,7 +20,7 @@ export function HomePageContent() {
                 beyond. Precision-engineered for efficiency.
               </p>
               <div className="hero-btns">
-                <button type="button" className="btn btn-primary">Book Delivery</button>
+                <Link href="/book-delivery" className="btn btn-primary">Book Delivery</Link>
                 <button type="button" className="btn btn-ghost-blue">Track Shipment</button>
               </div>
             </div>
@@ -239,7 +239,7 @@ export function HomePageContent() {
         {/* APP */}
         <section className="section-app">
           <div className="app-header">
-            <h2>CarryOn App — Deliver Anywhere</h2>
+            <h2>CarryOn App &mdash; Deliver Anywhere</h2>
             <p>The entire logistics network in the palm of your hand.</p>
           </div>
           <div className="app-content">
@@ -274,10 +274,16 @@ export function HomePageContent() {
             </ul>
             <div className="app-phone">
               <div className="phone-frame">
-                <div className="phone-notch"></div>
-                <div className="phone-screen">
-                  <img src="/assets/app-screen.svg" alt="CarryOn app" width={288} height={580} />
-                </div>
+                <div className="phone-screen" aria-hidden="true"></div>
+                <div className="phone-notch" aria-hidden="true"></div>
+                <img
+                  className="phone-logo"
+                  src="/assets/app-phone-logo-cropped.png"
+                  alt="CarryOn app logo"
+                  width={265}
+                  height={176}
+                />
+                <div className="phone-home-indicator" aria-hidden="true"></div>
               </div>
             </div>
           </div>
@@ -320,7 +326,7 @@ export function HomePageContent() {
                 </ul>
               </div>
               <div className="infra-media">
-                <img src="/assets/infra-facility.jpg" alt="Modern logistics facility" width={472} height={472} />
+                <img src="/assets/group-9.svg" alt="CarryOn API gateway architecture diagram" width={472} height={472} />
               </div>
             </div>
           </div>
@@ -334,7 +340,7 @@ export function HomePageContent() {
               <article className="testimonial-card">
                 <div className="testimonial-stars">
                   {[...Array(5)].map((_, i) => (
-                    <img key={i} src="/assets/icon-star.svg" width={20} height={19} alt="★" />
+                    <img key={i} src="/assets/icon-star.svg" width={20} height={19} alt="star" />
                   ))}
                 </div>
                 <blockquote>
@@ -353,7 +359,7 @@ export function HomePageContent() {
               <article className="testimonial-card">
                 <div className="testimonial-stars">
                   {[...Array(5)].map((_, i) => (
-                    <img key={i} src="/assets/icon-star.svg" width={20} height={19} alt="★" />
+                    <img key={i} src="/assets/icon-star.svg" width={20} height={19} alt="star" />
                   ))}
                 </div>
                 <blockquote>
@@ -392,14 +398,15 @@ export function HomePageContent() {
         <div className="footer-inner">
           <span className="footer-brand">CarryOn Malaysia</span>
           <nav className="footer-nav" aria-label="Footer">
-            <Link href="#">PRIVACY POLICY</Link>
-            <Link href="#">TERMS OF SERVICE</Link>
+            <Link href="/privacy">PRIVACY POLICY</Link>
+            <Link href="/terms">TERMS OF SERVICE</Link>
             <Link href="#">FLEET PARTNERS</Link>
             <Link href="#">CONTACT US</Link>
           </nav>
-          <span className="footer-copy">© 2024 CARRYON MALAYSIA. PRECISION LOGISTICS SOLUTIONS.</span>
+          <span className="footer-copy">&copy; 2024 CARRYON MALAYSIA. PRECISION LOGISTICS SOLUTIONS.</span>
         </div>
       </footer>
     </>
   );
 }
+

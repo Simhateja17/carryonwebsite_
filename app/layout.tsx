@@ -3,7 +3,7 @@ import "@/styles/styles.css";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "CarryOn — Smart Logistics for Malaysia",
+  title: "CarryOn - Smart Logistics for Malaysia",
   description: "Seamless deliveries across Kuala Lumpur, Penang, and beyond. Precision-engineered for efficiency.",
 };
 
