@@ -116,17 +116,18 @@
 /* Hero visual */
 .a-hero__visual {
   grid-column: 8 / span 5;
-  border-radius: 16px;
+  border-radius: 24px;
   overflow: hidden;
-  background: #f1f4f9;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
-  height: 582px;
+  background: #2F80ED;
+  box-shadow: 0 25px 50px -12px rgba(47,128,237,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .a-hero__img {
-  width: 125%;
-  height: 100%;
-  object-fit: cover;
-  margin-left: -12.5%;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ── MISSION & VISION ──────────────────────────────────────── */
@@ -488,47 +489,22 @@
 }
 .a-precision__frame {
   background: #f1f4f9;
-  border-radius: 16px;
+  border-radius: 24px;
   padding: 40px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .a-precision__img {
   width: 100%;
-  aspect-ratio: 1;
+  max-width: 520px;
+  height: auto;
   border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
   display: block;
 }
 .a-precision__float-card {
-  position: absolute;
-  bottom: -32px;
-  left: -32px;
-  background: #fff;
-  border: 1px solid rgba(213,216,225,.2);
-  border-radius: 16px;
-  padding: 33px 56px 34px 33px;
-  max-width: 240px;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-}
-.a-precision__float-kicker {
-  font-family: "Manrope", sans-serif;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #2f80ed;
-}
-.a-precision__float-text {
-  font-family: "Manrope", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 22.75px;
-  color: #000;
-  margin: 0;
+  display: none;
 }
 
 /* ── WHY CHOOSE CARRYON ────────────────────────────────────── */

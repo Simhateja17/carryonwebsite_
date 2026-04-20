@@ -47,8 +47,8 @@ export function AboutPageContent() {
             </div>
             <div className="a-hero__visual">
               <img
-                src="/assets/ab-future-logistics.jpg"
-                alt="Future of logistics"
+                src="/assets/ab-future-logistics.svg"
+                alt="CarryOn logistics dashboard"
                 className="a-hero__img"
               />
             </div>
@@ -205,8 +205,8 @@ export function AboutPageContent() {
             <div className="a-precision__visual">
               <div className="a-precision__frame">
                 <img
-                  src="/assets/ab-data-analytics.jpg"
-                  alt="Data analytics dashboard"
+                  src="/assets/ab-data-analytics.svg"
+                  alt="Fare Estimator showing transparent pricing"
                   className="a-precision__img"
                 />
                 <div className="a-precision__float-card">

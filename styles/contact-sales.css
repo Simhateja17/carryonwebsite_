@@ -1,0 +1,893 @@
+/* ================================================================
+   contact-sales.css — CarryOn Contact Sales Page (Driver Recruitment)
+   Tokens: primary #2F80ED | sky #A6D2F3 | sky-20 rgba(166,210,243,.2)
+   ================================================================ */
+
+.cs-main { background: #fff; }
+
+/* Shared tokens */
+.cs-section-label {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2F80ED;
+  margin-bottom: 12px;
+}
+.cs-section-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000;
+  margin: 0 0 48px;
+}
+.cs-blue { color: #2F80ED; }
+
+/* Buttons */
+.cs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+  text-decoration: none;
+}
+.cs-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.cs-btn--primary {
+  background: #2F80ED;
+  color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(47,128,237,.3);
+}
+.cs-btn--light {
+  background: #E3F0FF;
+  color: #2F80ED;
+}
+.cs-btn--white {
+  background: #fff;
+  color: #2F80ED;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1);
+}
+.cs-btn--ghost {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.3);
+  backdrop-filter: blur(6px);
+}
+
+/* ── HERO ── */
+.cs-hero {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.cs-hero__shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 80px 48px;
+}
+.cs-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.cs-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cs-hero__trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #2F80ED;
+}
+.cs-hero__trust-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2F80ED;
+}
+.cs-hero__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #000;
+  margin: 0;
+}
+.cs-hero__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #434654;
+  max-width: 480px;
+  margin: 0;
+}
+.cs-hero__btns {
+  display: flex;
+  gap: 12px;
+  padding-top: 8px;
+}
+.cs-hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.cs-hero__img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+}
+
+/* ── EARNINGS ── */
+.cs-earnings {
+  background: #F0F5FF;
+  padding: 96px 0;
+}
+.cs-earnings__shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.cs-earnings__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.cs-earnings__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cs-earnings__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000;
+  margin: 0;
+}
+.cs-earnings__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #434654;
+  margin: 0;
+}
+.cs-earnings__perks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+}
+.cs-perk {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.cs-perk__icon {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.cs-perk h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px;
+}
+.cs-perk p {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #434654;
+  margin: 0;
+}
+
+/* Calculator card */
+.cs-earnings__card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.cs-calc__label {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #434654;
+}
+.cs-calc__vehicles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.cs-calc__veh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  border: 2px solid #E8EDF3;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #434654;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.cs-calc__veh svg { color: #9CA3AF; transition: color 0.15s; }
+.cs-calc__veh.is-active {
+  border-color: #2F80ED;
+  background: #E3F0FF;
+  color: #2F80ED;
+}
+.cs-calc__veh.is-active svg { color: #2F80ED; }
+.cs-calc__hours { display: flex; flex-direction: column; gap: 8px; }
+.cs-calc__hours-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #434654;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.cs-calc__hours-value { color: #2F80ED; }
+.cs-calc__slider {
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  background: #E8EDF3;
+  border-radius: 3px;
+  outline: none;
+  accent-color: #2F80ED;
+}
+.cs-calc__slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2F80ED;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(47,128,237,.3);
+}
+.cs-calc__result {
+  border-top: 1px solid #E8EDF3;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cs-calc__result-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #434654;
+}
+.cs-calc__amount {
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #2F80ED;
+  line-height: 1.1;
+}
+.cs-calc__per {
+  font-size: 16px;
+  font-weight: 500;
+  color: #434654;
+}
+.cs-calc__note {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #9CA3AF;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── BENEFITS ── */
+.cs-benefits {
+  background: #F8FAFC;
+  padding: 96px 0;
+}
+.cs-benefits__shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 48px;
+  text-align: center;
+}
+.cs-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.cs-benefit-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-benefit-card__icon {
+  width: 44px;
+  height: 44px;
+  background: #E3F0FF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-benefit-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+.cs-benefit-card p {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #434654;
+  margin: 0;
+}
+
+/* ── JOURNEY ── */
+.cs-journey {
+  background: #F8FAFC;
+  padding: 96px 0;
+}
+.cs-journey__shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.cs-journey__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #000;
+  margin: 0 0 12px;
+}
+.cs-journey__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #434654;
+  max-width: 560px;
+  margin: 0 0 48px;
+}
+.cs-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+.cs-steps::before {
+  content: "";
+  position: absolute;
+  top: 56px;
+  left: 60px;
+  right: 60px;
+  height: 2px;
+  background: #E8EDF3;
+  z-index: 0;
+}
+.cs-step {
+  background: #E8F0FE;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  margin: 0 6px;
+}
+.cs-step--active {
+  background: #2F80ED;
+}
+.cs-step--active .cs-step__label,
+.cs-step--active .cs-step__num,
+.cs-step--active h3,
+.cs-step--active p,
+.cs-step--active .cs-step__icon {
+  color: #fff;
+}
+.cs-step--active .cs-step__icon svg { stroke: #fff; }
+.cs-step__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cs-step__label {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #2F80ED;
+}
+.cs-step__num {
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #D6E4F7;
+  line-height: 1;
+}
+.cs-step--active .cs-step__num { color: rgba(255,255,255,.3); }
+.cs-step h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+.cs-step p {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #434654;
+  margin: 0;
+}
+.cs-step__icon {
+  margin-top: auto;
+  color: #2F80ED;
+}
+.cs-step__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #2F80ED;
+}
+
+/* ── SAFETY ── */
+.cs-safety {
+  background: #fff;
+  padding: 96px 0;
+}
+.cs-safety__shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.cs-safety__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.cs-safety__visual {
+  display: flex;
+  justify-content: center;
+}
+.cs-safety__shield {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.cs-safety__shield svg {
+  width: 100%;
+  height: 100%;
+}
+.cs-safety__badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.cs-safety__badge-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cs-safety__badge-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+}
+.cs-safety__badge-desc {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  color: #6B7280;
+}
+.cs-safety__badge--sos {
+  top: 30px;
+  left: -20px;
+  background: #2F80ED;
+  color: #fff;
+}
+.cs-safety__badge--sos .cs-safety__badge-icon {
+  background: rgba(255,255,255,.2);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.cs-safety__badge--sos .cs-safety__badge-desc { color: rgba(255,255,255,.7); }
+.cs-safety__badge--tracking {
+  top: 30px;
+  right: -20px;
+  background: #fff;
+  color: #000;
+}
+.cs-safety__badge--tracking .cs-safety__badge-icon { background: #E3F0FF; }
+.cs-safety__badge--verified {
+  bottom: 140px;
+  left: -30px;
+  background: #fff;
+  color: #000;
+}
+.cs-safety__badge--verified .cs-safety__badge-icon { background: #E3F0FF; }
+.cs-safety__badge--insurance {
+  bottom: 140px;
+  right: -20px;
+  background: #fff;
+  color: #000;
+}
+.cs-safety__badge--insurance .cs-safety__badge-icon { background: #E3F0FF; }
+.cs-safety__badge--record {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #E3F0FF;
+  color: #2F80ED;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 8px 16px;
+}
+.cs-safety__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2F80ED;
+  flex-shrink: 0;
+}
+.cs-safety__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.cs-safety__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000;
+  margin: 0;
+}
+.cs-safety__items {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.cs-safety__item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.cs-safety__item-icon {
+  width: 40px;
+  height: 40px;
+  background: #E3F0FF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cs-safety__item h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px;
+}
+.cs-safety__item p {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #434654;
+  margin: 0;
+}
+
+/* ── TESTIMONIALS ── */
+.cs-testimonials {
+  background: #F0F5FF;
+  padding: 96px 0;
+}
+.cs-testimonials__shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.cs-testimonials__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+.cs-testimonials__nav {
+  display: flex;
+  gap: 8px;
+}
+.cs-testimonials__nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #D6E4F7;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #434654;
+  transition: all 0.15s;
+}
+.cs-testimonials__nav-btn:hover {
+  border-color: #2F80ED;
+  color: #2F80ED;
+}
+.cs-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.cs-testimonial-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.cs-testimonial-card__stars {
+  display: flex;
+  gap: 2px;
+}
+.cs-star--filled { color: #2F80ED; font-size: 16px; }
+.cs-star--empty { color: #D6E4F7; font-size: 16px; }
+.cs-testimonial-card__text {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+}
+.cs-testimonial-card__author {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-top: 8px;
+}
+.cs-testimonial-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.cs-testimonial-card__name {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+.cs-testimonial-card__role {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── CTA ── */
+.cs-cta {
+  background: #fff;
+  padding: 96px 0;
+}
+.cs-cta__shell {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 48px;
+  background: linear-gradient(135deg, #2F80ED 0%, #1D6FE0 100%);
+  border-radius: 24px;
+  padding: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.cs-cta__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0;
+  max-width: 700px;
+}
+.cs-cta__btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.cs-cta__note {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,.6);
+  margin: 0;
+}
+
+/* ── FOOTER ── */
+.cs-footer {
+  background: #F8FAFC;
+  padding: 64px 0 32px;
+  border-top: 1px solid #E8EDF3;
+}
+.cs-footer__shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.cs-footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #E8EDF3;
+}
+.cs-footer__logo {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #2F80ED;
+}
+.cs-footer__brand p {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #434654;
+  margin: 12px 0 0;
+  max-width: 280px;
+}
+.cs-footer__col h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #2F80ED;
+  margin: 0 0 16px;
+}
+.cs-footer__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cs-footer__col a {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #434654;
+  text-decoration: none;
+}
+.cs-footer__col a:hover { color: #2F80ED; }
+.cs-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+}
+.cs-footer__bottom span {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #9CA3AF;
+}
+.cs-footer__socials {
+  display: flex;
+  gap: 12px;
+}
+.cs-footer__socials a {
+  color: #9CA3AF;
+  transition: color 0.15s;
+}
+.cs-footer__socials a:hover { color: #2F80ED; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .cs-hero__grid { grid-template-columns: 1fr; text-align: center; }
+  .cs-hero__copy { align-items: center; }
+  .cs-hero__visual { display: none; }
+  .cs-hero__title { font-size: 42px; }
+  .cs-earnings__grid { grid-template-columns: 1fr; }
+  .cs-benefits__grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-steps { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cs-steps::before { display: none; }
+  .cs-safety__grid { grid-template-columns: 1fr; }
+  .cs-safety__visual { display: none; }
+  .cs-testimonials__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .cs-hero__shell { padding: 48px 24px; }
+  .cs-hero__title { font-size: 32px; }
+  .cs-hero__btns { flex-direction: column; }
+  .cs-benefits__grid { grid-template-columns: 1fr; }
+  .cs-steps { grid-template-columns: 1fr; }
+  .cs-cta__shell { padding: 40px 24px; }
+  .cs-cta__title { font-size: 28px; }
+  .cs-cta__btns { flex-direction: column; }
+  .cs-footer__grid { grid-template-columns: 1fr; }
+  .cs-section-title { font-size: 28px; }
+}

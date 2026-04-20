@@ -29,7 +29,7 @@ export function ServicesPageContent() {
               High-performance bulk delivery and fleet management solutions for
               modern enterprises. Scalable, reliable, and developer-first.
             </p>
-            <button type="button" className="sv-btn sv-btn--primary sv-btn--hero">Contact Sales</button>
+            <Link href="/contact-sales" className="sv-btn sv-btn--primary sv-btn--hero">Contact Sales</Link>
             <div className="sv-hero__track">
               <div className="sv-track__input-wrap">
                 <img src="/assets/sv-icon-search.svg" width={18} height={18} alt="" className="sv-track__icon" />
@@ -47,7 +47,7 @@ export function ServicesPageContent() {
             <div className="sv-hero__img-wrap">
               <div className="sv-hero__img-overlay" />
               <img
-                src="/assets/services-hero.svg"
+                src="/assets/9381.png"
                 alt="Global logistics infrastructure"
                 width={584}
                 height={453}
@@ -97,11 +97,6 @@ export function ServicesPageContent() {
               </div>
             </div>
 
-            {/* Infra diagram — overlaps both rows */}
-            <div className="sv-bento-diagram" aria-hidden="true">
-              <img src="/assets/sv-infra-diagram.png" alt="" className="sv-bento-diagram__img" />
-            </div>
-
             {/* Feature 3: Enterprise Support — bottom-left */}
             <div className="sv-bento-card sv-bento-card--support">
               <div className="sv-bento-icon">
@@ -114,7 +109,7 @@ export function ServicesPageContent() {
               </p>
             </div>
 
-            {/* Feature 4: Automated Compliance — bottom-right */}
+            {/* Feature 4: Automated Compliance — bottom-center */}
             <div className="sv-bento-card sv-bento-card--compliance">
               <div className="sv-bento-card__content">
                 <h3 className="sv-h3">Automated Compliance</h3>
@@ -123,10 +118,73 @@ export function ServicesPageContent() {
                   digital signature chains.
                 </p>
               </div>
-              <div className="sv-bento-bars" aria-hidden="true">
-                <div className="sv-bento-bar" style={{ height: 96, background: "#2f80ed" }} />
-                <div className="sv-bento-bar" style={{ height: 128, background: "#1d4ed8" }} />
-                <div className="sv-bento-bar" style={{ height: 64, background: "#003d9b" }} />
+            </div>
+
+            {/* Feature 5: Compliance Visual — bottom-right */}
+            <div className="sv-bento-card sv-bento-card--compliance-visual">
+              <div className="sv-cv-left">
+                <div className="sv-cv-checklist">
+                  <p className="sv-cv-checklist-title">Compliance</p>
+                  <div className="sv-cv-check-item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="#2f80ed" strokeWidth="1.5"/><path d="M4 7l2 2 4-4" stroke="#2f80ed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <span>Road Transport Act</span>
+                  </div>
+                  <div className="sv-cv-check-item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="#2f80ed" strokeWidth="1.5"/><path d="M4 7l2 2 4-4" stroke="#2f80ed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <span>LPKP Licence</span>
+                  </div>
+                  <div className="sv-cv-check-item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="#2f80ed" strokeWidth="1.5"/><path d="M4 7l2 2 4-4" stroke="#2f80ed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <span>GDPR / PDPA</span>
+                  </div>
+                  <div className="sv-cv-check-item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="#2f80ed" strokeWidth="1.5"/><path d="M4 7l2 2 4-4" stroke="#2f80ed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <span>Intl Transport</span>
+                  </div>
+                  <div className="sv-cv-check-item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="#2f80ed" strokeWidth="1.5"/><path d="M4 7l2 2 4-4" stroke="#2f80ed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <span>Digital Signatures</span>
+                  </div>
+                </div>
+                <div className="sv-cv-approved">
+                  <span className="sv-cv-approved-label">AUTO-APPROVED</span>
+                  <span className="sv-cv-approved-value">100%</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#22c55e" strokeWidth="2"/><path d="M6 10l3 3 5-6" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </div>
+              </div>
+              <div className="sv-cv-center">
+                <div className="sv-cv-shield">
+                  <svg width="48" height="56" viewBox="0 0 48 56" fill="none">
+                    <path d="M24 4L6 12v16c0 12 8 20 18 24 10-4 18-12 18-24V12L24 4z" fill="#2f80ed" opacity="0.3"/>
+                    <path d="M24 4L6 12v16c0 12 8 20 18 24 10-4 18-12 18-24V12L24 4z" stroke="#2f80ed" strokeWidth="2"/>
+                    <path d="M18 28l5 5 10-12" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="sv-cv-right">
+                <div className="sv-cv-sigchain">
+                  <p className="sv-cv-sigchain-title">Digital Sig Chain</p>
+                  <div className="sv-cv-sigchain-code">0xF2a...c9Fb · SHA-256</div>
+                  <div className="sv-cv-verified">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <span>Verified</span>
+                  </div>
+                </div>
+                <div className="sv-cv-region">
+                  <p className="sv-cv-region-title">Region Status</p>
+                  <div className="sv-cv-region-item">
+                    <span className="sv-cv-dot sv-cv-dot--green" />
+                    <span>Malaysia · All clear</span>
+                  </div>
+                  <div className="sv-cv-region-item">
+                    <span className="sv-cv-dot sv-cv-dot--green" />
+                    <span>Singapore · All clear</span>
+                  </div>
+                  <div className="sv-cv-region-item">
+                    <span className="sv-cv-dot sv-cv-dot--green" />
+                    <span>International · Active</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

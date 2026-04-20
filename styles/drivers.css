@@ -1,1415 +1,967 @@
-/* ============================================================
-   CarryOn — Drivers page styles
+/* ================================================================
+   drivers.css — CarryOn Drivers Page (Figma redesign)
    Tokens: primary #2F80ED | sky #A6D2F3 | sky-20 rgba(166,210,243,.2)
-   ============================================================ */
+   ================================================================ */
 
-/* ── Driver Hero — Figma 311-2830 ─────────────────────────── */
-/* Outer section: white background, overflow hidden */
-.d-hero {
-  background: #fff;
-  overflow: hidden;
+.drv-main {
+  background: #f7f9fe;
 }
 
-/* Shell: full-width centering wrapper */
-.d-hero__shell {
-  display: flex;
+/* Shared */
+.drv-btn {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  width: 100%;
+  gap: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+  text-decoration: none;
+}
+.drv-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.drv-btn--primary {
+  background: #2F80ED;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(47,128,237,.3);
+}
+.drv-btn--light {
+  background: #a6d2f3;
+  color: #2F80ED;
 }
 
-/* 12-col inline-grid — exact Figma token match */
-.d-hero__grid {
-  display: inline-grid;
-  width: min(100%, 1280px);
-  padding: 96px 40px;
-  row-gap: 24px;
-  column-gap: 24px;
-  align-self: stretch;
-  grid-template-rows: 419.5px;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  align-items: stretch;
+/* ── HERO ── */
+.drv-hero {
+  background: #f7f9fe;
+  padding: 64px 0 48px;
 }
-
-/* Copy — cols 1-5 */
-.d-hero__copy {
-  grid-column: 1 / span 5;
+.drv-hero__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.drv-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.drv-hero__copy {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0;
+  gap: 20px;
 }
-
-/* Visual wrapper — cols 6-12 */
-.d-hero__visual-wrap {
-  grid-column: 6 / span 7;
+.drv-hero__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: #2F80ED;
+  margin: 0;
+}
+.drv-hero__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #434654;
+  margin: 0;
+  max-width: 480px;
+}
+.drv-hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drv-hero__fleet {
   position: relative;
 }
-
-.d-hero__visual {
-  overflow: hidden;
-}
-
-.d-hero__visual img {
+.drv-hero__img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 520px;
+  height: auto;
   display: block;
-  mix-blend-mode: multiply;
 }
-
-/* Title */
-.d-hero__title {
-  margin: 0 0 1rem;
-  font-family: "Manrope", var(--font);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: var(--primary);
-}
-
-/* Lead paragraph */
-.d-hero__lead {
-  margin: 0 0 0;
-  font-size: 0.975rem;
-  line-height: 1.65;
-  color: var(--text-muted);
-  max-width: 26rem;
-}
-
-/* Button group */
-.d-hero__btns {
-  margin-top: 1.75rem;
-  align-items: center;
-}
-
-/* "Learn More" text link */
-.d-hero__learn-more {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--primary);
-  text-decoration: none;
-  padding: 0.5rem 0.25rem;
-  border-bottom: 1.5px solid transparent;
-  transition: border-color 0.15s ease;
-}
-
-.d-hero__learn-more:hover {
-  border-bottom-color: var(--primary);
-  text-decoration: none;
-}
-
-/* Badge card — below visual, left-aligned */
-.d-hero__badge {
+.drv-hero__badge {
   position: absolute;
+  bottom: 0;
   left: 0;
-  bottom: -48px;
   background: #fff;
   border-radius: 12px;
-  padding: 1rem 1.25rem;
-  box-shadow: var(--shadow-soft);
+  padding: 16px 20px;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
 }
-
-.d-hero__badge-icon {
-  width: 48px;
-  height: 48px;
-  background: rgba(166, 210, 243, 0.35);
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
+.drv-hero__badge-icon {
+  width: 40px;
+  height: 40px;
+  background: #e3f0ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.d-hero__badge-label {
-  margin: 0 0 1px;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+.drv-hero__badge-label {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #434654;
+  letter-spacing: 0.5px;
 }
-
-.d-hero__badge-value {
-  margin: 0;
-  font-family: "Manrope", var(--font);
-  font-size: 1.15rem;
+.drv-hero__badge-value {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
   font-weight: 800;
-  color: var(--primary);
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-/* Responsive hero */
-@media (max-width: 900px) {
-  .d-hero__grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding: 60px 24px;
-    row-gap: 32px;
-  }
-
-  .d-hero__copy {
-    grid-column: 1 / -1;
-  }
-
-  .d-hero__visual-wrap {
-    grid-column: 1 / -1;
-  }
-
-  .d-hero__visual {
-    aspect-ratio: 16 / 9;
-    min-height: 260px;
-  }
-}
-
-/* ── Stats — Figma node 311-2855 ──────────────────────────── */
-/* Outer section wrapper — flex column, border-top/bottom */
-.d-stats {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
-  border-top: 1px solid rgba(195, 198, 214, 0.10);
-  border-bottom: 1px solid rgba(195, 198, 214, 0.10);
-  background: #fff;
-}
-
-/* Inner layout container — padding 80px 0 */
-.d-stats__inner {
-  padding: 80px 0;
-  width: 100%;
-  max-width: var(--layout-max);
-  margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
-  align-self: stretch;
-}
-
-/* 3-column equal grid for cards — justify-self stretch */
-.d-stats__row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: auto;
-  gap: 24px;
-}
-
-/* ── Stat card — Figma node 311-2857 ── */
-.d-stat-card {
-  display: flex;
-  padding: 40px 40px 56px 40px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  grid-row: 1 / span 1;
-  justify-self: stretch;
-  border-radius: 8px;
-  border: 1px solid rgba(195, 198, 214, 0.05);
-  background: rgba(166, 210, 243, 0.20);
-}
-
-/* Kicker label — e.g. "AVG MONTHLY EARNINGS" */
-.d-stat-card__kicker {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  line-height: 1.3;
-}
-
-/* Large value — e.g. "$4,200+" */
-.d-stat-card__value {
-  margin: 0;
-  font-family: "Manrope", var(--font);
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 800;
-  color: var(--primary);
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-
-/* First description line */
-.d-stat-card__desc {
-  margin: 0;
-  font-size: 0.8125rem;
-  font-weight: 400;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* Second description line */
-.d-stat-card__sub {
-  margin: 0;
-  font-size: 0.8125rem;
-  font-weight: 400;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-@media (max-width: 860px) {
-  .d-stats__row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px) {
-  .d-stats__row {
-    grid-template-columns: 1fr;
-  }
-
-  .d-stat-card {
-    padding: 32px 28px 40px 28px;
-  }
-}
-
-/* ══════════════════════════════════════════════════════════════
-   Precision Onboarding + Designed for Fleet
-   Figma nodes: 311-2887 / 2888 / 2889 / 2890 / 2892 / 2945 / 2946 / 2947
-   ══════════════════════════════════════════════════════════════ */
-
-/* 311-2887 — outer section: exact Figma tokens */
-.d-features {
-  background: var(--bg-page); /* #f7f9fe — light blue-grey to match screenshot */
-  overflow: hidden;
-}
-
-/* Section shell: flex col, padding 128px 0, gap 96px, center */
-.d-features__shell {
-  display: flex;
-  padding: 128px 0;
-  flex-direction: column;
-  align-items: center;
-  gap: 96px;
-  align-self: stretch;
-}
-
-/* ── 311-2888: Precision Onboarding block ── */
-.d-ob-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  align-self: stretch;
-}
-
-/* 311-2889: heading group */
-.d-ob-block__header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
-  gap: 14px;
-}
-
-/* 311-2890: "Precision Onboarding" title */
-.d-ob-block__title {
-  margin: 0;
   color: #2F80ED;
-  text-align: center;
-  font-family: "Manrope", var(--font);
+}
+
+/* ── STATS ── */
+.drv-stats {
+  padding: 32px 0 64px;
+}
+.drv-stats__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.drv-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.drv-stat-card {
+  background: #e8f0fe;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.drv-stat-card__label {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #434654;
+}
+.drv-stat-card__value {
+  font-family: "Manrope", sans-serif;
   font-size: 36px;
   font-weight: 800;
-  line-height: 40px;
-  letter-spacing: -0.9px;
+  color: #2F80ED;
+  line-height: 1.1;
+}
+.drv-stat-card__sub {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.4;
+}
+.drv-stat-card__note {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.5;
 }
 
-/* Blue accent bar below title */
-.d-ob-block__accent {
-  width: 56px;
-  height: 4px;
-  border-radius: 99px;
+/* ── ONBOARDING ── */
+.drv-onboarding {
+  padding: 64px 0;
+  border-top: 1px solid #e8edf3;
+}
+.drv-onboarding__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
+  text-align: center;
+}
+.drv-onboarding__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #2F80ED;
+  margin: 0 0 12px;
+}
+.drv-onboarding__line {
+  width: 48px;
+  height: 3px;
   background: #2F80ED;
+  border-radius: 2px;
+  margin: 0 auto 48px;
 }
-
-/* 311-2892: Steps container — width 1024px */
-.d-ob-steps-wrap {
-  display: flex;
-  width: min(1024px, 100%);
-  max-width: 1024px;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* ────────────────────────────────────────────────────────────
-   Horizontal stepper matching screenshot:
-   - Large ghost step numbers at top
-   - Rounded-square icon below (not circle!)
-   - Horizontal track line through icon center
-   - Label + description below
-   ────────────────────────────────────────────────────────────*/
-.d-stepper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
+.drv-onboarding__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
   position: relative;
 }
-
-/* Track line — top = num line-height(40px) + margin(6px) + half icon(28px) = 74px */
-.d-stepper::before {
+.drv-onboarding__steps::before {
   content: "";
   position: absolute;
-  top: 74px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgba(47, 128, 237, 0.20);
+  top: 28px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: #e8edf3;
   z-index: 0;
 }
-
-/* Individual step column */
-.d-step {
-  flex: 1;
+.drv-onboarding__step {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 12px;
   position: relative;
   z-index: 1;
   padding: 0 8px;
 }
-
-/* Step number — exact Figma token match */
-.d-step__num {
-  color: rgba(166, 210, 243, 0.20);
-  text-align: center;
-  font-family: "Manrope", var(--font);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 40px;
-  margin-bottom: 6px;
-}
-
-/* Rounded-square icon — 56×56, border-radius 14px */
-.d-step__icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: rgba(166, 210, 243, 0.35);
+.drv-onboarding__icon {
+  width: 48px;
+  height: 48px;
+  background: #a6d2f3;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #2F80ED;
-  display: grid;
-  place-items: center;
-  position: relative;
-  z-index: 2; /* sits on top of the track line */
-  flex-shrink: 0;
-  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
-
-/* Active step 01 — filled solid blue, white icon */
-.d-step--active .d-step__icon {
+.drv-onboarding__icon.is-active {
   background: #2F80ED;
   color: #fff;
-  box-shadow: 0 8px 24px rgba(47, 128, 237, 0.40);
 }
-
-/* Step label */
-.d-step__label {
-  margin: 0;
-  font-family: "Manrope", var(--font);
-  font-size: 0.9375rem;
+.drv-onboarding__num {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #d6e4f7;
+  line-height: 1;
+}
+.drv-onboarding__step-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
   font-weight: 700;
   color: #2F80ED;
-}
-
-/* Step description */
-.d-step__desc {
   margin: 0;
-  font-size: 0.8125rem;
-  line-height: 1.55;
-  color: var(--text-muted);
-  max-width: 176px;
+}
+.drv-onboarding__step-desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #434654;
+  margin: 0;
+  max-width: 200px;
 }
 
-/* ── Designed for the Modern Fleet card — 311-2945 ── */
-.d-fleet-card {
-  display: flex;
-  padding: 64px;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
-  border-radius: 24px;
-  background: rgba(166, 210, 243, 0.20);
+/* ── MODERN FLEET ── */
+.drv-fleet {
+  padding: 64px 0;
 }
-
-/* 311-2946 — inner 2-col grid: row 650px, gap 64px */
-.d-fleet-card__grid {
-  display: inline-grid;
-  row-gap: 64px;
-  column-gap: 64px;
-  align-self: stretch;
-  grid-template-rows: 650px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.drv-fleet__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
 }
-
-/* 311-2947 — left copy: exact Figma tokens */
-.d-fleet-card__copy {
+.drv-fleet__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  background: #e8f0fe;
+  border-radius: 20px;
+  padding: 48px;
+}
+.drv-fleet__copy {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;               /* 40px between all 4 direct flex children */
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 1;
-  justify-self: stretch;
-  min-height: 0;
+  gap: 20px;
 }
-
-/* ── Flex child 1: Title ── */
-.d-fleet-card__title {
-  margin: 0;
-  font-family: "Manrope", var(--font);
-  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+.drv-fleet__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
   font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
   color: #2F80ED;
+  margin: 0;
+  line-height: 1.2;
 }
-
-/* ── Flex child 2: Description with left blue border bar ── */
-.d-fleet-card__quote {
+.drv-fleet__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #434654;
   margin: 0;
   padding-left: 16px;
   border-left: 3px solid #2F80ED;
-  font-size: 0.9375rem;
-  line-height: 1.65;
-  color: var(--text-muted);
 }
-
-/* ── Flex child 3: 2×2 features grid ── */
-.d-fleet-features {
+.drv-fleet__benefits {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px 20px;
-  align-self: stretch;
+  gap: 20px;
 }
-
-.d-fleet-feat {
+.drv-fleet__benefit {
   display: flex;
+  gap: 12px;
   align-items: flex-start;
-  gap: 10px;
 }
-
-.d-fleet-feat__icon {
-  width: 32px;
-  height: 32px;
-  background: rgba(47, 128, 237, 0.10);
+.drv-fleet__benefit-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(47,128,237,.1);
   border-radius: 8px;
-  display: grid;
-  place-items: center;
-  color: #2F80ED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
-
-.d-fleet-feat__text h3 {
-  margin: 0 0 4px;
-  font-family: "Manrope", var(--font);
-  font-size: 0.875rem;
+.drv-fleet__benefit h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
   font-weight: 700;
   color: #2F80ED;
+  margin: 0 0 4px;
 }
-
-.d-fleet-feat__text p {
-  margin: 0;
-  font-size: 0.8125rem;
+.drv-fleet__benefit p {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
   line-height: 1.5;
-  color: var(--text-muted);
+  color: #434654;
+  margin: 0;
 }
-
-/* ── Flex child 4: "Explore all driver benefits →" link ── */
-.d-fleet-card__link {
+.drv-fleet__link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-family: "Manrope", var(--font);
-  font-size: 0.9375rem;
+  gap: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
   font-weight: 700;
   color: #2F80ED;
   text-decoration: none;
-  transition: gap 0.15s ease;
 }
-
-.d-fleet-card__link:hover {
-  text-decoration: none;
+.drv-fleet__link:hover { opacity: 0.8; }
+.drv-fleet__visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.drv-fleet__phone {
+  position: relative;
+}
+.drv-fleet__phone-frame {
+  width: 220px;
+  background: #fff;
+  border-radius: 28px;
+  border: 4px solid #2F80ED;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(47,128,237,.15);
+}
+.drv-fleet__phone-notch {
+  width: 60px;
+  height: 16px;
+  background: #2F80ED;
+  border-radius: 0 0 12px 12px;
+  margin: 0 auto;
+}
+.drv-fleet__phone-screen {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
-
-/* ── Right column: phone image ── */
-.d-fleet-card__phone-col {
-  grid-row: 1 / span 1;
-  grid-column: 2 / span 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.drv-fleet__phone-map {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
   overflow: hidden;
-  border-radius: 16px;
 }
-
-/* Phone/app image — tilted perspective matching screenshot */
-.d-fleet-card__phone-img {
+.drv-fleet__phone-map svg {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
 }
-
-.d-fleet-card__phone-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(47, 128, 237, 0.25);
-  transform: perspective(800px) rotateY(-6deg) rotateX(2deg);
-  transition: transform 0.3s ease;
-}
-
-.d-fleet-card__phone-img img:hover {
-  transform: perspective(800px) rotateY(-3deg) rotateX(1deg);
-}
-
-/* ── Responsive ── */
-@media (max-width: 960px) {
-  .d-features__shell {
-    padding: 80px 0;
-    gap: 64px;
-  }
-
-  .d-fleet-card {
-    padding: 40px;
-  }
-
-  .d-fleet-card__grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 40px;
-  }
-
-  .d-fleet-card__copy {
-    grid-column: 1 / -1;
-  }
-
-  .d-fleet-card__phone-col {
-    grid-column: 1 / -1;
-    grid-row: auto;
-  }
-}
-
-@media (max-width: 720px) {
-  .d-stepper {
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-  }
-
-  .d-stepper::before {
-    display: none;
-  }
-
-  .d-step {
-    flex: 0 0 calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .d-step {
-    flex: 0 0 100%;
-  }
-
-  .d-fleet-features {
-    grid-template-columns: 1fr;
-  }
-
-  .d-features__shell {
-    padding: 64px 0;
-    gap: 48px;
-  }
-}
-
-/* ══════════════════════════════════════════════════════════════
-   THE PRECISION DRIVER HUB — Figma 311-2991
-   ══════════════════════════════════════════════════════════════ */
-.d-hub {
-  background: var(--bg-page);
-  overflow: hidden;
-}
-
-.d-hub__shell {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-/* 311-2991 — inline-grid, 12-col, row 544px, padding 208px 0 128px 0 */
-.d-hub__grid {
-  display: inline-grid;
-  padding: 208px 0 128px 0;
-  row-gap: 48px;
-  column-gap: 48px;
-  align-self: stretch;
-  grid-template-rows: 544px;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  width: 100%;
-  align-items: stretch;
-}
-
-/* Left phone image — cols 1-6 */
-.d-hub__phone {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 6;
-  border-radius: 16px;
-  overflow: hidden;
-  background: transparent;
-  box-shadow: none;
-  position: relative;
-}
-
-.d-hub__phone img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-/* 311-2996 — right copy: flex col, gap 48px, col 7/span 6 */
-.d-hub__copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 48px;
-  grid-row: 1 / span 1;
-  grid-column: 7 / span 6;
-  justify-self: stretch;
-  min-height: 0;
-}
-
-/* 311-2999 — title: Manrope 800, 48px, #2F80ED, -1.2px */
-.d-hub__title {
-  margin: 0;
-  align-self: stretch;
-  color: #2F80ED;
-  font-family: "Manrope", var(--font);
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 48px;
-  letter-spacing: -1.2px;
-}
-
-/* 311-3001 — description: Manrope 400, 18px, #000, 28px */
-.d-hub__desc {
-  margin: 0;
-  align-self: stretch;
-  color: #000;
-  font-family: "Manrope", var(--font);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-}
-
-/* 311-3003 / 3012 / 3021 — feature items: flex row, gap 24px */
-.d-hub__feat {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  align-self: stretch;
-}
-
-.d-hub__feat-icon {
-  width: 40px;
-  height: 40px;
-  background: rgba(166, 210, 243, 0.35);
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  color: #2F80ED;
-  flex-shrink: 0;
-}
-
-.d-hub__feat-text h3 {
-  margin: 0 0 6px;
-  font-family: "Manrope", var(--font);
-  font-size: 1rem;
-  font-weight: 700;
-  color: #2F80ED;
-}
-
-.d-hub__feat-text p {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: var(--text-muted);
-}
-
-/* ══════════════════════════════════════════════════════════════
-   SUPPORT CARDS — Figma 311-3030
-   inline-grid, 2-col, row 334px, padding 80px 0 208px 0, gap 32px
-   ══════════════════════════════════════════════════════════════ */
-.d-support {
-  background: var(--bg-page);
-  overflow: hidden;
-}
-
-/* 311-3030 — inline-grid, 2 cols, gap 32px, padding 80px 0 208px 0 */
-.d-support__grid {
-  display: grid;
-  padding: 80px 0 208px 0;
-  row-gap: 32px;
-  column-gap: 32px;
-  align-self: stretch;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
-  align-items: start;
-}
-
-/* Both cards */
-.d-support__card {
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,.10), 0 8px 10px -6px rgba(0,0,0,.10);
-}
-
-/* Card 1: 24/7 Priority Support — solid blue, Figma token */
-.d-support__card--primary {
-  background: #2f80ed;
+.drv-fleet__phone-order {
+  background: #2F80ED;
   color: #fff;
-  padding: 48px 48px 78px 48px;
-}
-
-.d-support__card--primary .d-support__card-icon {
-  width: 36px;
-  height: 36px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.d-support__card--primary .d-support__card-icon img {
-  width: 36px;
-  height: 36px;
-  display: block;
-  object-fit: contain;
-  color: #fff;
-}
-
-.d-support__card--primary h3 {
-  margin: 0;
-  padding-top: 8px;
-  font-family: "Manrope", var(--font);
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  color: #fff;
-}
-
-.d-support__card--primary p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 28px;
-  color: #c4d2ff;
-  max-width: 384px;
-}
-
-/* Card 2: Emergency Protection — light blue, Figma token */
-.d-support__card--secondary {
-  border: 1px solid rgba(195, 198, 214, 0.10);
-  background: #a6d2f3;
-  padding: 49px;
-}
-
-.d-support__card--secondary .d-support__card-icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.d-support__card--secondary .d-support__card-icon img {
-  width: 40px;
-  height: 40px;
-  display: block;
-  object-fit: contain;
-  color: #2F80ED;
-}
-
-.d-support__card--secondary h3 {
-  margin: 0;
-  padding-top: 8px;
-  font-family: "Manrope", var(--font);
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  color: #2F80ED;
-}
-
-.d-support__card--secondary p,
-.d-support__card-desc {
-  margin: 0;
-  color: #000;
+  border-radius: 6px;
+  padding: 8px 12px;
   font-family: "Manrope", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
-  max-width: 384px;
+  font-size: 11px;
+  font-weight: 600;
 }
-
-/* Figma overlay shadow on card 1 */
-.d-support__card--primary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  box-shadow: 0px 20px 25px -5px rgba(0,0,0,0.10), 0px 8px 10px -6px rgba(0,0,0,0.10);
-  pointer-events: none;
-}
-
-/* Responsive */
-@media (max-width: 860px) {
-  .d-hub__grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding: 80px 0 64px 0;
-    row-gap: 32px;
-  }
-
-  .d-hub__phone {
-    grid-column: 1 / -1;
-    aspect-ratio: 4 / 3;
-    min-height: 260px;
-  }
-
-  .d-hub__copy {
-    grid-column: 1 / -1;
-    gap: 32px;
-  }
-
-  .d-hub__title {
-    font-size: clamp(2rem, 5vw, 48px);
-    line-height: 1.1;
-  }
-
-  .d-support__grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding: 64px 0 80px 0;
-  }
-
-  .d-support__card {
-    min-height: 280px;
-  }
-}
-
-/* ══════════════════════════════════════════════════════════════
-   TESTIMONIALS — Figma 1-954 / 1-966
-   2-card grid, light blue background
-   ══════════════════════════════════════════════════════════════ */
-.d-testimonials {
-  background: var(--bg-page);
-  padding-block: clamp(3rem, 6vw, 5rem);
-}
-
-.d-testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  align-items: stretch;
-}
-
-.d-testimonial-card {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 40px;
-  border-radius: 24px;
-  background: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-
-.d-testimonial-card__quote-icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
-.d-testimonial-card__text {
-  margin: 0;
-  font-family: "Manrope", var(--font);
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.6;
-  color: #1a1a2e;
-}
-
-.d-testimonial-card__author {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: auto;
-}
-
-.d-testimonial-card__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  object-fit: cover;
+.drv-fleet__phone-order-label {
   display: block;
-  flex-shrink: 0;
 }
-
-.d-testimonial-card__info {
+.drv-fleet__phone-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.drv-fleet__phone-stat {
+  background: #e8f0fe;
+  border-radius: 6px;
+  padding: 8px 10px;
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
-
-.d-testimonial-card__name {
-  font-family: "Manrope", var(--font);
-  font-size: 15px;
-  font-weight: 700;
-  color: #1a1a2e;
-}
-
-.d-testimonial-card__role {
-  font-family: "Manrope", var(--font);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.drv-fleet__phone-stat-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
   color: #6b7280;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .d-testimonials__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .d-testimonial-card {
-    padding: 32px;
-  }
-}
-
-/* ══════════════════════════════════════════════════════════════
-   FAQ  — Figma nodes 311-3073 … 311-3092
-   ══════════════════════════════════════════════════════════════ */
-
-/* 311-3073 outer: full-width section, centred */
-.d-faq {
-  background: var(--bg-page);
-  display: flex;
-  justify-content: center;
-}
-
-/* 311-3073 outer wrapper — centres the 896px column */
-.d-faq__outer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-/* 311-3073 inner container — 896px, flex col, padding 224 0 96, gap 64 */
-.d-faq__container {
-  display: flex;
-  width: 896px;
-  max-width: 896px;
-  padding: 224px 0 96px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 64px;
-}
-
-/* 311-3074 block — flex col, center, gap 16 */
-.d-faq__block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  align-self: stretch;
-}
-
-/* 311-3075 heading group — flex col, center */
-.d-faq__header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
-  gap: 12px;
-}
-
-/* 311-3076 title — Manrope 800, 36px, #2F80ED, -0.9px */
-.d-faq__title {
-  margin: 0;
-  color: #2F80ED;
-  text-align: center;
+.drv-fleet__phone-stat-value {
   font-family: "Manrope", sans-serif;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 40px;       /* 111.111% */
-  letter-spacing: -0.9px;
-}
-
-/* 311-3077 blue accent bar — 64×4px, radius 12 */
-.d-faq__accent {
-  width: 64px;
-  height: 4px;
-  border-radius: 12px;
-  background: #2F80ED;
-  flex-shrink: 0;
-}
-
-/* FAQ items list */
-.d-faq__list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-self: stretch;
-}
-
-/* FAQ item card — radius 8, solid sky bg, 1px sky border */
-.d-faq__item {
-  border-radius: 8px;
-  border: 1px solid #A6D2F3;
-  background: #A6D2F3;
-  overflow: hidden;
-}
-
-/* 311-3080 / 311-3087 / 311-3092 question row */
-.d-faq__question {
-  display: flex;
-  padding: 24px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  gap: 12px;
-}
-
-.d-faq__question::-webkit-details-marker {
-  display: none;
-}
-
-/* 311-3081 question text — Manrope 700, 16px, #2F80ED, 24px */
-.d-faq__q-text {
-  color: #2F80ED;
-  font-family: "Manrope", sans-serif;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 24px;       /* 150% */
+  color: #2F80ED;
+}
+.drv-fleet__phone-next {
+  background: #f7f9fe;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.drv-fleet__phone-next-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #434654;
+}
+.drv-fleet__phone-next-addr {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #6b7280;
+}
+.drv-fleet__phone-next-btn {
+  background: #2F80ED;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.drv-fleet__phone-float {
+  position: absolute;
+  background: #2F80ED;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(47,128,237,.2);
+}
+.drv-fleet__phone-float-sub {
+  font-size: 9px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.drv-fleet__phone-float--left {
+  top: 50%;
+  left: -60px;
+  transform: translateY(-50%);
+}
+.drv-fleet__phone-float--right {
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+  background: #a6d2f3;
+  color: #2F80ED;
+  box-shadow: 0 4px 12px rgba(166,210,243,.3);
 }
 
-.d-faq__icon {
-  flex-shrink: 0;
+/* ── DRIVER HUB ── */
+.drv-hub {
+  padding: 64px 0;
+}
+.drv-hub__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.drv-hub__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.drv-hub__visual {
+  display: flex;
+  justify-content: center;
+}
+.drv-hub__servers {
+  width: 100%;
+  max-width: 360px;
+  background: #e8f0fe;
+  border-radius: 20px;
+  padding: 32px;
+}
+.drv-hub__servers svg {
+  width: 100%;
+  height: auto;
+}
+.drv-hub__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.drv-hub__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #2F80ED;
+  margin: 0;
+  line-height: 1.2;
+}
+.drv-hub__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #434654;
+  margin: 0;
+}
+.drv-hub__features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.drv-hub__feature {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.drv-hub__feature-icon {
+  width: 44px;
+  height: 44px;
+  background: #a6d2f3;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  transition: transform 0.25s ease;
+  justify-content: center;
+  flex-shrink: 0;
 }
-
-.d-faq__item[open] .d-faq__icon {
-  transform: rotate(180deg);
-}
-
-/* 311-3085 answer body */
-.d-faq__answer {
-  padding: 0 24px 24px;
-}
-
-/* 311-3085 answer text — Manrope 400, 16px, #000, 26px */
-.d-faq__answer p {
-  margin: 0;
-  align-self: stretch;
-  color: #000;
+.drv-hub__feature h4 {
   font-family: "Manrope", sans-serif;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;       /* 162.5% */
-}
-
-/* ── Responsive ── */
-@media (max-width: 960px) {
-  .d-faq__container {
-    width: 100%;
-    max-width: 100%;
-    padding: 80px 24px 64px;
-  }
-}
-
-@media (max-width: 640px) {
-  .d-faq__title {
-    font-size: 28px;
-    line-height: 34px;
-  }
-  .d-faq__container {
-    padding: 60px 20px 48px;
-    gap: 40px;
-  }
-}
-
-/* ── Ready to Start Driving CTA ──────────────────────────── */
-.d-cta {
-  padding-block: clamp(3rem, 7vw, 4.5rem);
-  background: var(--bg-white);
-}
-
-.d-cta__card {
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(166, 210, 243, 0.4);
-  overflow: hidden;
-  max-width: 700px;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.d-cta__top-bar {
-  height: 8px;
-  background: var(--primary);
-}
-
-/* 311-3097: body content wrapper — flex col, 672px max, gap 40px */
-.d-cta__body {
-  display: flex;
-  max-width: 672px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  align-self: stretch;
-  padding: clamp(2rem, 5vw, 3.5rem);
-  margin-inline: auto;
-}
-
-/* 311-3099: heading — Manrope 800, 48px, #2F80ED, -1.2px */
-.d-cta__body h2 {
-  margin: 0;
-  font-family: "Manrope", sans-serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 48px;
-  letter-spacing: -1.2px;
+  font-weight: 700;
   color: #2F80ED;
-  align-self: stretch;
+  margin: 0 0 4px;
+}
+.drv-hub__feature p {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #434654;
+  margin: 0;
 }
 
-/* 311-3101: subtitle — Manrope 400, 20px, #434654, center, 28px */
-.d-cta__body p {
-  margin: 0;
-  align-self: stretch;
-  color: #434654;
-  text-align: center;
+/* ── SUPPORT & PROTECTION ── */
+.drv-support {
+  padding: 48px 0;
+}
+.drv-support__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.drv-support__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.drv-support__card {
+  border-radius: 14px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.drv-support__card--blue {
+  background: #2F80ED;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(47,128,237,.2);
+}
+.drv-support__card--light {
+  background: #a6d2f3;
+  color: #2F80ED;
+}
+.drv-support__card-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drv-support__card h3 {
   font-family: "Manrope", sans-serif;
   font-size: 20px;
-  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+.drv-support__card p {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 28px; /* 140% */
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.85;
 }
 
-.d-cta__body .cta-buttons {
-  justify-content: flex-start;
+/* ── TESTIMONIAL ── */
+.drv-testimonial {
+  padding: 48px 0;
 }
-
-/* ══════════════════════════════════════════════════════════════
-   FOOTER — Figma nodes 311-3108 … 311-3160
-   ══════════════════════════════════════════════════════════════ */
-
-/* 311-3108: footer shell */
-.d-footer {
-  position: relative;
-  background: #A6D2F3;
-  border-top: 1px solid rgba(195, 198, 214, 0.10);
-  display: flex;
-  justify-content: center;
+.drv-testimonial__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
 }
-
-/* 311-3108: inner wrap — flex col, 1280px, padding 64px 0, gap 64px */
-.d-footer__wrap {
-  display: flex;
-  width: 1280px;
-  max-width: 100%;
-  padding: 64px 0;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 64px;
-}
-
-/* 311-3109: 4-col grid — repeat(4,1fr), padding 0 48px, gap 48px, rows 120.25px */
-.d-footer__grid {
-  display: inline-grid;
-  max-width: 1440px;
-  width: 100%;
-  padding: 0 48px;
-  row-gap: 48px;
-  column-gap: 48px;
-  align-self: stretch;
-  grid-template-rows: 120.25px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-/* Col 1 — brand */
-.d-footer__brand {
+.drv-testimonial__card {
+  background: #e8f0fe;
+  border-radius: 20px;
+  padding: 48px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 16px;
+  position: relative;
 }
-
-.d-footer__logo {
-  color: #1A3D6B;
+.drv-testimonial__quote-mark {
   font-family: "Manrope", sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: #2F80ED;
+  opacity: 0.08;
+  line-height: 1;
+  position: absolute;
+  top: 16px;
+  right: 40px;
+}
+.drv-testimonial__avatar img {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.drv-testimonial__stars {
+  display: flex;
+  gap: 4px;
+}
+.drv-testimonial__stars span {
+  color: #f5a623;
   font-size: 16px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
-
-.d-footer__brand-copy {
-  margin: 0;
-  color: #000;
+.drv-testimonial__text {
   font-family: "Manrope", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #2F80ED;
+  margin: 0;
+  max-width: 640px;
 }
-
-/* Cols 2-4 — nav columns */
-.d-footer__col {
+.drv-testimonial__author {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
 }
-
-.d-footer__col-head {
-  margin: 0;
-  color: #1A3D6B;
+.drv-testimonial__name {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
   font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0.04em;
+  color: #2F80ED;
+  letter-spacing: 0.5px;
+}
+.drv-testimonial__role {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #434654;
+}
+.drv-testimonial__deliveries {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #9ca3af;
 }
 
-.d-footer__col-list {
+/* ── FAQ ── */
+.drv-faq {
+  padding: 48px 0;
+}
+.drv-faq__shell {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: 48px;
+  text-align: center;
+}
+.drv-faq__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #2F80ED;
+  margin: 0 0 12px;
+}
+.drv-faq__items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+.drv-faq__item {
+  background: #a6d2f3;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+.drv-faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2F80ED;
+  cursor: pointer;
+  gap: 12px;
+}
+.drv-faq__question:hover { opacity: 0.85; }
+.drv-faq__chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.drv-faq__chevron.is-open {
+  transform: rotate(180deg);
+}
+.drv-faq__answer {
+  padding: 0 20px 16px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1e3a8a;
+}
+
+/* ── CTA ── */
+.drv-cta {
+  padding: 48px 0;
+}
+.drv-cta__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.drv-cta__shell > div:first-child,
+.drv-cta__bar {
+  display: none;
+}
+.drv-cta__shell {
+  position: relative;
+}
+.drv-cta__shell::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #2F80ED;
+  border-radius: 16px 16px 0 0;
+}
+.drv-cta__shell {
+  background: #fff;
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.1);
+}
+.drv-cta__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #2F80ED;
+  margin: 0;
+}
+.drv-cta__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #434654;
+  margin: 0;
+}
+.drv-cta__btns {
+  display: flex;
+  gap: 12px;
+}
+
+/* ── FOOTER ── */
+.drv-footer {
+  background: #a6d2f3;
+  padding: 48px 0 24px;
+  position: relative;
+}
+.drv-footer__bar {
+  display: none;
+}
+.drv-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #2F80ED;
+}
+.drv-footer__shell {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+.drv-footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 32px;
+}
+.drv-footer__logo {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #2F80ED;
+  letter-spacing: 1px;
+}
+.drv-footer__brand p {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1e3a8a;
+  margin: 12px 0 0;
+  max-width: 260px;
+}
+.drv-footer__col h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2F80ED;
+  margin: 0 0 12px;
+}
+.drv-footer__col ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
-.d-footer__col-list a {
-  color: #000;
+.drv-footer__col a {
   font-family: "Manrope", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1e3a8a;
   text-decoration: none;
-  transition: color 0.15s ease;
 }
-
-.d-footer__col-list a:hover {
-  color: #1A3D6B;
-}
-
-/* Active link (Driver Careers) */
-.d-footer__link--active {
-  color: #2F80ED !important;
-  font-weight: 500 !important;
-}
-
-/* 311-3141: bottom bar — flex col, center, padding 64px 48px 0, border-top */
-.d-footer__bottom {
+.drv-footer__col a:hover { color: #2F80ED; }
+.drv-footer__bottom {
   display: flex;
-  max-width: 1440px;
-  width: 100%;
-  padding: 64px 48px 0;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  align-self: stretch;
-  border-top: 1px solid rgba(195, 198, 214, 0.10);
+  padding-top: 24px;
+  border-top: 1px solid rgba(47,128,237,.2);
 }
-
-/* 311-3142: copyright text — Manrope 400, 14px, #000, center, 20px */
-.d-footer__copy {
-  margin: 0;
-  color: #000;
-  text-align: center;
+.drv-footer__bottom span {
   font-family: "Manrope", sans-serif;
-  font-size: 14px;
-  font-style: normal;
+  font-size: 11px;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  color: #1e3a8a;
 }
-
-/* 311-3160: floating Apply to Drive FAB — absolute, bottom-right, shadow */
-.d-footer__fab {
-  position: fixed;
-  bottom: 24px;
-  right: 0;
+.drv-footer__apply {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  width: 202.92px;
-  height: 56px;
-  padding: 0 20px;
-  border-radius: 12px;
   background: #2F80ED;
   color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
   font-family: "Manrope", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-  z-index: 100;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.drv-footer__apply:hover { opacity: 0.9; }
+
+/* ── Responsive ─ */
+@media (max-width: 1024px) {
+  .drv-hero__grid { grid-template-columns: 1fr; text-align: center; }
+  .drv-hero__copy { align-items: center; }
+  .drv-hero__visual { display: none; }
+  .drv-hero__title { font-size: 36px; }
+  .drv-stats__grid { grid-template-columns: 1fr; }
+  .drv-onboarding__steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .drv-onboarding__steps::before { display: none; }
+  .drv-fleet__grid { grid-template-columns: 1fr; }
+  .drv-fleet__visual { display: none; }
+  .drv-hub__grid { grid-template-columns: 1fr; }
+  .drv-hub__visual { display: none; }
+  .drv-support__grid { grid-template-columns: 1fr; }
+  .drv-footer__grid { grid-template-columns: 1fr 1fr; }
 }
 
-.d-footer__fab:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35);
-}
-
-/* ── Responsive ── */
-@media (max-width: 960px) {
-  .d-footer__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto;
-    padding: 0 24px;
+@media (max-width: 640px) {
+  .drv-hero__shell,
+  .drv-stats__shell,
+  .drv-onboarding__shell,
+  .drv-fleet__shell,
+  .drv-hub__shell,
+  .drv-support__shell,
+  .drv-testimonial__shell,
+  .drv-faq__shell,
+  .drv-cta__shell,
+  .drv-footer__shell {
+    padding-inline: 24px;
   }
-  .d-footer__wrap {
-    padding: 48px 0;
-  }
-}
-
-@media (max-width: 560px) {
-  .d-footer__grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .d-footer__bottom {
-    padding: 32px 24px 0;
-  }
-  .d-footer__fab {
-    width: auto;
-    right: 16px;
-    bottom: 16px;
-  }
+  .drv-hero__title { font-size: 28px; }
+  .drv-onboarding__steps { grid-template-columns: 1fr; }
+  .drv-fleet__grid { padding: 32px 24px; }
+  .drv-fleet__benefits { grid-template-columns: 1fr; }
+  .drv-cta__btns { flex-direction: column; }
+  .drv-footer__grid { grid-template-columns: 1fr; }
+  .drv-footer__bottom { flex-direction: column; gap: 16px; }
 }

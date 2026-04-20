@@ -237,23 +237,18 @@
 .sv-hero__img-wrap {
   position: relative;
   width: 512px;
-  height: 512px;
-  border-radius: 32px;
+  height: auto;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.15);
+  background: #f0f5ff;
 }
 .sv-hero__img-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,.2);
-  mix-blend-mode: saturation;
-  z-index: 1;
-  border-radius: 32px;
+  display: none;
 }
 .sv-hero__img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -274,7 +269,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 264px 272px;
-  gap: 0;
+  gap: 8px;
   position: relative;
 }
 
@@ -290,7 +285,6 @@
 .sv-bento-card--large {
   grid-column: 1 / span 2;
   grid-row: 1;
-  margin: 0 8px 8px 0;
 }
 .sv-bento-card__top-row {
   display: flex;
@@ -314,7 +308,6 @@
   background: #2f80ed;
   grid-column: 3;
   grid-row: 1 / span 2;
-  margin: 0 0 0 8px;
   padding: 40px;
   border-radius: 8px;
   box-shadow: none;
@@ -348,65 +341,157 @@
   letter-spacing: 0.5px;
 }
 
-/* Infrastructure diagram — overlaps grid center */
-.sv-bento-diagram {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-  position: relative;
-  pointer-events: none;
-  z-index: 2;
-  /* Positioned at left:40px, top:276px from grid top in Figma */
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 0;
-}
-/* Use absolute positioning via wrapper trick */
-.sv-bulk__bento {
-  position: relative;
-}
-.sv-bento-diagram {
-  position: absolute;
-  left: 40px;
-  top: 276px;
-  width: 763px;
-  height: 292px;
-  z-index: 2;
-  pointer-events: none;
-}
-.sv-bento-diagram__img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 /* Feature 3 — bottom-left */
 .sv-bento-card--support {
   grid-column: 1;
   grid-row: 2;
-  margin: 8px 8px 0 0;
   gap: 16px;
 }
 
-/* Feature 4 — bottom-center+right (compliance) */
+/* Feature 4 — bottom-center (compliance text) */
 .sv-bento-card--compliance {
   grid-column: 2;
   grid-row: 2;
-  margin: 8px 8px 0 0;
-  flex-direction: row;
-  align-items: center;
-  gap: 48px;
 }
-.sv-bento-card__content { flex: 1; display: flex; flex-direction: column; gap: 16px; }
-.sv-bento-bars {
+.sv-bento-card__content { display: flex; flex-direction: column; gap: 16px; height: 100%; justify-content: center; }
+
+/* Feature 5 — bottom-right (compliance visual) */
+.sv-bento-card--compliance-visual {
+  grid-column: 3;
+  grid-row: 2;
+  padding: 24px;
   display: flex;
-  gap: 8px;
-  align-items: flex-end;
+  gap: 16px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.sv-cv-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+.sv-cv-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sv-cv-checklist-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #2f80ed;
+  margin: 0 0 4px;
+}
+.sv-cv-check-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #434654;
+  white-space: nowrap;
+}
+.sv-cv-approved {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+.sv-cv-approved-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  color: #434654;
+  text-transform: uppercase;
+}
+.sv-cv-approved-value {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+}
+.sv-cv-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
-.sv-bento-bar {
-  width: 48px;
-  border-radius: 4px;
+.sv-cv-shield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.sv-cv-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+.sv-cv-sigchain {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sv-cv-sigchain-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #2f80ed;
+  margin: 0;
+}
+.sv-cv-sigchain-code {
+  font-family: "Liberation Mono", monospace;
+  font-size: 10px;
+  color: #a6d2f3;
+  background: rgba(166,210,243,.15);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.sv-cv-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #2f80ed;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 4px 10px;
+  width: fit-content;
+}
+.sv-cv-region {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sv-cv-region-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #2f80ed;
+  margin: 0 0 4px;
+}
+.sv-cv-region-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #434654;
+}
+.sv-cv-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.sv-cv-dot--green { background: #22c55e; }
 
 /* ── VERSATILE SOLUTIONS ───────────────────────────────────── */
 .sv-versatile {
@@ -831,7 +916,8 @@
 @media (max-width: 1024px) {
   .sv-hero__title { font-size: 52px; }
   .sv-cta-wrap { padding: 64px 32px; }
-  .sv-bento-diagram { display: none; }
+  /* compliance visual hidden on tablet */
+  .sv-bento-card--compliance-visual { display: none; }
 }
 @media (max-width: 768px) {
   .sv-hero__grid { grid-template-columns: 1fr; padding: 60px 24px; }
